@@ -207,7 +207,7 @@ const translations = {
 "legal.terms.intro": "Disse handelsbetingelser gælder for alle ydelser leveret af MAN MALER. Ved at bruge vores hjemmeside eller bestille vores tjenester accepterer du nedenstående vilkår.",
 
 "legal.terms.section1.title": "Virksomhedsoplysninger",
-"legal.terms.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
+"legal.terms.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
 
 "legal.terms.section2.title": "Ydelser",
 "legal.terms.section2.text": "MAN MALER leverer professionelle maler- og renoveringsydelser til både private og erhverv. Omfanget af den enkelte opgave aftales individuelt med kunden før arbejdet påbegyndes.",
@@ -240,7 +240,7 @@ const translations = {
 "legal.privacy.intro": "Denne privatlivspolitik forklarer, hvordan MAN MALER indsamler og behandler personoplysninger i forbindelse med brugen af vores hjemmeside og vores tjenester.",
 
 "legal.privacy.section1.title": "Dataansvarlig",
-"legal.privacy.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
+"legal.privacy.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
 "legal.privacy.section2.title": "Hvilke personoplysninger indsamler vi?",
 "legal.privacy.section2.text": "Vi indsamler kun personoplysninger, som du selv vælger at give os, for eksempel når du kontakter os via kontaktformularen, sender os en email eller ringer til os. Oplysningerne kan inkludere dit navn, emailadresse, telefonnummer samt andre oplysninger, som du vælger at skrive i din besked.",
 
@@ -278,7 +278,7 @@ const translations = {
 "legal.cookies.section5.text": "Du kan altid slette eller blokere cookies via indstillingerne i din browser. Bemærk dog, at hvis du blokerer cookies, kan visse funktioner på hjemmesiden muligvis ikke fungere korrekt.",
 
 "legal.cookies.section6.title": "Kontakt",
-"legal.cookies.section6.text": "Hvis du har spørgsmål til vores brug af cookies, er du velkommen til at kontakte os:\n\nMAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
+"legal.cookies.section6.text": "Hvis du har spørgsmål til vores brug af cookies, er du velkommen til at kontakte os:\n\nMAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Energivej 27, 2750 Ballerup\nEmail: info@manmaler.dk",
   "seo.text1": "Leder du efter en professionel maler i København eller på Sjælland? MAN MALER tilbyder professionelt malerarbejde i København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød, Helsingør og resten af Sjælland.",
 "seo.serviceAreas.title": "Professionel maler i København og på Sjælland",
 
@@ -496,7 +496,7 @@ const translations = {
 "legal.terms.intro": "These Terms & Conditions apply to all services provided by MAN MALER. By using our website or booking our services, you agree to the terms described below.",
 
 "legal.terms.section1.title": "Company Information",
-"legal.terms.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
+"legal.terms.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
 
 "legal.terms.section2.title": "Services",
 "legal.terms.section2.text": "MAN MALER provides professional painting and renovation services for both private and commercial clients. The scope of each project is agreed individually with the customer before the work begins.",
@@ -529,7 +529,7 @@ const translations = {
 "legal.privacy.intro": "This privacy policy explains how MAN MALER collects and processes personal data in connection with the use of our website and our services.",
 
 "legal.privacy.section1.title": "Data Controller",
-"legal.privacy.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
+"legal.privacy.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
 "legal.privacy.section2.title": "What personal data do we collect?",
 "legal.privacy.section2.text": "We only collect personal data that you voluntarily provide, for example when you contact us through the contact form, send us an email, or call us by phone. The information may include your name, email address, phone number, and any information you choose to include in your message.",
 
@@ -567,7 +567,7 @@ const translations = {
 "legal.cookies.section5.text": "You can always delete or block cookies through your browser settings. Please note that blocking cookies may affect certain features of the website.",
 
 "legal.cookies.section6.title": "Contact information",
-"legal.cookies.section6.text": "If you have any questions regarding our use of cookies, please feel free to contact us:\n\nMAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 45400018\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
+"legal.cookies.section6.text": "If you have any questions regarding our use of cookies, please feel free to contact us:\n\nMAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Energivej 27, 2750 Ballerup, Denmark\nEmail: info@manmaler.dk",
   "seo.text1": "Looking for a professional painter in Copenhagen or Zealand? MAN MALER provides professional painting services in Copenhagen, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød and Helsingør.",
 "seo.serviceAreas.title": "Professional painter in Copenhagen and across Zealand",
 

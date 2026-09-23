@@ -96,7 +96,7 @@ export default function Footer() {
   </p>
 
   <p className="text-gray-200 text-sm mt-2">
-    {t("footer.cvr")}: 45400018
+    {t("footer.cvr")}: 46787773
   </p>
 
   <p className="text-gray-300 text-sm mt-4">
