@@ -77,6 +77,12 @@ export default function Footer() {
           </h4>
 
           <p className="text-gray-200 text-sm">
+            <a href="tel:+4571316499" className="hover:text-orange-500 transition">
+              Tlf: 71 31 64 99
+            </a>
+          </p>
+
+          <p className="text-gray-200 text-sm mt-2">
             Email: info@manmaler.dk
           </p>
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Mail, MapPin, Clock, CheckCircle, Instagram, Facebook, ChevronDown, X, Loader2 } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, CheckCircle, Instagram, Facebook, ChevronDown, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { Helmet } from "react-helmet-async";
 
@@ -121,6 +121,7 @@ setSent(true);
 };
 
   const infoItems = [
+    { icon: Phone, title: t("contact.info.phone.title"), value: t("contact.info.phone"), href: "tel:+4571316499" },
     { icon: Mail, title: "Email", value: t("contact.info.email") },
     { icon: MapPin, title: t("footer.address"), value: t("contact.info.address") },
     { icon: Clock, title: t("contact.info.hours"), value: `${t("contact.info.hours.weekdays")}` },
@@ -398,7 +399,13 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
                       </div>
                       <div>
                         <p className="font-semibold mb-1 text-foreground">{item.title}</p>
-                        <p className="text-muted-foreground text-sm">{item.value}</p>
+                        {item.href ? (
+                          <a href={item.href} className="text-muted-foreground text-sm hover:text-primary transition">
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="text-muted-foreground text-sm">{item.value}</p>
+                        )}
                       </div>
                     </div>
                   );

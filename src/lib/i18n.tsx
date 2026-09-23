@@ -141,7 +141,7 @@ const translations = {
 
 "about.story.p2": "Virksomheden drives af Ion og Victoria, som sammen står bag udviklingen af vores serviceområder. Ion har mange års erfaring inden for malerarbejde, overfladebehandling og renovering og har det primære ansvar for vores malerprojekter. Hans arbejde fokuserer på præcision, rene linjer og et professionelt finish – uanset om det gælder lejligheder, huse eller erhvervsejendomme.",
 
-"about.story.p3": "Victoria bidrager med erfaring inden for service og drift og har været med til at opbygge virksomhedens struktur og kundeservice. MANMALER er en del af Nordisk Renhed og Bygg ApS, hvor både malerarbejde og rengøringsydelser oprindeligt blev udviklet. Efterhånden som virksomheden voksede, blev ydelserne opdelt i specialiserede områder – CleanSpell for rengøring og MANMALER for maler- og renoveringsarbejde – for at sikre bedre fokus og konstant høj kvalitet.",
+"about.story.p3": "Victoria bidrager med erfaring inden for service og drift og har været med til at opbygge virksomhedens struktur og kundeservice. MANMALER er en del af MAN Maler ApS, hvor både malerarbejde og rengøringsydelser oprindeligt blev udviklet. Efterhånden som virksomheden voksede, blev ydelserne opdelt i specialiserede områder – CleanSpell for rengøring og MANMALER for maler- og renoveringsarbejde – for at sikre bedre fokus og konstant høj kvalitet.",
 
 "about.values.title": "Vores Værdier",
 
@@ -179,6 +179,8 @@ const translations = {
     "contact.info.title": "Kontaktinformation",
     "contact.info.email": "info@manmaler.dk",
     "contact.info.address": "Sporstræde 39, Nærheden",
+    "contact.info.phone": "71 31 64 99",
+    "contact.info.phone.title": "Telefon",
     "contact.info.hours": "Åbningstider",
     "contact.info.hours.weekdays": "Man-Fre: 08:00 – 16:00",
     "contact.success.title": "Tak for din henvendelse!",
@@ -191,13 +193,13 @@ const translations = {
     "footer.address": "Adresse",
     "footer.follow": "Følg os",
     "footer.rights": "Alle rettigheder forbeholdes.",
-    "footer.operated": "MANMALER drives under Nordisk Renhed og Bygg ApS",
+    "footer.operated": "MANMALER drives under MAN Maler ApS",
     "footer.legal": "Juridisk",
     "footer.terms": "Handelsbetingelser",
     "footer.privacy": "Privatlivspolitik",
     "footer.cookies": "Cookiepolitik",
     "footer.companyInfo": "Virksomhedsinfo",
-"footer.companyName": "Nordisk Renhed og Bygg ApS",
+"footer.companyName": "MAN Maler ApS",
 "footer.cvr": "CVR",
 "footer.hours": "Åbningstider",
 "footer.hours.weekdays": "Man–Fre · 08:00–16:00",
@@ -207,7 +209,7 @@ const translations = {
 "legal.terms.intro": "Disse handelsbetingelser gælder for alle ydelser leveret af MAN MALER. Ved at bruge vores hjemmeside eller bestille vores tjenester accepterer du nedenstående vilkår.",
 
 "legal.terms.section1.title": "Virksomhedsoplysninger",
-"legal.terms.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
+"legal.terms.section1.text": "MAN MALER drives under MAN Maler ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
 
 "legal.terms.section2.title": "Ydelser",
 "legal.terms.section2.text": "MAN MALER leverer professionelle maler- og renoveringsydelser til både private og erhverv. Omfanget af den enkelte opgave aftales individuelt med kunden før arbejdet påbegyndes.",
@@ -240,7 +242,7 @@ const translations = {
 "legal.privacy.intro": "Denne privatlivspolitik forklarer, hvordan MAN MALER indsamler og behandler personoplysninger i forbindelse med brugen af vores hjemmeside og vores tjenester.",
 
 "legal.privacy.section1.title": "Dataansvarlig",
-"legal.privacy.section1.text": "MAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
+"legal.privacy.section1.text": "MAN MALER drives under MAN Maler ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
 "legal.privacy.section2.title": "Hvilke personoplysninger indsamler vi?",
 "legal.privacy.section2.text": "Vi indsamler kun personoplysninger, som du selv vælger at give os, for eksempel når du kontakter os via kontaktformularen, sender os en email eller ringer til os. Oplysningerne kan inkludere dit navn, emailadresse, telefonnummer samt andre oplysninger, som du vælger at skrive i din besked.",
 
@@ -278,7 +280,7 @@ const translations = {
 "legal.cookies.section5.text": "Du kan altid slette eller blokere cookies via indstillingerne i din browser. Bemærk dog, at hvis du blokerer cookies, kan visse funktioner på hjemmesiden muligvis ikke fungere korrekt.",
 
 "legal.cookies.section6.title": "Kontakt",
-"legal.cookies.section6.text": "Hvis du har spørgsmål til vores brug af cookies, er du velkommen til at kontakte os:\n\nMAN MALER drives under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
+"legal.cookies.section6.text": "Hvis du har spørgsmål til vores brug af cookies, er du velkommen til at kontakte os:\n\nMAN MALER drives under MAN Maler ApS\nCVR: 46787773\nAdresse: Sporstræde 39, Nærheden\nEmail: info@manmaler.dk",
   "seo.text1": "Leder du efter en professionel maler i København eller på Sjælland? MAN MALER tilbyder professionelt malerarbejde i København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød, Helsingør og resten af Sjælland.",
 "seo.serviceAreas.title": "Professionel maler i København og på Sjælland",
 
@@ -430,7 +432,7 @@ const translations = {
 
 "about.story.p2": "The company is run by Ion and Victoria, who together are behind the development of our service areas. Ion has many years of experience in painting, surface finishing and renovation work and is primarily responsible for our painting projects. His work focuses on precision, clean lines and professional finishes – whether in apartments, houses or commercial properties.",
 
-"about.story.p3": "Victoria contributes with experience in service and operations and has helped build the company’s structure and customer service. MANMALER operates under Nordisk Renhed og Bygg ApS, where both painting and cleaning services originally developed. As the company grew, the services evolved into specialized areas – CleanSpell for cleaning and MANMALER for painting and renovation – ensuring better focus and consistently high quality.",
+"about.story.p3": "Victoria contributes with experience in service and operations and has helped build the company’s structure and customer service. MANMALER operates under MAN Maler ApS, where both painting and cleaning services originally developed. As the company grew, the services evolved into specialized areas – CleanSpell for cleaning and MANMALER for painting and renovation – ensuring better focus and consistently high quality.",
 
 "about.values.title": "Our Values",
 
@@ -468,6 +470,8 @@ const translations = {
     "contact.info.title": "Contact Information",
     "contact.info.email": "info@manmaler.dk",
     "contact.info.address": "Sporstræde 39, Nærheden",
+    "contact.info.phone": "71 31 64 99",
+    "contact.info.phone.title": "Phone",
     "contact.info.hours": "Opening Hours",
     "contact.info.hours.weekdays": "Mon-Fri: 08:00 – 16:00",
     "contact.success.title": "Thank you for your message!",
@@ -480,13 +484,13 @@ const translations = {
     "footer.address": "Address",
     "footer.follow": "Follow us",
     "footer.rights": "All rights reserved.",
-    "footer.operated": "MANMALER is operated by Nordisk Renhed og Bygg ApS",
+    "footer.operated": "MANMALER is operated by MAN Maler ApS",
     "footer.legal": "Legal",
     "footer.terms": "Terms & Conditions",
     "footer.privacy": "Privacy Policy",
     "footer.cookies": "Cookie Policy",
     "footer.companyInfo": "Company Info",
-    "footer.companyName": "Nordisk Renhed og Bygg ApS",
+    "footer.companyName": "MAN Maler ApS",
     "footer.cvr": "CVR",
     "footer.hours": "Opening Hours",
     "footer.hours.weekdays": "Mon–Fri · 08:00–16:00",
@@ -496,7 +500,7 @@ const translations = {
 "legal.terms.intro": "These Terms & Conditions apply to all services provided by MAN MALER. By using our website or booking our services, you agree to the terms described below.",
 
 "legal.terms.section1.title": "Company Information",
-"legal.terms.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
+"legal.terms.section1.text": "MAN MALER is operated under MAN Maler ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
 
 "legal.terms.section2.title": "Services",
 "legal.terms.section2.text": "MAN MALER provides professional painting and renovation services for both private and commercial clients. The scope of each project is agreed individually with the customer before the work begins.",
@@ -529,7 +533,7 @@ const translations = {
 "legal.privacy.intro": "This privacy policy explains how MAN MALER collects and processes personal data in connection with the use of our website and our services.",
 
 "legal.privacy.section1.title": "Data Controller",
-"legal.privacy.section1.text": "MAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
+"legal.privacy.section1.text": "MAN MALER is operated under MAN Maler ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
 "legal.privacy.section2.title": "What personal data do we collect?",
 "legal.privacy.section2.text": "We only collect personal data that you voluntarily provide, for example when you contact us through the contact form, send us an email, or call us by phone. The information may include your name, email address, phone number, and any information you choose to include in your message.",
 
@@ -567,7 +571,7 @@ const translations = {
 "legal.cookies.section5.text": "You can always delete or block cookies through your browser settings. Please note that blocking cookies may affect certain features of the website.",
 
 "legal.cookies.section6.title": "Contact information",
-"legal.cookies.section6.text": "If you have any questions regarding our use of cookies, please feel free to contact us:\n\nMAN MALER is operated under Nordisk Renhed og Bygg ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
+"legal.cookies.section6.text": "If you have any questions regarding our use of cookies, please feel free to contact us:\n\nMAN MALER is operated under MAN Maler ApS\nCVR: 46787773\nAddress: Sporstræde 39, Nærheden, Denmark\nEmail: info@manmaler.dk",
   "seo.text1": "Looking for a professional painter in Copenhagen or Zealand? MAN MALER provides professional painting services in Copenhagen, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød and Helsingør.",
 "seo.serviceAreas.title": "Professional painter in Copenhagen and across Zealand",
 
