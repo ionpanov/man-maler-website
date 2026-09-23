@@ -144,13 +144,13 @@ export default function Footer() {
 
       {/* Legal Links */}
       <div className="max-w-6xl mx-auto px-6 pb-4 flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-        <Link to="/terms" className="hover:text-orange-500 transition">
+        <Link to="/vilkar" className="hover:text-orange-500 transition">
           {t("footer.terms")}
         </Link>
 
         <span>·</span>
 
-        <Link to="/privacy" className="hover:text-orange-500 transition">
+        <Link to="/privatliv" className="hover:text-orange-500 transition">
           {t("footer.privacy")}
         </Link>
 
