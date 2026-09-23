@@ -81,7 +81,7 @@ export default function Footer() {
           </p>
 
           <p className="text-gray-200 text-sm mt-2">
-            {t("footer.address")}: Energivej 27, 2750 Ballerup
+            {t("footer.address")}: Sporstræde 39, Nærheden
           </p>
         </div>
 
