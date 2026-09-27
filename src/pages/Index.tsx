@@ -437,6 +437,18 @@ return (
         <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           {t("seo.serviceAreas.text")}
         </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <Link to="/maler-koebenhavn" className="text-primary font-medium hover:underline">
+            Maler i København
+          </Link>
+          <Link to="/maler-roskilde" className="text-primary font-medium hover:underline">
+            Maler i Roskilde
+          </Link>
+          <Link to="/omraader" className="text-primary font-medium hover:underline">
+            Se alle vores områder →
+          </Link>
+        </div>
       </div>
     </AnimatedSection>
 

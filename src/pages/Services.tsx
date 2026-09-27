@@ -150,6 +150,13 @@ content="Professionelle malerydelser i København og på Sjælland."
         </div>
       </section>
 
+      {/* AREA LINK */}
+      <section className="py-10 px-6 text-center">
+        <Link to="/omraader" className="text-primary font-medium hover:underline">
+          Se alle de områder, vi dækker →
+        </Link>
+      </section>
+
       {/* CTA */}
       <section className="relative py-28 px-6 overflow-hidden bg-primary">
         <AnimatedSection>

@@ -3,12 +3,53 @@ import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin } from "lucide-react";
 
-interface Area {
+interface CityLink {
   name: string;
-  desc: string;
+  href: string;
 }
 
-const AREAS: Area[] = [];
+interface Group {
+  title: string;
+  cities: CityLink[];
+}
+
+const GROUPS: Group[] = [
+  {
+    title: "København og Vestegnen",
+    cities: [
+      { name: "København", href: "/maler-koebenhavn" },
+      { name: "Frederiksberg", href: "/maler-frederiksberg" },
+      { name: "Hvidovre", href: "/maler-hvidovre" },
+      { name: "Rødovre", href: "/maler-rodovre" },
+      { name: "Herlev", href: "/maler-herlev" },
+      { name: "Glostrup", href: "/maler-glostrup" },
+      { name: "Ballerup", href: "/maler-ballerup" },
+      { name: "Taastrup", href: "/maler-taastrup" },
+      { name: "Albertslund", href: "/maler-albertslund" },
+      { name: "Ishøj", href: "/maler-ishoj" },
+      { name: "Brøndby", href: "/maler-brondby" },
+    ],
+  },
+  {
+    title: "Nordsjælland",
+    cities: [
+      { name: "Lyngby", href: "/maler-lyngby" },
+      { name: "Gentofte", href: "/maler-gentofte" },
+      { name: "Hillerød", href: "/maler-hillerod" },
+      { name: "Helsingør", href: "/maler-helsingor" },
+    ],
+  },
+  {
+    title: "Roskilde og Sydsjælland",
+    cities: [
+      { name: "Roskilde", href: "/maler-roskilde" },
+      { name: "Hedehusene", href: "/maler-hedehusene" },
+      { name: "Greve", href: "/maler-greve" },
+      { name: "Køge", href: "/maler-koge" },
+      { name: "Næstved", href: "/maler-naestved" },
+    ],
+  },
+];
 
 export default function Omraader() {
   return (
@@ -53,8 +94,8 @@ export default function Omraader() {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-10">
               MAN MALER udfører professionelt malerarbejde i mange byer og
-              kommuner på Sjælland. Se hvilke områder vi dækker, og hvad der
-              typisk kendetegner malerarbejde hos os netop dér.
+              kommuner på Sjælland. Vælg din by nedenfor for at se, hvad vi
+              tilbyder netop dér.
             </p>
             <Link
               to="/kontakt"
@@ -66,44 +107,25 @@ export default function Omraader() {
         </div>
       </section>
 
-      {/* DEDICATED PAGES CALLOUT */}
-      <section className="py-12 px-6 bg-card">
-        <div className="max-w-4xl mx-auto text-center">
-          <AnimatedSection>
-            <p className="text-muted-foreground">
-              Bor du i København, Roskilde eller Ballerup? Se vores dedikerede
-              sider:{" "}
-              <Link to="/maler-koebenhavn" className="text-primary font-medium hover:underline">
-                Maler i København
-              </Link>{" "}
-              ·{" "}
-              <Link to="/maler-roskilde" className="text-primary font-medium hover:underline">
-                Maler i Roskilde
-              </Link>{" "}
-              ·{" "}
-              <Link to="/maler-ballerup" className="text-primary font-medium hover:underline">
-                Maler i Ballerup
-              </Link>
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* AREA GRID */}
+      {/* CITY DIRECTORY, GROUPED */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {AREAS.map((area, i) => (
-            <AnimatedSection key={area.name} delay={(i % 6) * 0.05}>
-              <div className="h-full p-6 rounded-2xl bg-card border border-border shadow-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin size={18} className="text-primary flex-shrink-0" />
-                  <h2 className="text-lg font-display font-semibold text-card-foreground">
-                    {area.name}
-                  </h2>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {area.desc}
-                </p>
+        <div className="max-w-5xl mx-auto space-y-16">
+          {GROUPS.map((group, gi) => (
+            <AnimatedSection key={group.title} delay={gi * 0.1}>
+              <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+                {group.title}
+              </h2>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {group.cities.map((city) => (
+                  <Link
+                    key={city.href}
+                    to={city.href}
+                    className="flex items-center gap-2 p-4 rounded-xl bg-card border border-border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm font-medium text-foreground"
+                  >
+                    <MapPin size={16} className="text-primary flex-shrink-0" />
+                    Maler i {city.name}
+                  </Link>
+                ))}
               </div>
             </AnimatedSection>
           ))}

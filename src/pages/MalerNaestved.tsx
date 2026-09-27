@@ -209,6 +209,26 @@ export default function MalerNaestved() {
         </div>
       </section>
 
+      {/* NEARBY AREAS */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-foreground text-center">
+              Malerarbejde i nærheden af Næstved
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+                <Link
+                  to="/maler-koge"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
+                >
+                  <MapPin size={16} className="text-primary flex-shrink-0" />
+                  Maler i Køge
+                </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-3xl mx-auto">

@@ -19,21 +19,33 @@ export default function About() {
   ];
 
   const coverageCities = [
-    "København", "Hedehusene", "Taastrup", "Roskilde", "Ballerup",
-    "Glostrup", "Hvidovre", "Albertslund", "Ishøj", "Brøndby"
+    "København", "Frederiksberg", "Hvidovre", "Rødovre", "Herlev",
+    "Glostrup", "Ballerup", "Taastrup", "Albertslund", "Ishøj",
+    "Brøndby", "Lyngby", "Gentofte", "Roskilde", "Hedehusene",
+    "Greve", "Køge", "Hillerød", "Helsingør", "Næstved",
   ];
 
   const cityLinks: Record<string, string> = {
     "København": "/maler-koebenhavn",
-    "Roskilde": "/maler-roskilde",
-    "Hedehusene": "/omraader",
-    "Taastrup": "/omraader",
+    "Frederiksberg": "/maler-frederiksberg",
+    "Hvidovre": "/maler-hvidovre",
+    "Rødovre": "/maler-rodovre",
+    "Herlev": "/maler-herlev",
+    "Glostrup": "/maler-glostrup",
     "Ballerup": "/maler-ballerup",
-    "Glostrup": "/omraader",
-    "Hvidovre": "/omraader",
-    "Albertslund": "/omraader",
-    "Ishøj": "/omraader",
-    "Brøndby": "/omraader",
+    "Taastrup": "/maler-taastrup",
+    "Albertslund": "/maler-albertslund",
+    "Ishøj": "/maler-ishoj",
+    "Brøndby": "/maler-brondby",
+    "Lyngby": "/maler-lyngby",
+    "Gentofte": "/maler-gentofte",
+    "Roskilde": "/maler-roskilde",
+    "Hedehusene": "/maler-hedehusene",
+    "Greve": "/maler-greve",
+    "Køge": "/maler-koge",
+    "Hillerød": "/maler-hillerod",
+    "Helsingør": "/maler-helsingor",
+    "Næstved": "/maler-naestved",
   };
   return (
 <>
