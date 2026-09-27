@@ -10,18 +10,6 @@ interface Area {
 
 const AREAS: Area[] = [
   {
-    name: "Lyngby",
-    desc: "Kongens Lyngby i det nordlige Storkøbenhavn har mange store villaer og herskabelige huse. Her udfører vi ofte facademaling og omfattende renoveringsopgaver.",
-  },
-  {
-    name: "Gentofte",
-    desc: "Gentofte er kendt for store villaer og velholdte boligområder. Vi lægger vægt på præcision og et højt finish-niveau, når vi maler i kommunen.",
-  },
-  {
-    name: "Greve",
-    desc: "Greve ved kysten syd for København har mange parcelhuskvarterer. Vi udfører facademaling, træbeskyttelse og indendørs maling til boligejere i området.",
-  },
-  {
     name: "Køge",
     desc: "Køge er en købstad med en ældre bykerne og nyere boligområder udenfor. Vi tilpasser vores arbejde efter både historiske bygninger og moderne byggeri.",
   },
