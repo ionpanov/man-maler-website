@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin } from "lucide-react";
-import ab1 from "@/assets/ab1.png";
-import ab2 from "@/assets/ab2.png";
-import ab3 from "@/assets/ab3.png";
+import ab1 from "@/assets/ab1.webp";
+import ab2 from "@/assets/ab2.webp";
+import ab3 from "@/assets/ab3.webp";
 import { Helmet } from "react-helmet-async";
 
-import foundersImg from "@/assets/vicion4.png";
+import foundersImg from "@/assets/vicion4.webp";
 
 export default function About() {
   const { t } = useI18n();

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Paintbrush, Building2, Home, Star, Shield, HandCoins, Handshake,Layers, Wrench, Hammer} from "lucide-react";
 
-import heroImg from "@/assets/hero-bg.png";
+import heroImg from "@/assets/hero-bg.webp";
 import project1 from "@/assets/projects/proj53.jpg";
 import project2 from "@/assets/projects/p5.jpg";
 import project3 from "@/assets/projects/proj36.jpg";

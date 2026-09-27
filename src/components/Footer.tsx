@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo3 from "@/assets/logo3.png";
+import logo3 from "@/assets/logo3.webp";
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (

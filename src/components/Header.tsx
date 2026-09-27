@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 export default function Header() {
   const location = useLocation();

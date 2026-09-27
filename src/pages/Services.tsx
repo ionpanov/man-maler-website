@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, Paintbrush, Wrench, Layers, Hammer } from "lucide-react";
-import interiorImg from "@/assets/interior.png";
-import exteriorImg from "@/assets/exterior.png";
-import renovationImg from "@/assets/renovation.png";
-import commercialImg from "@/assets/commercial.png";
+import interiorImg from "@/assets/interior.webp";
+import exteriorImg from "@/assets/exterior.webp";
+import renovationImg from "@/assets/renovation.webp";
+import commercialImg from "@/assets/commercial.webp";
 import { Helmet } from "react-helmet-async";
 
 export default function Services() {
