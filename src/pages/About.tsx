@@ -28,7 +28,7 @@ export default function About() {
     "Roskilde": "/maler-roskilde",
     "Hedehusene": "/omraader",
     "Taastrup": "/omraader",
-    "Ballerup": "/omraader",
+    "Ballerup": "/maler-ballerup",
     "Glostrup": "/omraader",
     "Hvidovre": "/omraader",
     "Albertslund": "/omraader",

@@ -23,6 +23,7 @@ import Cookies from "./pages/Cookies";
 import MalerKobenhavn from "./pages/MalerKobenhavn";
 import MalerRoskilde from "./pages/MalerRoskilde";
 import Omraader from "./pages/Omraader";
+import MalerBallerup from "./pages/MalerBallerup";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import AnalyticsTracker from "@/components/AnalyticsTracker";
@@ -55,6 +56,7 @@ const App = () => (
                   <Route path="/maler-koebenhavn" element={<MalerKobenhavn />} />
                   <Route path="/maler-roskilde" element={<MalerRoskilde />} />
                   <Route path="/omraader" element={<Omraader />} />
+                  <Route path="/maler-ballerup" element={<MalerBallerup />} />
                   <Route path="/vilkar" element={<Terms />} />
                   <Route path="/privatliv" element={<Privacy />} />
                   <Route path="/cookies" element={<Cookies />} />

@@ -10,10 +10,6 @@ interface Area {
 
 const AREAS: Area[] = [
   {
-    name: "Ballerup",
-    desc: "Ballerup i den vestlige del af Storkøbenhavn har en blanding af villakvarterer, rækkehuse og etageejendomme. Vi udfører både facademaling af villaer og indendørs maling af lejligheder i området.",
-  },
-  {
     name: "Frederiksberg",
     desc: "Frederiksberg er tæt bebygget med mange ældre etageejendomme og karakteristiske facader. Her ligger vores fokus ofte på indvendig maling af lejligheder samt facadearbejde på ældre bygninger.",
   },
@@ -144,13 +140,18 @@ export default function Omraader() {
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-muted-foreground">
-              Bor du i København eller Roskilde? Se vores dedikerede sider:{" "}
+              Bor du i København, Roskilde eller Ballerup? Se vores dedikerede
+              sider:{" "}
               <Link to="/maler-koebenhavn" className="text-primary font-medium hover:underline">
                 Maler i København
               </Link>{" "}
               ·{" "}
               <Link to="/maler-roskilde" className="text-primary font-medium hover:underline">
                 Maler i Roskilde
+              </Link>{" "}
+              ·{" "}
+              <Link to="/maler-ballerup" className="text-primary font-medium hover:underline">
+                Maler i Ballerup
               </Link>
             </p>
           </AnimatedSection>
