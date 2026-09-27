@@ -36,6 +36,11 @@ import MalerBrondby from "./pages/MalerBrondby";
 import MalerLyngby from "./pages/MalerLyngby";
 import MalerGentofte from "./pages/MalerGentofte";
 import MalerGreve from "./pages/MalerGreve";
+import MalerKoge from "./pages/MalerKoge";
+import MalerHillerod from "./pages/MalerHillerod";
+import MalerHelsingor from "./pages/MalerHelsingor";
+import MalerNaestved from "./pages/MalerNaestved";
+import MalerHedehusene from "./pages/MalerHedehusene";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import AnalyticsTracker from "@/components/AnalyticsTracker";
@@ -81,6 +86,11 @@ const App = () => (
                   <Route path="/maler-lyngby" element={<MalerLyngby />} />
                   <Route path="/maler-gentofte" element={<MalerGentofte />} />
                   <Route path="/maler-greve" element={<MalerGreve />} />
+                  <Route path="/maler-koge" element={<MalerKoge />} />
+                  <Route path="/maler-hillerod" element={<MalerHillerod />} />
+                  <Route path="/maler-helsingor" element={<MalerHelsingor />} />
+                  <Route path="/maler-naestved" element={<MalerNaestved />} />
+                  <Route path="/maler-hedehusene" element={<MalerHedehusene />} />
                   <Route path="/vilkar" element={<Terms />} />
                   <Route path="/privatliv" element={<Privacy />} />
                   <Route path="/cookies" element={<Cookies />} />

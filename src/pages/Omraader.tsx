@@ -8,28 +8,7 @@ interface Area {
   desc: string;
 }
 
-const AREAS: Area[] = [
-  {
-    name: "Køge",
-    desc: "Køge er en købstad med en ældre bykerne og nyere boligområder udenfor. Vi tilpasser vores arbejde efter både historiske bygninger og moderne byggeri.",
-  },
-  {
-    name: "Hillerød",
-    desc: "Hillerød i Nordsjælland har en blanding af ældre og nyere boliger. Vi udfører malerarbejde til villaer, rækkehuse og erhvervsejendomme i området.",
-  },
-  {
-    name: "Helsingør",
-    desc: "Helsingør er en kystby med en historisk bykerne og mange ældre huse. Her kræver facademaling ofte ekstra forberedelse af gamle overflader, hvilket vi har erfaring med.",
-  },
-  {
-    name: "Næstved",
-    desc: "Næstved på Sydsjælland er en af regionens større byer med både ældre og nyere boligområder. Vi udfører malerarbejde til private og virksomheder i hele kommunen.",
-  },
-  {
-    name: "Hedehusene",
-    desc: "Hedehusene tæt på Roskilde har overvejende villakvarterer. Vi udfører facademaling og indendørs renovering for boligejere i og omkring byen.",
-  },
-];
+const AREAS: Area[] = [];
 
 export default function Omraader() {
   return (
