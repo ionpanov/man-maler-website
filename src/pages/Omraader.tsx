@@ -10,18 +10,6 @@ interface Area {
 
 const AREAS: Area[] = [
   {
-    name: "Herlev",
-    desc: "Herlev har en blanding af boligblokke og villakvarterer. Vi udfører både erhvervsmaling til virksomheder i området og indendørs maling for private boligejere.",
-  },
-  {
-    name: "Glostrup",
-    desc: "Glostrup er en pendlerby tæt på København med mange rækkehuse og villaer. Vi udfører facademaling, vinduesmaling og indendørs renovering i hele kommunen.",
-  },
-  {
-    name: "Taastrup",
-    desc: "Taastrup på Vestegnen har blandet boligbyggeri, fra ældre villaer til nyere rækkehuse. Vi tilpasser løsningen efter husets alder og stand.",
-  },
-  {
     name: "Albertslund",
     desc: "Albertslund er kendt for sit rækkehus- og murstensbyggeri fra 1960'erne og 70'erne. Her arbejder vi ofte med facaderenovering og træbeskyttelse på ældre bebyggelser.",
   },
