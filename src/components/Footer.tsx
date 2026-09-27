@@ -20,6 +20,7 @@ export default function Footer() {
     { name: t("nav.projects"), href: "/referencer" },
     { name: t("nav.about"), href: "/om-os" },
     { name: t("nav.contact"), href: "/kontakt" },
+    { name: "Maler i København", href: "/maler-koebenhavn" },
   ];
 
   const socials = [

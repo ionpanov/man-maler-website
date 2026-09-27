@@ -234,10 +234,20 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
       {coverageCities.map((city, i) => (
         <AnimatedSection key={city} delay={i * 0.05}>
-          <div className="flex items-center gap-2 p-4 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition text-sm font-medium text-foreground shadow-sm">
-            <MapPin size={16} className="text-primary flex-shrink-0" />
-            {city}
-          </div>
+          {city === "København" ? (
+            <Link
+              to="/maler-koebenhavn"
+              className="flex items-center gap-2 p-4 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition text-sm font-medium text-foreground shadow-sm"
+            >
+              <MapPin size={16} className="text-primary flex-shrink-0" />
+              {city}
+            </Link>
+          ) : (
+            <div className="flex items-center gap-2 p-4 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition text-sm font-medium text-foreground shadow-sm">
+              <MapPin size={16} className="text-primary flex-shrink-0" />
+              {city}
+            </div>
+          )}
         </AnimatedSection>
       ))}
     </div>
