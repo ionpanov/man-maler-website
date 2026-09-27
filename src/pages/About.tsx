@@ -26,6 +26,14 @@ export default function About() {
   const cityLinks: Record<string, string> = {
     "København": "/maler-koebenhavn",
     "Roskilde": "/maler-roskilde",
+    "Hedehusene": "/omraader",
+    "Taastrup": "/omraader",
+    "Ballerup": "/omraader",
+    "Glostrup": "/omraader",
+    "Hvidovre": "/omraader",
+    "Albertslund": "/omraader",
+    "Ishøj": "/omraader",
+    "Brøndby": "/omraader",
   };
   return (
 <>

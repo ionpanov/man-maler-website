@@ -22,6 +22,7 @@ export default function Footer() {
     { name: t("nav.contact"), href: "/kontakt" },
     { name: "Maler i København", href: "/maler-koebenhavn" },
     { name: "Maler i Roskilde", href: "/maler-roskilde" },
+    { name: "Alle Områder", href: "/omraader" },
   ];
 
   const socials = [
