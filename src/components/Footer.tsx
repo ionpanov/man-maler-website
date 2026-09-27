@@ -39,6 +39,7 @@ export default function Footer() {
             <img
               src={logo3}
               alt="Man Maler"
+              loading="lazy"
               className="h-20 w-auto rounded-sm"
             />
           </Link>

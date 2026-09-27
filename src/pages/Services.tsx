@@ -107,6 +107,7 @@ content="Professionelle malerydelser i København og på Sjælland."
                     <img
                       src={category.image}
                       alt={t(`services.extended.${category.key}.title` as any)}
+                      loading="lazy"
                       className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>

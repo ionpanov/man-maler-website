@@ -130,6 +130,7 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
             <img
               src={foundersImg}
               alt="Victoria og Ion – Grundlæggere"
+              loading="lazy"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -205,6 +206,7 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
             <img
               src={img}
               alt={`work-${i + 1}`}
+              loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
             />
           </div>

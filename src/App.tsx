@@ -9,6 +9,7 @@ import { I18nProvider } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -35,6 +36,7 @@ const App = () => (
           <BrowserRouter>
             <ScrollToTop />
             <AnalyticsTracker />
+            <LocalBusinessSchema />
 
             <div className="flex flex-col min-h-screen">
 

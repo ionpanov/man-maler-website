@@ -94,6 +94,23 @@ return (
 
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://manmaler.dk/" />
+
+      <meta property="og:title" content="Maler i København | Professionel Maler på Sjælland | MAN MALER" />
+      <meta
+        property="og:description"
+        content="Professionel maler i København, Ballerup og Roskilde. Vi tilbyder indendørs maling, facademaling, renovering og erhvervsmaling på hele Sjælland."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://manmaler.dk/" />
+      <meta property="og:image" content="https://manmaler.dk/og-home.jpg" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Maler i København | Professionel Maler på Sjælland | MAN MALER" />
+      <meta
+        name="twitter:description"
+        content="Professionel maler i København, Ballerup og Roskilde. Indendørs maling, facademaling, renovering og erhvervsmaling."
+      />
+      <meta name="twitter:image" content="https://manmaler.dk/og-home.jpg" />
     </Helmet>
 
     <main className="flex flex-col">
@@ -213,6 +230,7 @@ return (
               <img
                 src={p.img}
                 alt={t(`projects.${p.key}.title` as any)}
+                loading="lazy"
                 onClick={() => setSelectedIndex(index)}
                 className="w-full h-full object-cover cursor-pointer group-hover:scale-110 transition-transform duration-700"
               />
@@ -264,6 +282,7 @@ return (
     {/* Image */}
     <img
       src={projects[selectedIndex].img}
+      loading="lazy"
       className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-xl"
     />
 

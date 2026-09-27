@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { loadGoogleAnalytics } from "@/lib/analytics";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
@@ -14,6 +15,32 @@ export default function CookieBanner() {
       loadGoogleAnalytics();
     }
   }, []);
+
+  useEffect(() => {
+    if (!visible) {
+      document.body.style.paddingBottom = "";
+      return;
+    }
+
+    const el = bannerRef.current;
+    if (!el) return;
+
+    const applyPadding = () => {
+      document.body.style.paddingBottom = `${el.offsetHeight}px`;
+    };
+
+    applyPadding();
+
+    const resizeObserver = new ResizeObserver(applyPadding);
+    resizeObserver.observe(el);
+    window.addEventListener("resize", applyPadding);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", applyPadding);
+      document.body.style.paddingBottom = "";
+    };
+  }, [visible]);
 
   const acceptCookies = () => {
     localStorage.setItem("cookie-consent", "accepted");
@@ -29,7 +56,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-[#1F1F1F] text-white p-6 z-50 shadow-xl">
+    <div ref={bannerRef} className="fixed bottom-0 left-0 w-full bg-[#1F1F1F] text-white p-6 z-50 shadow-xl">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 
         <p className="text-sm text-gray-200">

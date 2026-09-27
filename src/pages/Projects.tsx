@@ -179,6 +179,7 @@ content="Se vores professionelle malerprojekter og referencer."
                   <img
                     src={project.img}
                     alt={`project-${project.key}`}
+                    loading="lazy"
                     onClick={() => setSelectedIndex(i)}
                     className="w-full h-full object-cover cursor-pointer group-hover:scale-110 transition-transform duration-700"
                   />
@@ -264,6 +265,7 @@ content="Se vores professionelle malerprojekter og referencer."
                 <img
                   src={img}
                   alt={`gallery-${i}`}
+                  loading="lazy"
                   className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                 />
               </div>
@@ -296,6 +298,7 @@ content="Se vores professionelle malerprojekter og referencer."
           {/* Image */}
           <img
             src={modalImages[selectedIndex]}
+            loading="lazy"
             className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-xl"
           />
 

@@ -1,10 +1,18 @@
 import { useI18n } from "@/lib/i18n";
+import { Helmet } from "react-helmet-async";
 
 export default function Privacy() {
   const { t } = useI18n();
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privatlivspolitik | MAN MALER</title>
+        <meta name="description" content="Privatlivspolitik for MAN MALER (MAN Maler ApS) — hvordan vi behandler personoplysninger." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://manmaler.dk/privatliv" />
+      </Helmet>
+
       <div className="max-w-3xl mx-auto px-6 py-20">
 
         <h1 className="text-3xl font-bold text-foreground mb-6">
