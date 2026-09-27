@@ -22,6 +22,11 @@ export default function About() {
     "København", "Hedehusene", "Taastrup", "Roskilde", "Ballerup",
     "Glostrup", "Hvidovre", "Albertslund", "Ishøj", "Brøndby"
   ];
+
+  const cityLinks: Record<string, string> = {
+    "København": "/maler-koebenhavn",
+    "Roskilde": "/maler-roskilde",
+  };
   return (
 <>
 <Helmet>
@@ -234,9 +239,9 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
       {coverageCities.map((city, i) => (
         <AnimatedSection key={city} delay={i * 0.05}>
-          {city === "København" ? (
+          {cityLinks[city] ? (
             <Link
-              to="/maler-koebenhavn"
+              to={cityLinks[city]}
               className="flex items-center gap-2 p-4 rounded-xl bg-white/70 backdrop-blur-sm hover:bg-white transition text-sm font-medium text-foreground shadow-sm"
             >
               <MapPin size={16} className="text-primary flex-shrink-0" />
