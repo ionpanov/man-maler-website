@@ -10,18 +10,6 @@ interface Area {
 
 const AREAS: Area[] = [
   {
-    name: "Albertslund",
-    desc: "Albertslund er kendt for sit rækkehus- og murstensbyggeri fra 1960'erne og 70'erne. Her arbejder vi ofte med facaderenovering og træbeskyttelse på ældre bebyggelser.",
-  },
-  {
-    name: "Ishøj",
-    desc: "Ishøj i den sydvestlige del af Storkøbenhavn har blandet boligbyggeri tæt på kysten. Vi udfører malerarbejde til både private boliger og erhvervslokaler.",
-  },
-  {
-    name: "Brøndby",
-    desc: "Brøndby har en kombination af rækkehuse, villaer og erhvervsområder. Vi løser opgaver fra facademaling til kontormaling for virksomheder i kommunen.",
-  },
-  {
     name: "Lyngby",
     desc: "Kongens Lyngby i det nordlige Storkøbenhavn har mange store villaer og herskabelige huse. Her udfører vi ofte facademaling og omfattende renoveringsopgaver.",
   },
