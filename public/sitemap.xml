@@ -56,6 +56,24 @@
 </url>
 
 <url>
+  <loc>https://manmaler.dk/maler-frederiksberg</loc>
+  <lastmod>2026-09-27</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/maler-hvidovre</loc>
+  <lastmod>2026-09-27</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/maler-rodovre</loc>
+  <lastmod>2026-09-27</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
   <loc>https://manmaler.dk/vilkar</loc>
   <lastmod>2026-09-27</lastmod>
   <priority>0.3</priority>

@@ -10,18 +10,6 @@ interface Area {
 
 const AREAS: Area[] = [
   {
-    name: "Frederiksberg",
-    desc: "Frederiksberg er tæt bebygget med mange ældre etageejendomme og karakteristiske facader. Her ligger vores fokus ofte på indvendig maling af lejligheder samt facadearbejde på ældre bygninger.",
-  },
-  {
-    name: "Hvidovre",
-    desc: "Hvidovre har mange rækkehuse og parcelhuse fra midten af 1900-tallet. Vi hjælper boligejere med facademaling, træbeskyttelse og renovering af ældre overflader.",
-  },
-  {
-    name: "Rødovre",
-    desc: "Rødovre består primært af villakvarterer og rækkehusbebyggelser tæt på København. Typiske opgaver her er udvendig vedligeholdelse og indendørs renovering.",
-  },
-  {
     name: "Herlev",
     desc: "Herlev har en blanding af boligblokke og villakvarterer. Vi udfører både erhvervsmaling til virksomheder i området og indendørs maling for private boligejere.",
   },
