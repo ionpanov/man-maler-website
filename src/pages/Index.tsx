@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Paintbrush, Building2, Home, Star, Shield, HandCoins, Handshake,Layers, Wrench, Hammer} from "lucide-react";
 
 import heroImg from "@/assets/hero-bg.webp";
-import project1 from "@/assets/projects/proj53.jpg";
-import project2 from "@/assets/projects/p5.jpg";
-import project3 from "@/assets/projects/proj36.jpg";
+import project1 from "@/assets/projects/proj53.webp";
+import project2 from "@/assets/projects/p5.webp";
+import project3 from "@/assets/projects/proj36.webp";
 
 import video1 from "@/assets/projects/video1.mp4";
 import video2 from "@/assets/projects/video3.mp4";

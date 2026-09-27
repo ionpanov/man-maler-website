@@ -5,12 +5,12 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 
 /* Featured images */
-import proj53 from "@/assets/projects/proj53.jpg";
-import proj5 from "@/assets/projects/p5.jpg";
-import proj9 from "@/assets/projects/proj36.jpg";
-import proj14 from "@/assets/projects/proj51.jpg";
-import proj21 from "@/assets/projects/pic16.jpg";
-import proj33 from "@/assets/projects/pic6.jpg";
+import proj53 from "@/assets/projects/proj53.webp";
+import proj5 from "@/assets/projects/p5.webp";
+import proj9 from "@/assets/projects/proj36.webp";
+import proj14 from "@/assets/projects/proj51.webp";
+import proj21 from "@/assets/projects/pic16.webp";
+import proj33 from "@/assets/projects/pic6.webp";
 
 import video1 from "@/assets/projects/video1.mp4";
 import video2 from "@/assets/projects/video4.mp4";
@@ -45,7 +45,7 @@ export default function Projects() {
 
   /* Load ALL images automatically */
   const allImagesFromFolder = Object.values(
-    import.meta.glob("@/assets/projects/*.jpg", { eager: true })
+    import.meta.glob("@/assets/projects/*.webp", { eager: true })
   ).map((img: any) => img.default);
 
   /* Remove featured images from gallery */
