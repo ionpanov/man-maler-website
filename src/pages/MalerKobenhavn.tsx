@@ -9,6 +9,44 @@ const NEIGHBORHOODS = [
   "Frederiksberg", "Valby", "Sydhavn", "Nordvest", "Brønshøj",
 ];
 
+const CHECKLIST = [
+  {
+    p: "Flader og arbejdsomfang",
+    d: "Hvilke vægge, lofter og træværk der behandles, samt hvilke rum arbejdet omfatter.",
+    h: "Gør det muligt at sammenligne tilbud på samme opgave frem for kun på pris.",
+  },
+  {
+    p: "Forarbejde og reparationer",
+    d: "Om spartling, tapetnedtagning, reparation af revner og håndtering af løs maling, nikotin, fugtspor eller småskader er inkluderet.",
+    h: "God klargøring har stor betydning for jævne flader og et holdbart resultat.",
+  },
+  {
+    p: "Maling og antal lag",
+    d: "Type maling, glans, slidstyrke, vaskbarhed og hvor mange lag der påføres.",
+    h: "Malingens egenskaber skal passe til rummet og underlaget, særligt i eksempelvis køkken, entré og børneværelse.",
+  },
+  {
+    p: "Adgangsforhold",
+    d: "Hvordan forhold som fjerde sal uden elevator, begrænset parkering eller arbejde i en beboet ejendom håndteres.",
+    h: "Adgangsforhold kan påvirke både pris, planlægning og behovet for koordinering.",
+  },
+  {
+    p: "Afdækning og beskyttelse",
+    d: "Hvordan gulve og inventar beskyttes under arbejdet.",
+    h: "Reducerer risikoen for skader og gør forløbet mere smidigt, især hvis boligen er i brug.",
+  },
+  {
+    p: "Oprydning og slutrengøring",
+    d: "Om afdækning fjernes, og om oprydning og slutrengøring er en del af prisen.",
+    h: "Forhindrer uklarhed om, hvad der skal ordnes, når malerarbejdet er afsluttet.",
+  },
+  {
+    p: "Tidsplan",
+    d: "Hvornår arbejdet kan begynde, hvor længe det forventes at vare, og hvordan arbejdet tilrettelægges, hvis du bliver boende undervejs.",
+    h: "Gør det lettere at vurdere, hvordan projektet påvirker hverdagen.",
+  },
+];
+
 const FAQS = [
   {
     q: "Hvad koster en maler i København?",
@@ -199,55 +237,38 @@ export default function MalerKobenhavn() {
             <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
               Tjekliste til tilbud fra malere i København
             </h3>
-            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 mb-10">
-              <table className="w-full min-w-[640px] text-sm border-collapse">
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {CHECKLIST.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Skal med i tilbuddet: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Hvorfor: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
                 <thead>
                   <tr className="border-b border-border text-left">
-                    <th className="py-3 pr-4 font-semibold text-foreground">Punkt at afklare</th>
-                    <th className="py-3 pr-4 font-semibold text-foreground">Hvad du bør få beskrevet i tilbuddet</th>
-                    <th className="py-3 font-semibold text-foreground">Hvorfor det er relevant</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Punkt at afklare</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Hvad du bør få beskrevet i tilbuddet</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Hvorfor det er relevant</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    {
-                      p: "Flader og arbejdsomfang",
-                      d: "Hvilke vægge, lofter og træværk der behandles, samt hvilke rum arbejdet omfatter.",
-                      h: "Gør det muligt at sammenligne tilbud på samme opgave frem for kun på pris.",
-                    },
-                    {
-                      p: "Forarbejde og reparationer",
-                      d: "Om spartling, tapetnedtagning, reparation af revner og håndtering af løs maling, nikotin, fugtspor eller småskader er inkluderet.",
-                      h: "God klargøring har stor betydning for jævne flader og et holdbart resultat.",
-                    },
-                    {
-                      p: "Maling og antal lag",
-                      d: "Type maling, glans, slidstyrke, vaskbarhed og hvor mange lag der påføres.",
-                      h: "Malingens egenskaber skal passe til rummet og underlaget, særligt i eksempelvis køkken, entré og børneværelse.",
-                    },
-                    {
-                      p: "Adgangsforhold",
-                      d: "Hvordan forhold som fjerde sal uden elevator, begrænset parkering eller arbejde i en beboet ejendom håndteres.",
-                      h: "Adgangsforhold kan påvirke både pris, planlægning og behovet for koordinering.",
-                    },
-                    {
-                      p: "Afdækning og beskyttelse",
-                      d: "Hvordan gulve og inventar beskyttes under arbejdet.",
-                      h: "Reducerer risikoen for skader og gør forløbet mere smidigt, især hvis boligen er i brug.",
-                    },
-                    {
-                      p: "Oprydning og slutrengøring",
-                      d: "Om afdækning fjernes, og om oprydning og slutrengøring er en del af prisen.",
-                      h: "Forhindrer uklarhed om, hvad der skal ordnes, når malerarbejdet er afsluttet.",
-                    },
-                    {
-                      p: "Tidsplan",
-                      d: "Hvornår arbejdet kan begynde, hvor længe det forventes at vare, og hvordan arbejdet tilrettelægges, hvis du bliver boende undervejs.",
-                      h: "Gør det lettere at vurdere, hvordan projektet påvirker hverdagen.",
-                    },
-                  ].map((row) => (
+                  {CHECKLIST.map((row) => (
                     <tr key={row.p} className="border-b border-border align-top">
-                      <td className="py-3 pr-4 font-medium text-foreground whitespace-nowrap">{row.p}</td>
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
                       <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
                       <td className="py-3 text-muted-foreground">{row.h}</td>
                     </tr>
