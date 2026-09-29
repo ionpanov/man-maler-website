@@ -364,36 +364,48 @@ export default function MalerKobenhavn() {
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
               Maler København: Klar til gratis, uforpligtende tilbud fra vores maler?
             </h2>
-            <p className="text-muted-foreground mb-8">
-              Når du skal vælge maler i København, bør det være let at få et
-              klart billede af både opgaven, processen og prisen. Et godt
-              malerarbejde begynder ikke med en standardløsning, men med en
-              grundig vurdering af boligens stand, lysforhold, materialer og
-              dine ønsker til finish. Derfor tager vores maler udgangspunkt i
-              netop dine rum – uanset om det gælder en enkelt væg, en klassisk
-              københavnerlejlighed, en istandsættelse ved fraflytning eller en
-              større renovering af hus eller erhvervslokaler. Du kan få et
-              gratis tilbud, der beskriver arbejdets omfang og de vigtigste
-              forudsætninger, så du ved, hvad der er inkluderet, før arbejdet
-              går i gang. Et uforpligtende tilbud giver dig samtidig ro til at
-              sammenligne løsninger og stille de spørgsmål, der har betydning:
-              Skal væggene spartles helt op? Er der behov for grunder? Hvilken
-              maling passer til køkken, soveværelse eller facade? Og hvordan
-              planlægges arbejdet, så hverdagen påvirkes mindst muligt? Vi
-              mener, at et maler tilbud skal være gennemskueligt frem for blot
-              lavt sat. Derfor kan en fast pris aftales, når opgaven er
-              besigtiget og afgrænset, så der er en fælles forståelse af
-              materialer, forarbejde, antal behandlinger og det ønskede
-              resultat. Det mindsker risikoen for overraskelser undervejs og
-              gør det lettere at træffe en sikker beslutning. Kontakt os, når
-              du har brug for professionel sparring om farver, overflader
-              eller praktisk planlægning i København og omegn. Med billeder,
-              mål eller en kort beskrivelse af opgaven kan vi ofte give en
-              indledende vurdering hurtigt; ved mere omfattende arbejde er en
-              besigtigelse den bedste vej til en præcis løsning. Målet er
-              enkelt: veludført malerarbejde, ordentlig dialog og et tilbud,
-              der er lige så klart som den færdige overflade.
-            </p>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
+              <p>
+                Når du skal vælge maler i København, bør det være let at få
+                et klart billede af både opgaven, processen og prisen. Et
+                godt malerarbejde begynder ikke med en standardløsning, men
+                med en grundig vurdering af boligens stand, lysforhold,
+                materialer og dine ønsker til finish. Derfor tager vores
+                maler udgangspunkt i netop dine rum – uanset om det gælder en
+                enkelt væg, en klassisk københavnerlejlighed, en
+                istandsættelse ved fraflytning eller en større renovering af
+                hus eller erhvervslokaler.
+              </p>
+              <p>
+                Du kan få et gratis tilbud, der beskriver arbejdets omfang og
+                de vigtigste forudsætninger, så du ved, hvad der er
+                inkluderet, før arbejdet går i gang. Et uforpligtende tilbud
+                giver dig samtidig ro til at sammenligne løsninger og stille
+                de spørgsmål, der har betydning: Skal væggene spartles helt
+                op? Er der behov for grunder? Hvilken maling passer til
+                køkken, soveværelse eller facade? Og hvordan planlægges
+                arbejdet, så hverdagen påvirkes mindst muligt?
+              </p>
+              <p>
+                Vi mener, at et maler tilbud skal være gennemskueligt frem
+                for blot lavt sat. Derfor kan en fast pris aftales, når
+                opgaven er besigtiget og afgrænset, så der er en fælles
+                forståelse af materialer, forarbejde, antal behandlinger og
+                det ønskede resultat. Det mindsker risikoen for
+                overraskelser undervejs og gør det lettere at træffe en
+                sikker beslutning.
+              </p>
+              <p>
+                Kontakt os, når du har brug for professionel sparring om
+                farver, overflader eller praktisk planlægning i København og
+                omegn. Med billeder, mål eller en kort beskrivelse af
+                opgaven kan vi ofte give en indledende vurdering hurtigt; ved
+                mere omfattende arbejde er en besigtigelse den bedste vej til
+                en præcis løsning. Målet er enkelt: veludført malerarbejde,
+                ordentlig dialog og et tilbud, der er lige så klart som den
+                færdige overflade.
+              </p>
+            </div>
 
             <h3 className="text-lg font-display font-semibold mb-4 text-card-foreground">
               Sådan får du et klart tilbud
