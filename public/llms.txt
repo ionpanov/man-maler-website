@@ -26,6 +26,7 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 - [Maler Taastrup](https://manmaler.dk/maler-taastrup): Dedicated city page for home-sale-prep painting and commercial/erhverv painting in Taastrup
 - [Maler Rødovre](https://manmaler.dk/maler-rodovre): Dedicated city page for mid-century house renovation painting (incl. eternit/asbestos guidance) in Rødovre
 - [Maler Næstved](https://manmaler.dk/maler-naestved): Dedicated city page for commercial and institutional painting (offices, schools, care homes, industrial halls) in Næstved
+- [Maler Gentofte](https://manmaler.dk/maler-gentofte): Dedicated city page for premium-finish villa painting and decorative techniques in Gentofte
 - [Referencer (Projects)](https://manmaler.dk/referencer): Completed project gallery and case examples
 - [Om os (About)](https://manmaler.dk/om-os): Company story, founders, and values
 - [Kontakt (Contact)](https://manmaler.dk/kontakt): Contact form, phone, email, and business information
