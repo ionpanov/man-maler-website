@@ -21,7 +21,7 @@ export default function LocalBusinessSchema() {
       "København", "Frederiksberg", "Ballerup", "Herlev", "Glostrup",
       "Hvidovre", "Rødovre", "Taastrup", "Albertslund", "Lyngby",
       "Gentofte", "Roskilde", "Greve", "Køge", "Hillerød",
-      "Helsingør", "Næstved",
+      "Helsingør", "Næstved", "Hedehusene", "Brøndby", "Ishøj",
     ].map((city) => ({ "@type": "City", name: city })),
     openingHoursSpecification: [
       {
