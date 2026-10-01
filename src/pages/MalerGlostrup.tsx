@@ -6,6 +6,41 @@ import exteriorImg from "@/assets/exterior.webp";
 
 const AREAS = ["Glostrup by", "Hvissinge", "Ejby", "Stadion-området"];
 
+const KEY_TAKEAWAYS = [
+  "Mange rækkehuse i Glostrup ligger i andelsboligforeninger, hvor facadefarve skal godkendes af bestyrelsen.",
+  "Et samlet tilbud til flere rækkehuse i samme forening kan ofte give en mere effektiv planlægning.",
+  "Klinikker og sundhedsfaciliteter kræver hygiejnevenlige overflader og planlægning uden for patienttid.",
+  "Grundig klargøring af vinduer og træværk er afgørende for et holdbart resultat på ældre rækkehuse.",
+];
+
+const HOUSING_TABLE = [
+  {
+    p: "Facade (andelsbolig/ejerforening)",
+    d: "Farve og materiale skal ofte matche foreningens godkendte facadeplan.",
+    h: "Afklar godkendelse hos bestyrelsen, før farve vælges endeligt.",
+  },
+  {
+    p: "Facade (privat villa)",
+    d: "Vejrbestandig facademaling tilpasset husets materiale og stil.",
+    h: "Afrensning og reparation af puds eller træværk bør vurderes først.",
+  },
+  {
+    p: "Vinduer og træværk",
+    d: "Slidstærk træmaling med god hæftning til ældre, ofte tidligere malet træ.",
+    h: "Afrensning af gamle malingslag giver det mest holdbare resultat.",
+  },
+  {
+    p: "Venteværelse og klinik",
+    d: "Rengøringsvenlig, hygiejnisk maling, der tåler hyppig afrensning.",
+    h: "Planlægges typisk uden for åbningstid, så patienter ikke forstyrres.",
+  },
+  {
+    p: "Personalefaciliteter (sundhedssektor)",
+    d: "Robust, neutral maling der understøtter et roligt arbejdsmiljø.",
+    h: "Koordineres med klinikkens drift for mindst mulig forstyrrelse.",
+  },
+];
+
 const FAQS = [
   {
     q: "Maler I villaer og rækkehuse i Glostrup?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster det at få malet et rækkehus i Glostrup?",
     a: "Prisen afhænger af husets størrelse og stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set opgaven.",
   },
+  {
+    q: "Skal facaden godkendes af andelsboligforeningen, før den males?",
+    a: "I mange af Glostrups andelsboligforeninger og ejerforeninger skal facadefarve og materialer godkendes af bestyrelsen, før arbejdet går i gang. Vi hjælper gerne med at afklare dette og tilpasser tilbuddet til foreningens retningslinjer.",
+  },
+  {
+    q: "Udfører I malerarbejde i sundhedssektoren, f.eks. klinikker?",
+    a: "Ja, vi maler gerne venteværelser, kontorer og personalefaciliteter på klinikker og i sundhedssektoren, med fokus på hygiejnevenlige overflader og planlægning, der ikke forstyrrer patienter eller personale.",
+  },
 ];
 
 export default function MalerGlostrup() {
   return (
     <>
       <Helmet>
-        <title>Maler i Glostrup | Facademaling & Renovering – MAN MALER</title>
+        <title>Maler Glostrup | Malerfirma, rækkehuse & sundhedssektor</title>
         <meta
           name="description"
-          content="Søger du en maler i Glostrup? MAN MALER udfører facademaling, indendørs maling og renovering af villaer og rækkehuse. Gratis og uforpligtende tilbud."
+          content="Maler i Glostrup til rækkehuse, andelsboliger og sundhedssektoren. Indvendig maling, facademaling og hygiejnevenlige overflader. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler glostrup, malerfirma glostrup, facademaling glostrup, maler hvissinge, maler ejby"
+          content="maler glostrup, malerfirma glostrup, indvendig maling glostrup, facademaling glostrup, maler hvissinge, maler ejby"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-glostrup" />
 
-        <meta property="og:title" content="Maler i Glostrup | MAN MALER" />
+        <meta property="og:title" content="Maler Glostrup | Malerfirma, rækkehuse & sundhedssektor" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Glostrup. Facademaling, indendørs maling og renovering. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerGlostrup() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Glostrup | MAN MALER" />
+        <meta name="twitter:title" content="Maler Glostrup | Malerfirma, rækkehuse & sundhedssektor" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Glostrup. Gratis og uforpligtende tilbud."
@@ -140,6 +183,103 @@ export default function MalerGlostrup() {
         </div>
       </section>
 
+      {/* ARTICLE — ANDELSBOLIGER OG SUNDHEDSSEKTOR */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Rækkehuse, andelsboliger og sundhedssektoren i Glostrup
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Glostrup er kendetegnet ved mange rækkehuse, hvoraf en stor
+                del er organiseret i andelsboligforeninger eller
+                ejerforeninger. Her er facademaling sjældent en individuel
+                beslutning: farve og materialer skal typisk godkendes af
+                bestyrelsen, så hele bebyggelsen fremstår ensartet. Vi
+                hjælper gerne med at afklare foreningens retningslinjer, før
+                vi giver et tilbud, så der ikke opstår overraskelser
+                undervejs.
+              </p>
+              <p>
+                Når flere rækkehuse i samme forening skal males samtidig,
+                giver det ofte god mening at samle opgaven i ét forløb — det
+                kan både give en mere effektiv planlægning og en mere
+                ensartet pris for de involverede husstande.
+              </p>
+              <p>
+                Glostrup har desuden en betydelig sundhedssektor, og vi
+                udfører gerne malerarbejde i klinikker, venteværelser og
+                personalefaciliteter. Her er kravene anderledes end i en
+                privat bolig: overfladerne skal være hygiejnevenlige og
+                nemme at rengøre, og arbejdet planlægges typisk uden for
+                åbningstid, så patienter og personale ikke forstyrres.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: bolig og sundhedssektor i Glostrup
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {HOUSING_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade eller lokale</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {HOUSING_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du opgaven
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Afklar med bestyrelsen, om facadefarve og materialer skal godkendes først.",
+                "Få et samlet tilbud, hvis flere rækkehuse i samme forening skal males.",
+                "Nævn, om opgaven er en klinik eller sundhedsfacilitet, så vi kan planlægge uden for åbningstid.",
+                "Vælg hygiejnevenlig maling i venteværelser og personalefaciliteter.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -172,6 +312,63 @@ export default function MalerGlostrup() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I GLOSTRUP */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal rækkehuset have ny facade efter godkendelse fra
+              andelsboligforeningen, eller skal klinikken have malet
+              venteværelset? MAN MALER er din lokale maler i Glostrup, med
+              erfaring i både boligforeningers krav og sundhedssektorens
+              behov for hygiejnevenlige overflader. Vi giver altid et
+              gratis, uforpligtende tilbud, efter vi har set opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: boligforeninger og sundhedssektor i Glostrup
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Vi har erfaring med den praktiske proces omkring
+                andelsboligforeninger og ejerforeninger i Glostrup — fra at
+                afklare, hvad der skal godkendes af bestyrelsen, til at give
+                et tilbud, der dækker flere rækkehuse i samme forening.
+                Det gør processen enklere for alle parter og sikrer et
+                ensartet resultat på tværs af bebyggelsen.
+              </p>
+              <p>
+                I sundhedssektoren stiller vi skarpt på hygiejne og
+                planlægning. Overflader i klinikker og venteværelser skal
+                kunne tåle hyppig rengøring, og arbejdet koordineres altid
+                med klinikkens drift, så patienter og personale forstyrres
+                mindst muligt.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Glostrup — uanset om det er et
+                rækkehus, der skal godkendes af en forening, eller en
+                sundhedsfacilitet, der kræver særlig planlægning.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
