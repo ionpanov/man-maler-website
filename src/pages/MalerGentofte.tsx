@@ -6,6 +6,41 @@ import renovationImg from "@/assets/renovation.webp";
 
 const AREAS = ["Hellerup", "Charlottenlund", "Ordrup", "Vangede"];
 
+const KEY_TAKEAWAYS = [
+  "Gentoftes store villaer har ofte mange detaljer — lister, paneler og stuk — der kræver præcision frem for hurtige løsninger.",
+  "Dekorative teknikker som kalkmaling og strukturmaling kan fremhæve en villas arkitektoniske stil.",
+  "Mange villaer er bevaringsværdige, hvilket kan betyde retningslinjer for facadefarver og materialer.",
+  "Kvalitetsmaterialer og god tid til hvert lag er afgørende for et resultat, der holder i mange år.",
+];
+
+const FINISH_TABLE = [
+  {
+    p: "Lister, paneler og gerichter",
+    d: "Præcisionsarbejde med skarpe kanter og jævne overgange mellem flader og farver.",
+    h: "Kræver grundig afdækning og tålmodighed — det er her, det professionelle resultat ses tydeligst.",
+  },
+  {
+    p: "Stuk og klassiske detaljer",
+    d: "Forsigtig maling, der bevarer detaljernes skarphed uden at fylde profilerne.",
+    h: "Ældre stuk kan være skrøbelig og bør behandles varsomt under hele processen.",
+  },
+  {
+    p: "Facade (bevaringsværdig villa)",
+    d: "Materialer og farver, der respekterer villaens oprindelige arkitektoniske stil.",
+    h: "Tjek eventuelle kommunale retningslinjer for farvevalg, før arbejdet igangsættes.",
+  },
+  {
+    p: "Dekorative vægge (kalkmaling m.m.)",
+    d: "Levende, naturlig overflade med dybde, der adskiller sig fra almindelig vægmaling.",
+    h: "Kræver erfaring med teknikken, da resultatet er svært at rette, når det først er påført.",
+  },
+  {
+    p: "Udvendigt træværk og vinduer",
+    d: "Slidstærk, vejrbestandig træmaling, der matcher husets høje finish-niveau.",
+    h: "Grundig afrensning og flere tynde lag giver det mest holdbare og pæne resultat.",
+  },
+];
+
 const FAQS = [
   {
     q: "Arbejder I med de store villaer, Gentofte er kendt for?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster det at få malet en villa i Gentofte?",
     a: "Prisen afhænger af husets størrelse, stand og materialevalg. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set opgaven.",
   },
+  {
+    q: "Tilbyder I dekorative malerteknikker som kalkmaling?",
+    a: "Ja, vi udfører gerne kalkmaling, strukturmaling og andre dekorative teknikker, der passer til villaens arkitektur og det ønskede udtryk.",
+  },
+  {
+    q: "Er der særlige hensyn ved bevaringsværdige villaer?",
+    a: "Mange villaer i Gentofte er bevaringsværdige, og her kan der være retningslinjer for facadefarver og materialer. Vi hjælper gerne med at afklare dette, før vi anbefaler en løsning.",
+  },
 ];
 
 export default function MalerGentofte() {
   return (
     <>
       <Helmet>
-        <title>Maler i Gentofte | Villamaling & Renovering – MAN MALER</title>
+        <title>Maler Gentofte | Malerfirma, villamaling & høj finish</title>
         <meta
           name="description"
-          content="Søger du en maler i Gentofte? MAN MALER udfører facademaling, indendørs maling og renovering af villaer med præcision og høj finish. Gratis tilbud."
+          content="Maler i Gentofte til store villaer. Indvendig maling med høj finish, dekorative teknikker og facademaling af bevaringsværdige huse. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler gentofte, malerfirma gentofte, facademaling gentofte, maler hellerup, maler charlottenlund"
+          content="maler gentofte, malerfirma gentofte, indvendig maling gentofte, facademaling gentofte, maler hellerup, maler charlottenlund"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-gentofte" />
 
-        <meta property="og:title" content="Maler i Gentofte | MAN MALER" />
+        <meta property="og:title" content="Maler Gentofte | Malerfirma, villamaling & høj finish" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Gentofte. Facademaling, indendørs maling og renovering af villaer. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerGentofte() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Gentofte | MAN MALER" />
+        <meta name="twitter:title" content="Maler Gentofte | Malerfirma, villamaling & høj finish" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Gentofte. Gratis og uforpligtende tilbud."
@@ -142,6 +185,103 @@ export default function MalerGentofte() {
         </div>
       </section>
 
+      {/* ARTICLE — HØJ FINISH OG DEKORATIVE TEKNIKKER */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Villamaling med høj finish i Gentofte
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Gentofte er kendt for store, velholdte villaer, hvor
+                detaljerne ofte betyder lige så meget som de store flader.
+                Lister, paneler, gerichter og stuk kræver en anden tilgang
+                end en almindelig vægflade — her handler det om
+                præcisionsarbejde, skarpe kanter og jævne overgange mellem
+                farver, snarere end at komme hurtigt videre.
+              </p>
+              <p>
+                Mange af villaerne i kommunen er desuden bevaringsværdige,
+                hvilket betyder, at facadefarver og materialer bør
+                respektere husets oprindelige arkitektoniske stil. Vi
+                afklarer gerne eventuelle kommunale retningslinjer, før vi
+                anbefaler en løsning, så resultatet både ser godt ud og
+                overholder de gældende regler.
+              </p>
+              <p>
+                For boligejere, der ønsker noget ud over almindelig
+                vægmaling, tilbyder vi også dekorative teknikker som
+                kalkmaling og strukturmaling. Disse teknikker giver en
+                levende, naturlig overflade med dybde, men kræver erfaring —
+                resultatet er svært at rette, når det først er påført, så
+                forberedelse og præcision er afgørende.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: finish og teknikker til villaen
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {FINISH_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade eller detalje</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {FINISH_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan sikrer du det bedste resultat
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Afsæt tid til en besigtigelse, så alle detaljer og ønsker bliver afklaret på forhånd.",
+                "Afklar om huset er bevaringsværdigt, før facadefarve vælges.",
+                "Overvej en dekorativ teknik som kalkmaling, hvis du ønsker et unikt udtryk.",
+                "Vælg kvalitetsmaterialer, der matcher villaens niveau og holder i mange år.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -174,6 +314,64 @@ export default function MalerGentofte() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I GENTOFTE */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal villaen i Gentofte have ny facade, eller ønsker du et
+              unikt udtryk indendørs med en dekorativ teknik? MAN MALER er
+              din lokale maler i Gentofte, med erfaring i det høje
+              finish-niveau, mange boligejere i området forventer. Vi giver
+              altid et gratis, uforpligtende tilbud, efter vi har set
+              opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: præcision til Gentoftes villaer
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Vores opgaver i Gentofte handler sjældent om blot at få
+                malet en flade — de handler om at ramme et resultat, der
+                lever op til villaens niveau og boligejerens forventninger.
+                Det gælder, uanset om opgaven er en klassisk facademaling, en
+                totalrenovering af en ældre villa, eller en dekorativ
+                vægbehandling, der skal give rummet et særligt udtryk.
+              </p>
+              <p>
+                Vi tager os altid god tid til forberedelse og klargøring, da
+                det er her, grundlaget for et holdbart og flot resultat
+                lægges. Ved større opgaver kombinerer vi ofte facadearbejde
+                og indendørs renovering i én sammenhængende proces, så
+                villaen fremstår ensartet, både udvendigt og indvendigt.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din villa i Gentofte. Ved opgaver af denne
+                karakter anbefaler vi altid en besigtigelse, så vi kan give
+                et tilbud, der tager højde for alle detaljer, ønsker og
+                eventuelle bevaringshensyn.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
