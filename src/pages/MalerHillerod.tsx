@@ -6,6 +6,41 @@ import interiorImg from "@/assets/interior.webp";
 
 const AREAS = ["Hillerød Bymidte", "Ålholm", "Sophienborg", "Favrholm"];
 
+const KEY_TAKEAWAYS = [
+  "Ny puds skal typisk afbinde i flere uger til måneder, før facaden kan males.",
+  "Materialevalg i et nybygget hus bør være forenelige med byggeriets garantibestemmelser.",
+  "Nye gipsvægge og lofter kræver en anden grunder end ældre, tidligere malede overflader.",
+  "Et samlet tilbud på hele huset giver ofte den mest effektive planlægning for nybyggeri.",
+];
+
+const NEWBUILD_TABLE = [
+  {
+    p: "Nypudset facade",
+    d: "Vejrbestandig facademaling, der først påføres, når pudsen er fuldt afbundet.",
+    h: "Afbindingstid afhænger af pudstype — tjek altid med byggeriets anvisninger.",
+  },
+  {
+    p: "Nye indvendige vægge og lofter",
+    d: "Grunder tilpasset nyt gips, så den efterfølgende maling hæfter korrekt.",
+    h: "Nye overflader kræver typisk en anden forbehandling end ældre, tidligere malede vægge.",
+  },
+  {
+    p: "Nyt træværk, lister og fodpaneler",
+    d: "Slidstærk maling med jævn finish på helt nyt, ubehandlet træ.",
+    h: "Grundig afdækning og præcision giver det mest professionelle resultat fra start.",
+  },
+  {
+    p: "Køkken og bad i nybygget hus",
+    d: "Vaskbar, fugtbestandig maling tilpasset nye overflader.",
+    h: "Mindre forarbejde end i ældre huse, da underlaget er nyt og uden tidligere skader.",
+  },
+  {
+    p: "Garage og carport (nybygget)",
+    d: "Robust udendørs maling, der matcher hovedhusets farve og stil.",
+    h: "Kan med fordel udføres i samme forløb som facademalingen af huset.",
+  },
+];
+
 const FAQS = [
   {
     q: "Maler I både ældre og nyere boliger i Hillerød?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster det at få malet en bolig i Hillerød?",
     a: "Prisen afhænger af boligens størrelse og stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set eller fået beskrevet opgaven.",
   },
+  {
+    q: "Hvor længe skal en nypudset facade tørre, før den kan males?",
+    a: "Det afhænger af pudstypen, men ny puds skal typisk have flere uger til måneder til at afbinde, før den males. Vi vurderer altid facadens stand og rådgiver om det rette tidspunkt.",
+  },
+  {
+    q: "Kan I male et nybygget hus i Favrholm, uden at det går ud over byggegarantien?",
+    a: "Ja, vi bruger produkter og metoder, der er forenelige med byggeriets garantibestemmelser. Vi anbefaler altid at tjekke byggegarantien, før der vælges materialer, som afviger fra byggeriets anbefalinger.",
+  },
 ];
 
 export default function MalerHillerod() {
   return (
     <>
       <Helmet>
-        <title>Maler i Hillerød | Indendørs & Renovering – MAN MALER</title>
+        <title>Maler Hillerød | Malerfirma, nybyggeri & villaer</title>
         <meta
           name="description"
-          content="Søger du en maler i Hillerød? MAN MALER udfører indendørs maling, facademaling og renovering af villaer og nyere boliger. Gratis tilbud."
+          content="Maler i Hillerød til nybyggeri i Favrholm og ældre villaer. Indvendig maling, nypudset facade og renovering. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler hillerød, malerfirma hillerød, facademaling hillerød, maler favrholm, maler sophienborg"
+          content="maler hillerød, malerfirma hillerød, indvendig maling hillerød, facademaling hillerød, maler favrholm, maler sophienborg"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-hillerod" />
 
-        <meta property="og:title" content="Maler i Hillerød | MAN MALER" />
+        <meta property="og:title" content="Maler Hillerød | Malerfirma, nybyggeri & villaer" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Hillerød. Indendørs maling, facademaling og renovering. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerHillerod() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Hillerød | MAN MALER" />
+        <meta name="twitter:title" content="Maler Hillerød | Malerfirma, nybyggeri & villaer" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Hillerød. Gratis og uforpligtende tilbud."
@@ -141,6 +184,103 @@ export default function MalerHillerod() {
         </div>
       </section>
 
+      {/* ARTICLE — MALING AF NYBYGGERI I FAVRHOLM */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maling af nybyggeri i Favrholm og Hillerød
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Hillerød er en by i vækst, og særligt det nye byområde
+                Favrholm betyder, at mange boligejere står med et helt nyt
+                hus, der for første gang skal males. Det er en anden opgave
+                end at male et ældre hus: der skal ikke fjernes gammel
+                maling, men til gengæld stiller nye overflader deres egne
+                krav til tidspunkt og materialevalg.
+              </p>
+              <p>
+                En nypudset facade skal typisk afbinde i flere uger til
+                måneder, afhængigt af pudstypen, før den kan males. Males
+                facaden for tidligt, risikerer man, at fugt i pudsen
+                beskadiger den nye maling. Vi rådgiver altid om det rette
+                tidspunkt, baseret på byggeriets anvisninger og facadens
+                stand.
+              </p>
+              <p>
+                Det er også værd at være opmærksom på, at materialevalget i
+                et nybygget hus bør være foreneligt med byggeriets
+                garantibestemmelser. Vi bruger produkter, der ikke går ud
+                over byggegarantien, og anbefaler altid at tjekke dette,
+                hvis der ønskes materialer, som afviger fra byggeriets egne
+                anbefalinger.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling af det nybyggede hus
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {NEWBUILD_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {NEWBUILD_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du nybyggeriet
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Tjek byggeriets anvisninger for, hvornår facaden tidligst kan males.",
+                "Vælg materialer, der er forenelige med byggegarantien.",
+                "Brug grunder tilpasset nye gipsvægge, før den endelige farve påføres.",
+                "Få et samlet tilbud på hele huset, hvis flere flader skal males første gang.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -173,6 +313,61 @@ export default function MalerHillerod() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I HILLERØD */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal det nybyggede hus i Favrholm males for første gang, eller
+              trænger den ældre villa til renovering? MAN MALER er din
+              lokale maler i Hillerød, med erfaring i både nybyggeri og
+              ældre boliger. Vi giver altid et gratis, uforpligtende
+              tilbud, efter vi har set eller fået beskrevet opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: fra nybyggeri til ældre villaer
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Hillerøds vækst betyder, at vi løser opgaver, der spænder
+                bredt — fra et helt nyt hus i Favrholm, der skal males for
+                første gang, til en ældre villa i bymidten eller omkring
+                Ålholm og Sophienborg, der trænger til renovering. Vi
+                tilpasser altid vores tilgang efter husets alder og stand.
+              </p>
+              <p>
+                Ved nybyggeri rådgiver vi om det rette tidspunkt at male, så
+                nye overflader som puds og gips har fået den nødvendige tid
+                til at afbinde. Ved ældre huse lægger vi i stedet vægt på
+                grundig klargøring, så den nye maling holder i mange år
+                fremover.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Hillerød — uanset om det er et
+                nybygget hus eller en ældre villa, der trænger til et nyt
+                udtryk.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
