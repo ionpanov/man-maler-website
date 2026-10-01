@@ -36,6 +36,7 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 - [Maler Ballerup](https://manmaler.dk/maler-ballerup): Dedicated city page for corporate office/brand-color painting and private housing in Ballerup
 - [Maler Hvidovre](https://manmaler.dk/maler-hvidovre): Dedicated city page for period-correct color consulting on funkis/1950s housing in Hvidovre
 - [Maler Hillerød](https://manmaler.dk/maler-hillerod): Dedicated city page for new-build painting (Favrholm plaster curing, builder warranty) and older-villa renovation in Hillerød
+- [Maler Herlev](https://manmaler.dk/maler-herlev): Dedicated city page for retail-chain brand-color painting and after-hours storefront work in Herlev
 - [Referencer (Projects)](https://manmaler.dk/referencer): Completed project gallery and case examples
 - [Om os (About)](https://manmaler.dk/om-os): Company story, founders, and values
 - [Kontakt (Contact)](https://manmaler.dk/kontakt): Contact form, phone, email, and business information
