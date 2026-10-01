@@ -6,6 +6,41 @@ import commercialImg from "@/assets/commercial.webp";
 
 const AREAS = ["Næstved Bymidte", "Karrebæksminde", "Fensmark", "Herlufsholm"];
 
+const KEY_TAKEAWAYS = [
+  "Næstved har et bredt erhvervsliv, og opgaverne spænder fra kontorer og butikker til institutioner og industrihaller.",
+  "Arbejde på skoler og plejehjem planlægges altid uden for brugstid og med lavemitterende maling, hvor det er relevant.",
+  "Industrihaller og produktionslokaler stiller særlige krav til slidstyrke og rengøringsvenlighed.",
+  "Et samlet tilbud på flere lokaler eller bygninger giver ofte den mest effektive planlægning for erhvervskunder.",
+];
+
+const COMMERCIAL_TABLE = [
+  {
+    p: "Kontor",
+    d: "Rolig, professionel farvesætning der understøtter et godt arbejdsmiljø.",
+    h: "Planlægges ofte uden for arbejdstid eller i etaper, så driften ikke forstyrres.",
+  },
+  {
+    p: "Butik og showroom",
+    d: "Farver og finish, der understøtter brandet og skaber et indbydende rum for kunder.",
+    h: "Udføres ofte uden for åbningstid eller i forbindelse med en planlagt lukkeperiode.",
+  },
+  {
+    p: "Skole og institution",
+    d: "Robust, rengøringsvenlig maling, der kan tåle høj brug og hyppig rengøring.",
+    h: "Lavemitterende maling anbefales, og arbejdet planlægges uden for brugstid af hensyn til brugerne.",
+  },
+  {
+    p: "Plejehjem og sundhedsinstitution",
+    d: "Lavemitterende, hygiejnevenlig maling tilpasset beboernes og personalets behov.",
+    h: "Kræver tæt koordinering med institutionen om tidspunkt og adgang til lokalerne.",
+  },
+  {
+    p: "Industrihal og produktion",
+    d: "Slidstærk, ofte kemikalie- og rengøringsbestandig maling tilpasset produktionsmiljøet.",
+    h: "Krav til brandsikring og underlag bør afklares, før materialevalget fastlægges.",
+  },
+];
+
 const FAQS = [
   {
     q: "Udfører I både bolig- og erhvervsmaling i Næstved?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster det at få malet en bolig i Næstved?",
     a: "Prisen afhænger af boligens størrelse og stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set eller fået beskrevet opgaven.",
   },
+  {
+    q: "Kan I male på skoler, plejehjem eller andre institutioner?",
+    a: "Ja, vi udfører gerne malerarbejde på institutioner. Her planlægger vi altid opgaven uden for brugstid, og vi bruger lavemitterende maling, hvor det er relevant af hensyn til brugerne.",
+  },
+  {
+    q: "Udfører I maling af industrihaller og produktionslokaler?",
+    a: "Ja, vi maler gerne industrihaller og produktionslokaler, tilpasset de krav der er til slidstyrke, rengøring og eventuel brandsikring i det enkelte lokale.",
+  },
 ];
 
 export default function MalerNaestved() {
   return (
     <>
       <Helmet>
-        <title>Maler i Næstved | Bolig & Erhvervsmaling – MAN MALER</title>
+        <title>Maler Næstved | Malerfirma, indvendig maling & erhverv</title>
         <meta
           name="description"
-          content="Søger du en maler i Næstved? MAN MALER udfører indendørs maling, facademaling og erhvervsmaling til boliger og virksomheder. Gratis tilbud."
+          content="Maler i Næstved til boliger, institutioner og erhverv. Indvendig maling, facademaling og erhvervsmaling til kontorer og industrihaller. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler næstved, malerfirma næstved, facademaling næstved, maler fensmark, erhvervsmaling næstved"
+          content="maler næstved, malerfirma næstved, indvendig maling næstved, facademaling næstved, maler fensmark, erhvervsmaling næstved"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-naestved" />
 
-        <meta property="og:title" content="Maler i Næstved | MAN MALER" />
+        <meta property="og:title" content="Maler Næstved | Malerfirma, indvendig maling & erhverv" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Næstved. Indendørs maling, facademaling og erhvervsmaling. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerNaestved() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Næstved | MAN MALER" />
+        <meta name="twitter:title" content="Maler Næstved | Malerfirma, indvendig maling & erhverv" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Næstved. Gratis og uforpligtende tilbud."
@@ -141,6 +184,104 @@ export default function MalerNaestved() {
         </div>
       </section>
 
+      {/* ARTICLE — ERHVERVSMALING I NÆSTVED */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Erhvervsmaling til Næstveds virksomheder og institutioner
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Næstved er en af Sydsjællands største byer, og det
+                afspejles i bredden af erhvervsopgaver, vi løser her —
+                kontorer, butikker, skoler, plejehjem og industrihaller har
+                hver især deres egne krav til maling, planlægning og
+                materialevalg. Som maler i Næstved tilpasser vi altid
+                tilgangen efter lokalets brug og de mennesker, der færdes
+                der til daglig.
+              </p>
+              <p>
+                På skoler og plejehjem lægger vi særlig vægt på at planlægge
+                arbejdet uden for brugstid og at bruge lavemitterende
+                maling, så beboere, elever og personale generes mindst
+                muligt. I butikker og showrooms handler det ofte om at
+                ramme den rigtige farve og finish til brandet, mens
+                arbejdet typisk udføres uden for åbningstid eller i en
+                planlagt lukkeperiode.
+              </p>
+              <p>
+                I industrihaller og produktionslokaler stiller opgaven
+                andre krav: her skal malingen ofte kunne tåle kemikalier,
+                hyppig rengøring og slid fra daglig drift, og eventuelle
+                krav til brandsikring skal afklares, før materialevalget
+                fastlægges.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: erhvervsmaling efter lokaletype
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {COMMERCIAL_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Planlægning: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Lokaletype</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Planlægning og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMMERCIAL_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du erhvervsopgaven
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Fortæl os, om lokalet er i brug under arbejdet, så vi kan planlægge tidspunktet rigtigt.",
+                "Nævn, om der er særlige krav til lavemission, hygiejne eller brandsikring.",
+                "Få et samlet tilbud, hvis flere lokaler eller bygninger skal males i samme forløb.",
+                "Afklar adgangsforhold og eventuelle driftstider, før arbejdet planlægges endeligt.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -173,6 +314,65 @@ export default function MalerNaestved() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I NÆSTVED */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal kontoret, skolen eller boligen i Næstved have et nyt lag
+              maling? MAN MALER er din lokale maler i Næstved, med erfaring i
+              både private boliger og det brede erhvervsliv, byen og omegn
+              rummer. Vi giver altid et gratis, uforpligtende tilbud, efter
+              vi har set eller fået beskrevet opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: fra boligmaling til store erhvervsopgaver
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Næstved er en by i vækst, med både ældre og nyere
+                boligområder samt et bredt erhvervsliv, der spænder fra
+                mindre kontorer til store produktionsvirksomheder. Den
+                variation betyder, at vi løbende tilpasser vores
+                tilgang — en privat lejlighed kræver en anden planlægning end
+                en skole eller en produktionshal, hvor driften ikke må
+                forstyrres unødigt.
+              </p>
+              <p>
+                Ved større erhvervsopgaver lægger vi vægt på at give et
+                tilbud, der er til at forstå, uanset om det drejer sig om
+                en enkelt bygning eller flere lokaler, der skal males i
+                samme forløb. Vi koordinerer altid tidspunkt og adgang med
+                kunden, så arbejdet passer ind i den daglige drift, hvad
+                enten det er en virksomhed, en institution eller en privat
+                bolig.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Næstved-området — uanset om det er
+                en bolig, der skal males, eller en erhvervsopgave, der
+                kræver særlig planlægning.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
