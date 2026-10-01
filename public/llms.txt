@@ -22,6 +22,7 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 - [Maler Hedehusene](https://manmaler.dk/maler-hedehusene): Dedicated city page for villa facade and interior painting in Hedehusene
 - [Maler Greve](https://manmaler.dk/maler-greve): Dedicated city page for coastal-climate facade and interior painting in Greve
 - [Maler Køge](https://manmaler.dk/maler-koge): Dedicated city page for heritage/bindingsværk and modern-housing painting in Køge
+- [Maler Frederiksberg](https://manmaler.dk/maler-frederiksberg): Dedicated city page for old-apartment-building interior and facade painting in Frederiksberg
 - [Referencer (Projects)](https://manmaler.dk/referencer): Completed project gallery and case examples
 - [Om os (About)](https://manmaler.dk/om-os): Company story, founders, and values
 - [Kontakt (Contact)](https://manmaler.dk/kontakt): Contact form, phone, email, and business information
