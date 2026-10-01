@@ -186,6 +186,42 @@ export default function MalerAlbertslund() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={renovationImg}
+                alt="Facaderenovering af rækkehus"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Facaderenovering i Albertslund
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Mange af rækkehusene i Albertslund har nu 50-60 år på bagen, og
+              facaderne trænger ofte til grundig renovering før de kan
+              males — reparation af murværk, fuger og træværk.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Vi tager altid en grundig gennemgang af facaden, før vi giver
+              et tilbud, så du ved præcis, hvad opgaven indebærer.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — MURSTEN OG BETON FACADERENOVERING */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -280,42 +316,6 @@ export default function MalerAlbertslund() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={renovationImg}
-                alt="Facaderenovering af rækkehus"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Facaderenovering i Albertslund
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Mange af rækkehusene i Albertslund har nu 50-60 år på bagen, og
-              facaderne trænger ofte til grundig renovering før de kan
-              males — reparation af murværk, fuger og træværk.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Vi tager altid en grundig gennemgang af facaden, før vi giver
-              et tilbud, så du ved præcis, hvad opgaven indebærer.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>

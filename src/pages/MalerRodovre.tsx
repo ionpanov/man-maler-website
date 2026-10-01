@@ -185,6 +185,42 @@ export default function MalerRodovre() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={renovationImg}
+                alt="Renovering og klargøring af overflader"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Renovering og klargøring
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Mange af vores opgaver i Rødovre starter med grundig
+              klargøring — spartling, reparation af overflader og korrekt
+              grundbehandling — inden selve malerarbejdet går i gang.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Det gælder både ved facademaling og indendørs renovering, så
+              resultatet holder i mange år fremover.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — RENOVERING AF HUSE FRA MIDTEN AF 1900-TALLET */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -279,42 +315,6 @@ export default function MalerRodovre() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={renovationImg}
-                alt="Renovering og klargøring af overflader"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Renovering og klargøring
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Mange af vores opgaver i Rødovre starter med grundig
-              klargøring — spartling, reparation af overflader og korrekt
-              grundbehandling — inden selve malerarbejdet går i gang.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Det gælder både ved facademaling og indendørs renovering, så
-              resultatet holder i mange år fremover.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>

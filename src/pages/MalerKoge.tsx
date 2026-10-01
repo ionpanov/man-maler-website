@@ -184,6 +184,43 @@ export default function MalerKoge() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={exteriorImg}
+                alt="Facademaling af hus i Køge"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Facademaling af historiske huse
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Huse i Køges ældre bykerne kræver ofte ekstra omhu ved
+              facademaling — korrekt afrensning, reparation af puds og
+              træværk, samt materialer, der respekterer bygningens
+              oprindelige udtryk.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Vi rådgiver gerne om farvevalg, der passer til husets alder og
+              det omkringliggende gadebillede.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — MALING I BYKERNEN OG NYERE OMRÅDER */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -280,43 +317,6 @@ export default function MalerKoge() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={exteriorImg}
-                alt="Facademaling af hus i Køge"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Facademaling af historiske huse
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Huse i Køges ældre bykerne kræver ofte ekstra omhu ved
-              facademaling — korrekt afrensning, reparation af puds og
-              træværk, samt materialer, der respekterer bygningens
-              oprindelige udtryk.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Vi rådgiver gerne om farvevalg, der passer til husets alder og
-              det omkringliggende gadebillede.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>

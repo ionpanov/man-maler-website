@@ -187,6 +187,43 @@ export default function MalerFrederiksberg() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={interiorImg}
+                alt="Indendørs maling af lejlighed"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Indendørs maling af lejligheder
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Mange af vores opgaver på Frederiksberg handler om indendørs
+              maling af lejligheder — vægge, lofter, træværk og paneler, ofte
+              med respekt for ældre bygningsdetaljer som stuklofter og
+              gerichter.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Vi klargør altid overfladerne grundigt før maling, så
+              resultatet bliver holdbart og professionelt.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — MALING I ÆLDRE LEJLIGHEDER */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -281,43 +318,6 @@ export default function MalerFrederiksberg() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={interiorImg}
-                alt="Indendørs maling af lejlighed"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Indendørs maling af lejligheder
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Mange af vores opgaver på Frederiksberg handler om indendørs
-              maling af lejligheder — vægge, lofter, træværk og paneler, ofte
-              med respekt for ældre bygningsdetaljer som stuklofter og
-              gerichter.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Vi klargør altid overfladerne grundigt før maling, så
-              resultatet bliver holdbart og professionelt.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>

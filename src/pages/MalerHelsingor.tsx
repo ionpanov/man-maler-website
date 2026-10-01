@@ -184,6 +184,42 @@ export default function MalerHelsingor() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={renovationImg}
+                alt="Renovering af ældre hus"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Renovering af ældre huse
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Mange huse i Helsingørs bykerne kræver grundig renovering af
+              overfladerne, før de kan males — reparation af puds,
+              vinduesrammer og gamle malinglag skal fjernes korrekt.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Vi tager altid en grundig gennemgang, før vi giver et tilbud,
+              så du ved præcis, hvad opgaven indebærer.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — UDLEJNINGSBOLIGER I EN TURISTBY */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -277,42 +313,6 @@ export default function MalerHelsingor() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={renovationImg}
-                alt="Renovering af ældre hus"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Renovering af ældre huse
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Mange huse i Helsingørs bykerne kræver grundig renovering af
-              overfladerne, før de kan males — reparation af puds,
-              vinduesrammer og gamle malinglag skal fjernes korrekt.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Vi tager altid en grundig gennemgang, før vi giver et tilbud,
-              så du ved præcis, hvad opgaven indebærer.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>

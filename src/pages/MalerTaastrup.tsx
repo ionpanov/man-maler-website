@@ -191,6 +191,42 @@ export default function MalerTaastrup() {
         </div>
       </section>
 
+      {/* SERVICE HIGHLIGHT */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={interiorImg}
+                alt="Indendørs maling af bolig"
+                loading="lazy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+              Indendørs maling og klargøring
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Mange af vores opgaver i Taastrup handler om indendørs maling
+              af stuer, værelser og fællesarealer — ofte i forbindelse med
+              renovering eller klargøring før salg.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              Vi sørger altid for grundig afdækning og forberedelse, så
+              arbejdet foregår rent og professionelt.
+            </p>
+            <Link
+              to="/referencer"
+              className="text-primary font-medium hover:underline"
+            >
+              Se eksempler på vores arbejde →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ARTICLE — KLARGØRING FØR BOLIGSALG OG ERHVERV */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -285,42 +321,6 @@ export default function MalerTaastrup() {
                 </li>
               ))}
             </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SERVICE HIGHLIGHT */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={interiorImg}
-                alt="Indendørs maling af bolig"
-                loading="lazy"
-                className="w-full h-72 object-cover"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
-              Indendørs maling og klargøring
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              Mange af vores opgaver i Taastrup handler om indendørs maling
-              af stuer, værelser og fællesarealer — ofte i forbindelse med
-              renovering eller klargøring før salg.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              Vi sørger altid for grundig afdækning og forberedelse, så
-              arbejdet foregår rent og professionelt.
-            </p>
-            <Link
-              to="/referencer"
-              className="text-primary font-medium hover:underline"
-            >
-              Se eksempler på vores arbejde →
-            </Link>
           </AnimatedSection>
         </div>
       </section>
