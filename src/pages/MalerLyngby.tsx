@@ -6,6 +6,41 @@ import exteriorImg from "@/assets/exterior.webp";
 
 const AREAS = ["Kongens Lyngby", "Virum", "Sorgenfri", "Lundtofte"];
 
+const KEY_TAKEAWAYS = [
+  "Store ejendomme med haver og flere bygninger kræver mere planlægning af adgang, stillads og logistik.",
+  "Poolhuse, orangerier og udestuer males ofte som en del af en samlet opgave sammen med hovedhuset.",
+  "Erhvervsområdet omkring DTU rummer kontorer og laboratorier med særlige krav til overflader.",
+  "God planlægning af adgangsveje gennem haven sparer tid og minimerer risikoen for skader på beplantning.",
+];
+
+const ESTATE_TABLE = [
+  {
+    p: "Facade (stor ejendom)",
+    d: "Vejrbestandig facademaling, der kan påføres effektivt på store sammenhængende flader.",
+    h: "Stillads og adgang gennem haven bør planlægges, så beplantning og indkørsel ikke beskadiges.",
+  },
+  {
+    p: "Poolhus og orangeri",
+    d: "Materialer tilpasset høj luftfugtighed og temperaturudsving i glas- og poolområder.",
+    h: "Kan ofte males i samme forløb som hovedhuset for at spare opstilling af stillads.",
+  },
+  {
+    p: "Garage og carport",
+    d: "Robust udendørs maling, der matcher hovedhusets farve og stil.",
+    h: "Enkel at kombinere med facademaling for et ensartet helhedsindtryk.",
+  },
+  {
+    p: "Kontor og laboratorium (erhverv)",
+    d: "Kemikalie- og rengøringsbestandig maling tilpasset laboratoriers og kontorers krav.",
+    h: "Planlægges ofte uden for arbejdstid for at undgå at forstyrre forskning eller drift.",
+  },
+  {
+    p: "Indendørs i hovedhuset",
+    d: "Høj finish med rolige farver, der understøtter husets arkitektur og størrelse.",
+    h: "Grundig afdækning af store rum og møbler er en vigtig del af forarbejdet.",
+  },
+];
+
 const FAQS = [
   {
     q: "Har I erfaring med større villaer og herskabelige huse i Lyngby?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster det at få malet en villa i Lyngby?",
     a: "Prisen afhænger af husets størrelse, stand og materialevalg. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set opgaven.",
   },
+  {
+    q: "Kan I male poolhuse, orangerier og andre bygninger i haven?",
+    a: "Ja, mange af de store ejendomme i Lyngby har poolhuse, orangerier eller udestuer, som vi gerne maler som en del af en samlet opgave eller separat.",
+  },
+  {
+    q: "Udfører I erhvervsmaling til kontorer og laboratorier nær DTU?",
+    a: "Ja, vi maler gerne kontorer og laboratorier i erhvervsmiljøet omkring DTU, tilpasset de krav der kan være til kemikaliebestandighed og rengøringsvenlige overflader.",
+  },
 ];
 
 export default function MalerLyngby() {
   return (
     <>
       <Helmet>
-        <title>Maler i Lyngby | Villamaling & Facademaling – MAN MALER</title>
+        <title>Maler Lyngby | Malerfirma, store ejendomme & erhverv</title>
         <meta
           name="description"
-          content="Søger du en maler i Kongens Lyngby? MAN MALER udfører facademaling, indendørs maling og renovering af villaer med præcision. Gratis tilbud."
+          content="Maler i Kongens Lyngby til store villaer, poolhuse og erhvervslokaler nær DTU. Indvendig maling, facademaling og erhvervsmaling. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler lyngby, malerfirma lyngby, facademaling lyngby, maler virum, maler sorgenfri"
+          content="maler lyngby, malerfirma lyngby, indvendig maling lyngby, facademaling lyngby, maler virum, maler sorgenfri, erhvervsmaling dtu"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-lyngby" />
 
-        <meta property="og:title" content="Maler i Lyngby | MAN MALER" />
+        <meta property="og:title" content="Maler Lyngby | Malerfirma, store ejendomme & erhverv" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Kongens Lyngby. Facademaling, indendørs maling og renovering af villaer. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerLyngby() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Lyngby | MAN MALER" />
+        <meta name="twitter:title" content="Maler Lyngby | Malerfirma, store ejendomme & erhverv" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Kongens Lyngby. Gratis og uforpligtende tilbud."
@@ -143,6 +186,102 @@ export default function MalerLyngby() {
         </div>
       </section>
 
+      {/* ARTICLE — STORE EJENDOMME OG ERHVERV NÆR DTU */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maling af store ejendomme og erhverv i Lyngby
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Kongens Lyngby og omegn har mange ejendomme med store haver
+                og flere bygninger — hovedhus, garage, og ofte også poolhus
+                eller orangeri. Det stiller andre krav til planlægningen end
+                et almindeligt rækkehus: adgang gennem haven, placering af
+                stillads og beskyttelse af beplantning skal tænkes ind, før
+                arbejdet går i gang.
+              </p>
+              <p>
+                Poolhuse og orangerier er ofte udsat for høj luftfugtighed og
+                store temperaturudsving, hvilket kræver materialer, der kan
+                klare det miljø. Når flere bygninger på samme grund skal
+                males, giver det god mening at samle opgaverne i ét forløb,
+                så stillads og opstilling kun skal ske én gang.
+              </p>
+              <p>
+                Lyngby er desuden hjemsted for DTU og et stort erhvervsområde
+                med kontorer og laboratorier. Her stiller opgaverne andre
+                krav end private boliger — ofte skal overflader kunne tåle
+                kemikalier og hyppig rengøring, og arbejdet planlægges
+                typisk uden for arbejdstid for ikke at forstyrre forskning
+                eller daglig drift.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling af ejendom og erhverv
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {ESTATE_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Planlægning: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Bygning eller lokale</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Planlægning og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ESTATE_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du den store opgave
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Fortæl os, hvor mange bygninger på grunden der skal males, så vi kan give et samlet tilbud.",
+                "Afklar adgangsveje gennem haven, så beplantning og indkørsel ikke bliver skadet.",
+                "Nævn særlige krav til kemikaliebestandighed, hvis opgaven er et kontor eller laboratorium.",
+                "Aftal tidspunkt for erhvervsopgaver, så driften forstyrres mindst muligt.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -175,6 +314,63 @@ export default function MalerLyngby() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I LYNGBY */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal hovedhuset, poolhuset og garagen males i samme forløb,
+              eller trænger kontoret nær DTU til nye vægge? MAN MALER er din
+              lokale maler i Lyngby, med erfaring i både store private
+              ejendomme og det erhvervsliv, der følger med DTU og
+              omegnens virksomheder. Vi giver altid et gratis, uforpligtende
+              tilbud, efter vi har set opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: logistik til store ejendomme og erhverv
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Når en ejendom i Lyngby har flere bygninger og en stor have,
+                handler opgaven lige så meget om planlægning som om selve
+                malingen. Vi vurderer altid adgangsforhold, placering af
+                stillads og rækkefølgen af bygninger, før vi giver et tilbud,
+                så arbejdet kan udføres effektivt og uden unødige skader på
+                have og beplantning.
+              </p>
+              <p>
+                I erhvervsområdet omkring DTU løser vi opgaver, der kræver en
+                anden tilgang end private boliger — kontorer og laboratorier
+                har ofte specifikke krav til overfladernes modstandsdygtighed,
+                og arbejdet skal typisk planlægges uden for almindelig
+                arbejdstid for ikke at forstyrre driften.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Lyngby-området — uanset om det er
+                en stor ejendom med flere bygninger, eller et erhvervslokale,
+                der skal planlægges omhyggeligt.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
