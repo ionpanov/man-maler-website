@@ -6,6 +6,41 @@ import renovationImg from "@/assets/renovation.webp";
 
 const AREAS = ["Rødovre Centrum", "Islev", "Hendriksholm", "Broparken"];
 
+const KEY_TAKEAWAYS = [
+  "Mange huse i Rødovre er fra midten af 1900-tallet og kræver mere forarbejde end nyere byggeri.",
+  "Eternitfacader fra før ca. 1988 bør altid vurderes for asbest, før der slibes eller renses.",
+  "Gamle pudslag og tidligere malingstyper kan skjule fugt eller skader, der bør udbedres først.",
+  "Et grundigt forarbejde er den vigtigste faktor for, hvor længe den nye maling holder.",
+];
+
+const RENOVATION_TABLE = [
+  {
+    p: "Eternitfacade (før ca. 1988)",
+    d: "Kan indeholde asbest — må ikke slibes eller renses aggressivt uden forudgående vurdering.",
+    h: "Vi vurderer altid pladerne først og følger gældende regler for sikker håndtering.",
+  },
+  {
+    p: "Pudset mursten facade",
+    d: "Vejrbestandig facademaling, der passer til den oprindelige puds.",
+    h: "Revner og løs puds bør repareres, før der males, for at undgå at fugt trænger ind.",
+  },
+  {
+    p: "Vinduer og træværk fra perioden",
+    d: "Slidstærk træmaling med god hæftning til ældre, ofte flere gange tidligere malet træ.",
+    h: "Afrensning af gamle malingslag er ofte nødvendigt for et jævnt resultat.",
+  },
+  {
+    p: "Indvendige vægge med ældre puds",
+    d: "Maling tilpasset ujævnheder og tidligere reparationer i underlaget.",
+    h: "Gamle pudslag kan skjule revner eller fugtspor, der bør vurderes før maling.",
+  },
+  {
+    p: "Kælder",
+    d: "Fugtspærrende maling eller behandling, afhængigt af fugtniveau.",
+    h: "Særligt relevant i ældre huse, hvor kælderen ofte har naturlig fugt.",
+  },
+];
+
 const FAQS = [
   {
     q: "Maler I både villaer og rækkehuse i Rødovre?",
@@ -23,35 +58,43 @@ const FAQS = [
     q: "Hvad koster det at få malet et hus i Rødovre?",
     a: "Prisen afhænger af husets størrelse, stand og omfanget af forarbejde. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set opgaven.",
   },
+  {
+    q: "Kan I male eternitfacader fra 1950'erne og 60'erne?",
+    a: "Ja, men vi vurderer altid facaden først. Eternitplader fra før ca. 1988 kan indeholde asbest, og her må der ikke slibes eller rengøres aggressivt. Er der tegn på asbest, følger vi de gældende regler for sikker håndtering, eller henviser til en specialist, hvis pladerne skal skiftes.",
+  },
+  {
+    q: "Hvor meget forarbejde kræver et hus fra midten af 1900-tallet?",
+    a: "Typisk mere end et nyere hus. Gamle pudslag, tidligere malingstyper og eventuel fugt skal vurderes, før vi anbefaler den rette løsning — det tager vi altid med i tilbuddet.",
+  },
 ];
 
 export default function MalerRodovre() {
   return (
     <>
       <Helmet>
-        <title>Maler i Rødovre | Facademaling & Renovering – MAN MALER</title>
+        <title>Maler Rødovre | Malerfirma, indvendig maling & facade</title>
         <meta
           name="description"
-          content="Søger du en maler i Rødovre? MAN MALER udfører facademaling, indendørs maling og renovering af villaer og rækkehuse. Gratis og uforpligtende tilbud."
+          content="Maler i Rødovre til villaer og rækkehuse fra midten af 1900-tallet. Indvendig maling, renovering og facademaling. Gratis og uforpligtende tilbud."
         />
         <meta
           name="keywords"
-          content="maler rødovre, malerfirma rødovre, facademaling rødovre, maler islev, maler hendriksholm"
+          content="maler rødovre, malerfirma rødovre, indvendig maling rødovre, facademaling rødovre, maler islev, maler hendriksholm"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-rodovre" />
 
-        <meta property="og:title" content="Maler i Rødovre | MAN MALER" />
+        <meta property="og:title" content="Maler Rødovre | Malerfirma, indvendig maling & facade" />
         <meta
           property="og:description"
-          content="Professionelt malerfirma i Rødovre. Facademaling, indendørs maling og renovering. Gratis og uforpligtende tilbud."
+          content="Professionelt malerfirma i Rødovre. Indendørs maling, facademaling og renovering. Gratis og uforpligtende tilbud."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://manmaler.dk/maler-rodovre" />
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Rødovre | MAN MALER" />
+        <meta name="twitter:title" content="Maler Rødovre | Malerfirma, indvendig maling & facade" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Rødovre. Gratis og uforpligtende tilbud."
@@ -142,6 +185,104 @@ export default function MalerRodovre() {
         </div>
       </section>
 
+      {/* ARTICLE — RENOVERING AF HUSE FRA MIDTEN AF 1900-TALLET */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maling og renovering af Rødovres ældre villaer
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Mange af villaerne og rækkehusene i Rødovre er opført i
+                midten af 1900-tallet, og det betyder, at overfladerne ofte
+                kræver mere forarbejde end på et nyere hus. Facader kan være
+                pudset mursten eller eternitplader, vinduerne er ofte malet
+                flere gange gennem årene, og indvendige vægge kan skjule
+                ældre pudslag eller tidligere reparationer.
+              </p>
+              <p>
+                Et særligt opmærksomhedspunkt er eternitfacader fra før ca.
+                1988, som kan indeholde asbest. Her må der ikke slibes eller
+                renses aggressivt, uden at facaden først er vurderet. Vi
+                tager altid stilling til dette, inden vi anbefaler en
+                løsning, og følger de gældende regler for sikker håndtering,
+                eller henviser til en specialist, hvis pladerne skal
+                udskiftes.
+              </p>
+              <p>
+                Udover facaden er det ofte kælderen, der kræver en særlig
+                vurdering i ældre huse — naturlig fugt er almindeligt, og her
+                vælger vi fugtspærrende maling eller en anden behandling,
+                afhængigt af fugtniveauet. Et grundigt forarbejde er den
+                vigtigste faktor for, om resultatet holder i mange år
+                fremover, uanset om opgaven er indvendig eller udvendig.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling af det ældre hus
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {RENOVATION_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {RENOVATION_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du renoveringen
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Fortæl os husets byggeår, så vi kan vurdere, om facaden kræver særlig opmærksomhed.",
+                "Lad os vurdere eternitfacader, før der slibes eller renses.",
+                "Nævn eventuel fugt i kælderen, så vi kan anbefale den rette maling.",
+                "Afsæt tid til grundigt forarbejde — det er det, der afgør holdbarheden.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -174,6 +315,64 @@ export default function MalerRodovre() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I RØDOVRE */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal villaen eller rækkehuset i Rødovre have renoveret facaden,
+              eller trænger stuen og kælderen til indvendig maling? MAN
+              MALER er din lokale maler i Rødovre, med erfaring i det
+              grundige forarbejde, som husene fra midten af 1900-tallet ofte
+              kræver. Vi giver altid et gratis, uforpligtende tilbud, efter
+              vi har set opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: erfaring med Rødovres ældre boligmasse
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Rødovre er et af de ældre forstadsområder tæt på København,
+                og det betyder, at mange af vores opgaver her starter med en
+                grundig vurdering, før vi giver et tilbud. Facadens
+                materiale, husets byggeår og eventuel fugt i kælderen har
+                alle betydning for, hvilken løsning vi anbefaler — og for
+                hvor meget forarbejde der skal til, før selve malingen går
+                i gang.
+              </p>
+              <p>
+                Vi lægger særlig vægt på sikkerhed ved ældre eternitfacader,
+                hvor der kan være asbest involveret. Her vurderer vi altid
+                facaden grundigt, før vi anbefaler næste skridt, så opgaven
+                håndteres korrekt og sikkert for alle parter.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af dit hus i Rødovre-området. Med billeder eller en
+                kort beskrivelse kan vi ofte give en indledende vurdering
+                hurtigt; ved ældre huse anbefaler vi dog altid en
+                besigtigelse, så alle forhold bliver taget med i tilbuddet.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
