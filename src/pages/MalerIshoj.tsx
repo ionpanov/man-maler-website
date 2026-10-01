@@ -6,6 +6,41 @@ import interiorImg from "@/assets/interior.webp";
 
 const AREAS = ["Ishøj Strand", "Vejleåparken", "Torslunde", "Ishøj Landsby"];
 
+const KEY_TAKEAWAYS = [
+  "I almene boliger afgør A- eller B-ordningen, hvem der betaler for maling ved fraflytning.",
+  "Hurtig maling mellem fraflytning og indflytning er vigtigt, så lejligheden kan udlejes videre uden unødigt tomgang.",
+  "Standardfarver og vaskbare overflader gør det lettere at klargøre boligen til ny lejer.",
+  "Et samlet tilbud på flere lejligheder i samme boligafdeling giver ofte den mest effektive planlægning.",
+];
+
+const RENTAL_TABLE = [
+  {
+    p: "Stue og værelser",
+    d: "Neutral, standardfarve der passer til de fleste lejere og er let at vedligeholde.",
+    h: "Huller efter billeder og møbler bør udbedres, før der males.",
+  },
+  {
+    p: "Entré",
+    d: "Slidstærk maling, der kan tåle hyppig berøring og rengøring.",
+    h: "Ofte den flade, der viser mest slid ved fraflytning.",
+  },
+  {
+    p: "Køkken",
+    d: "Vaskbar maling, der kan modstå fedt og hyppig rengøring.",
+    h: "Fedtpletter og misfarvninger bør afrenses grundigt før maling.",
+  },
+  {
+    p: "Badeværelse",
+    d: "Fugtbestandig maling uden skimmelpletter eller afskalning.",
+    h: "Fugtskader bør udbedres, før der males, så problemet ikke vender tilbage.",
+  },
+  {
+    p: "Vinduer og karme",
+    d: "Slidstærk træmaling, der kan tåle kystens vind og vejr.",
+    h: "Afrensning af gammel maling giver det mest holdbare resultat.",
+  },
+];
+
 const FAQS = [
   {
     q: "Maler I både lejligheder og villaer i Ishøj?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster malerarbejde i Ishøj?",
     a: "Prisen afhænger af opgavens omfang og boligens stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set eller fået beskrevet opgaven.",
   },
+  {
+    q: "Hvem betaler for maling ved fraflytning i en almen bolig?",
+    a: "Det afhænger af, om boligafdelingen bruger A-ordning eller B-ordning. Under B-ordningen betales der løbende ind via huslejen, og boligorganisationen sørger typisk for maling ved fraflytning. Under A-ordningen vedligeholder beboeren selv boligen i lejeperioden. Vi hjælper gerne med at afklare, hvad der gælder for netop din bolig.",
+  },
+  {
+    q: "Kan I male en lejlighed hurtigt mellem to lejere?",
+    a: "Ja, vi udfører gerne maling mellem fraflytning og indflytning i almene boliger, og tilpasser tidsplanen, så lejligheden kan udlejes videre så hurtigt som muligt.",
+  },
 ];
 
 export default function MalerIshoj() {
   return (
     <>
       <Helmet>
-        <title>Maler i Ishøj | Bolig & Erhvervsmaling – MAN MALER</title>
+        <title>Maler Ishøj | Malerfirma, almene boliger & villaer</title>
         <meta
           name="description"
-          content="Søger du en maler i Ishøj? MAN MALER udfører indendørs maling, facademaling og renovering af lejligheder og villaer. Gratis og uforpligtende tilbud."
+          content="Maler i Ishøj til almene boliger, lejligheder og villaer. Indvendig maling ved fraflytning, facademaling og renovering. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler ishøj, malerfirma ishøj, facademaling ishøj, maler vejleåparken, maler torslunde"
+          content="maler ishøj, malerfirma ishøj, indvendig maling ishøj, facademaling ishøj, maler vejleåparken, maler torslunde"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-ishoj" />
 
-        <meta property="og:title" content="Maler i Ishøj | MAN MALER" />
+        <meta property="og:title" content="Maler Ishøj | Malerfirma, almene boliger & villaer" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Ishøj. Indendørs maling, facademaling og renovering. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerIshoj() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Ishøj | MAN MALER" />
+        <meta name="twitter:title" content="Maler Ishøj | Malerfirma, almene boliger & villaer" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Ishøj. Gratis og uforpligtende tilbud."
@@ -142,6 +185,103 @@ export default function MalerIshoj() {
         </div>
       </section>
 
+      {/* ARTICLE — MALING I ALMENE BOLIGER VED FRAFLYTNING */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maling af almene boliger i Ishøj ved fraflytning
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Ishøj har mange almene boliger, blandt andet i Vejleåparken,
+                og her gælder andre regler for maling end i en privat
+                udlejningsbolig. Boligafdelingen bruger enten A-ordning eller
+                B-ordning: under B-ordningen betales der løbende ind via
+                huslejen, og boligorganisationen sørger typisk for maling
+                ved fraflytning, mens beboeren under A-ordningen selv
+                vedligeholder boligen i lejeperioden.
+              </p>
+              <p>
+                Uanset ordning er det vigtigt, at malerarbejdet udføres
+                hurtigt og ensartet mellem fraflytning og indflytning, så
+                lejligheden kan udlejes videre uden unødig tomgang. Vi
+                arbejder derfor ofte med standardfarver og vaskbare
+                overflader, der både er lette at vedligeholde og hurtige at
+                påføre i et stramt tidsforløb.
+              </p>
+              <p>
+                Ishøj ligger desuden tæt på kysten, hvilket betyder, at
+                vinduer, karme og eventuelle facader er mere udsat for vind
+                og vejr end længere inde i landet. Det tager vi med i
+                vurderingen, når vi anbefaler materialer til både almene
+                boliger og private villaer i området.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling ved fraflytning i almen bolig
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {RENTAL_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Rum eller flade</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {RENTAL_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du fraflytningsmalingen
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Afklar, om boligafdelingen bruger A-ordning eller B-ordning, før arbejdet aftales.",
+                "Vælg standardfarver og vaskbare overflader, der passer til de fleste kommende lejere.",
+                "Få et samlet tilbud, hvis flere lejligheder skal males i samme boligafdeling.",
+                "Planlæg tidspunktet stramt, så lejligheden kan udlejes videre hurtigst muligt.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -174,6 +314,63 @@ export default function MalerIshoj() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I ISHØJ */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal lejligheden i Vejleåparken males før ny lejer flytter ind,
+              eller trænger villaen tæt på kysten til facademaling? MAN
+              MALER er din lokale maler i Ishøj, med erfaring i både almene
+              boliger og private huse i kommunen. Vi giver altid et gratis,
+              uforpligtende tilbud, efter vi har set eller fået beskrevet
+              opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: erfaring med Ishøjs almene boliger
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Vi har stor erfaring med den praktiske proces omkring
+                fraflytning i almene boliger — fra at afklare, hvilken
+                vedligeholdelsesordning der gælder, til at levere et tilbud,
+                der passer til boligorganisationens krav og tidsplan. Det
+                gør processen enklere for både boligafdeling og
+                beboerservice.
+              </p>
+              <p>
+                For private boligejere i Ishøj, især tæt på kysten, lægger vi
+                vægt på vejrbestandige materialer, der kan modstå vind og
+                salt fra havet. Uanset om opgaven er en enkelt lejlighed
+                eller en hel boligafdeling, giver vi altid et tilbud, der er
+                til at forstå.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Ishøj — uanset om det er en almen
+                bolig, der skal klargøres til ny lejer, eller en privat
+                villa, der trænger til vedligeholdelse.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
