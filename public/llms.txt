@@ -32,6 +32,7 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 - [Maler Brøndby](https://manmaler.dk/maler-brondby): Dedicated city page for large apartment-block facade renovation and boligafdeling approval process in Brøndby
 - [Maler Ishøj](https://manmaler.dk/maler-ishoj): Dedicated city page for almene-bolig move-in/move-out painting (A-/B-ordning rules) and coastal villa painting in Ishøj
 - [Maler Helsingør](https://manmaler.dk/maler-helsingor): Dedicated city page for short-term-rental turnaround painting and historic bykerne facades in Helsingør
+- [Maler Albertslund](https://manmaler.dk/maler-albertslund): Dedicated city page for brick/concrete facade renovation and Hersted Industripark commercial painting in Albertslund
 - [Referencer (Projects)](https://manmaler.dk/referencer): Completed project gallery and case examples
 - [Om os (About)](https://manmaler.dk/om-os): Company story, founders, and values
 - [Kontakt (Contact)](https://manmaler.dk/kontakt): Contact form, phone, email, and business information
