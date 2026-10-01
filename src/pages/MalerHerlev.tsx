@@ -6,6 +6,41 @@ import commercialImg from "@/assets/commercial.webp";
 
 const AREAS = ["Herlev Bygade", "Hjortespring", "Kildegård", "Herlev Hospital-området"];
 
+const KEY_TAKEAWAYS = [
+  "Kædebutikker ønsker ofte ensartede brandfarver på tværs af flere lokationer.",
+  "Butiksfacader kan som regel males om aftenen eller i weekenden, uden at butikken skal lukke.",
+  "Displayvinduer og skiltefelter kræver præcisionsarbejde, så varer og skilte forbliver synlige.",
+  "Et samlet tilbud på flere butikker i samme kæde giver ofte den mest effektive planlægning.",
+];
+
+const RETAIL_TABLE = [
+  {
+    p: "Butiksfacade og indgangsparti",
+    d: "Professionel facademaling, der matcher kædens brandfarver og skaber et indbydende indtryk.",
+    h: "Planlægges typisk om aftenen eller i weekenden, så butikken kan holde åbent.",
+  },
+  {
+    p: "Displayvinduer og skiltefelter",
+    d: "Præcisionsarbejde, der holder kanter skarpe omkring glas og skilte.",
+    h: "Grundig afdækning er nødvendig for at undgå malingsstænk på glas og inventar.",
+  },
+  {
+    p: "Butikslokale (indvendigt)",
+    d: "Farver der understøtter kædens brand og skaber en indbydende atmosfære for kunder.",
+    h: "Udføres ofte uden for åbningstid eller i etaper for at undgå at forstyrre handlen.",
+  },
+  {
+    p: "Kontor bag butikken",
+    d: "Rolig, professionel farvesætning til administrative opgaver.",
+    h: "Kan ofte males samtidig med butikslokalet for en samlet proces.",
+  },
+  {
+    p: "Lager og bagrum",
+    d: "Robust, rengøringsvenlig maling tilpasset daglig brug og transport af varer.",
+    h: "Mindre krav til finish end kundevendte arealer, men stadig behov for holdbarhed.",
+  },
+];
+
 const FAQS = [
   {
     q: "Udfører I både bolig- og erhvervsmaling i Herlev?",
@@ -23,25 +58,33 @@ const FAQS = [
     q: "Hvad koster malerarbejde i Herlev?",
     a: "Prisen afhænger af opgavens omfang og overfladernes stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set eller fået beskrevet opgaven.",
   },
+  {
+    q: "Kan I male flere butikslokationer med samme brandfarve?",
+    a: "Ja, vi matcher gerne brandfarver på tværs af flere lokationer, så kædens butikker fremstår ensartet, uanset hvor de ligger.",
+  },
+  {
+    q: "Kan butiksfacaden males, uden at butikken skal lukke?",
+    a: "I mange tilfælde ja. Vi planlægger gerne arbejdet om aftenen eller i weekenden, så butikken kan holde åbent i den normale åbningstid.",
+  },
 ];
 
 export default function MalerHerlev() {
   return (
     <>
       <Helmet>
-        <title>Maler i Herlev | Bolig & Erhvervsmaling – MAN MALER</title>
+        <title>Maler Herlev | Malerfirma, butikker & erhverv</title>
         <meta
           name="description"
-          content="Søger du en maler i Herlev? MAN MALER udfører indendørs maling, facademaling, renovering og erhvervsmaling i hele Herlev Kommune. Gratis tilbud."
+          content="Maler i Herlev til butikker, kæder og boliger. Indvendig maling med brandfarver, facademaling og erhvervsmaling uden lukketid. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler herlev, malerfirma herlev, erhvervsmaling herlev, maler hjortespring, maler kildegård"
+          content="maler herlev, malerfirma herlev, erhvervsmaling herlev, indvendig maling herlev, maler hjortespring, maler kildegård, facademaling butik"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-herlev" />
 
-        <meta property="og:title" content="Maler i Herlev | MAN MALER" />
+        <meta property="og:title" content="Maler Herlev | Malerfirma, butikker & erhverv" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i Herlev. Indendørs maling, facademaling og erhvervsmaling. Gratis og uforpligtende tilbud."
@@ -51,7 +94,7 @@ export default function MalerHerlev() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Herlev | MAN MALER" />
+        <meta name="twitter:title" content="Maler Herlev | Malerfirma, butikker & erhverv" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Herlev. Gratis og uforpligtende tilbud."
@@ -141,6 +184,101 @@ export default function MalerHerlev() {
         </div>
       </section>
 
+      {/* ARTICLE — BUTIKS- OG KÆDEMALING I HERLEV */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Butiks- og kædemaling i Herlev
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Herlev har et stort handelsliv, og mange af vores
+                erhvervsopgaver her handler om butikker og kæder, der skal
+                fremstå ensartede på tværs af flere lokationer. Det gælder
+                både facaden og butikslokalet indvendigt: brandfarver skal
+                matches præcist, så kunden oplever den samme visuelle
+                identitet, uanset hvilken butik i kæden de besøger.
+              </p>
+              <p>
+                Et af de praktiske spørgsmål, der ofte går igen, er, hvordan
+                man maler en butiksfacade uden at skulle lukke. Vi planlægger
+                derfor gerne arbejdet om aftenen eller i weekenden, så
+                butikken kan holde åbent i den normale åbningstid. Det
+                kræver grundig planlægning, men betyder, at omsætningen ikke
+                påvirkes af malerarbejdet.
+              </p>
+              <p>
+                Displayvinduer og skiltefelter kræver desuden
+                præcisionsarbejde — kanter omkring glas og skilte skal være
+                skarpe, og grundig afdækning er nødvendig for at undgå
+                malingsstænk på varer og inventar.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling af butik og erhverv
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {RETAIL_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Planlægning: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade eller lokale</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Planlægning og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {RETAIL_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du butiksopgaven
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Oplys kædens brandfarver, så vi kan matche dem præcist på tværs af lokationer.",
+                "Fortæl os, om butikken skal holde åbent under arbejdet, så vi kan planlægge aften eller weekend.",
+                "Afdæk displayvinduer og skiltefelter grundigt for et skarpt resultat.",
+                "Få et samlet tilbud, hvis flere butikker i kæden skal males.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -173,6 +311,63 @@ export default function MalerHerlev() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I HERLEV */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal butikskæden have ensartede brandfarver på tværs af flere
+              lokationer, eller trænger boligen til et nyt lag maling? MAN
+              MALER er din lokale maler i Herlev, med erfaring i både
+              detailhandel og private boliger i kommunen. Vi giver altid et
+              gratis, uforpligtende tilbud, efter vi har set eller fået
+              beskrevet opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: ensartet brand på tværs af butikslokationer
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Vi har erfaring med at matche brandfarver præcist, så en
+                kædes butikker fremstår ensartede, uanset hvor i Herlev —
+                eller i resten af Storkøbenhavn — de ligger. Det gælder
+                både facaden, der møder kunden udefra, og butikslokalet
+                indvendigt.
+              </p>
+              <p>
+                Vi planlægger altid arbejdet, så det passer ind i butikkens
+                åbningstider og drift — ofte ved at male om aftenen eller i
+                weekenden, så omsætningen ikke påvirkes. Ved siden af
+                erhvervsopgaverne udfører vi også indendørs maling,
+                facademaling og renovering for private boligejere i hele
+                Herlev Kommune.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af din opgave i Herlev — uanset om det er en
+                butik, der skal matche en kædes brand, eller en bolig, der
+                trænger til et nyt udtryk.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
