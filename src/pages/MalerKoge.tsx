@@ -6,6 +6,41 @@ import exteriorImg from "@/assets/exterior.webp";
 
 const AREAS = ["Køge Bymidte", "Ølby", "Ll. Skensved", "Herfølge"];
 
+const KEY_TAKEAWAYS = [
+  "Køges gamle bykerne har mange bevaringsværdige huse, hvor farvevalg og materialer bør respektere bygningens oprindelige udtryk.",
+  "Bindingsværk kræver en anden teknik end pudsede facader, så træet kan ånde korrekt.",
+  "Nyere boligområder som Ølby og Ll. Skensved stiller mere almindelige krav til facade- og indvendig maling.",
+  "Tjek altid eventuelle kommunale retningslinjer for farver, før du vælger facadefarve i den historiske bykerne.",
+];
+
+const SURFACE_TABLE = [
+  {
+    p: "Bindingsværk",
+    d: "Åndbar maling, der følger træets naturlige bevægelser og ikke lukker fugt inde.",
+    h: "Kræver vurdering af træets stand og ofte reparation af udtørrede eller rådne dele før maling.",
+  },
+  {
+    p: "Pudsede facader (ældre huse)",
+    d: "Materialer der passer til den oprindelige puds og respekterer husets alder og stil.",
+    h: "Farvevalg bør tjekkes op mod eventuelle kommunale retningslinjer for bevaringsværdige bygninger.",
+  },
+  {
+    p: "Facader på nyere huse",
+    d: "Almindelig vejrbestandig facademaling tilpasset husets materiale (tegl, puds eller træ).",
+    h: "Færre restriktioner end i bykernen, men stadig behov for grundig afrensning før maling.",
+  },
+  {
+    p: "Gamle vinduer med sprosser",
+    d: "Slidstærk træmaling, der kan påføres præcist omkring små glasfelter og sprosser.",
+    h: "Tidskrævende arbejde — afsæt ekstra tid til afrensning og flere tynde lag.",
+  },
+  {
+    p: "Indvendigt i ældre huse",
+    d: "Maling tilpasset høje lofter, stukkatur og ældre vægge, der kan være ujævne.",
+    h: "Grundig vurdering af underlaget er vigtig, da ældre vægge ofte skjuler tidligere reparationer.",
+  },
+];
+
 const FAQS = [
   {
     q: "Har I erfaring med de historiske bygninger i Køges bykerne?",
@@ -23,35 +58,43 @@ const FAQS = [
     q: "Hvad koster det at få malet et hus i Køge?",
     a: "Prisen afhænger af husets størrelse, alder og stand. Vi giver altid et gratis og uforpligtende tilbud, efter vi har set opgaven.",
   },
+  {
+    q: "Er der særlige regler for farver på huse i den gamle bykerne?",
+    a: "Mange bevaringsværdige bygninger i Køges bykerne har retningslinjer for facadefarver fra kommunen eller en lokal bevaringsplan. Vi hjælper gerne med at afklare, hvad der gælder for netop dit hus, før vi vælger farve.",
+  },
+  {
+    q: "Kan I male bindingsværk?",
+    a: "Ja, bindingsværk kræver en anden teknik og type maling end en almindelig pudset facade. Vi vurderer træets stand og bruger materialer, der lader træet ånde korrekt.",
+  },
 ];
 
 export default function MalerKoge() {
   return (
     <>
       <Helmet>
-        <title>Maler i Køge | Facademaling & Renovering – MAN MALER</title>
+        <title>Maler Køge | Malerfirma, indvendig maling & facade</title>
         <meta
           name="description"
-          content="Søger du en maler i Køge? MAN MALER udfører facademaling, indendørs maling og renovering af huse i den historiske bykerne og omegn. Gratis tilbud."
+          content="Maler i Køge til historiske huse og nyere boliger. Indvendig maling, bindingsværk og facademaling i den gamle bykerne og omegn. Gratis tilbud."
         />
         <meta
           name="keywords"
-          content="maler køge, malerfirma køge, facademaling køge, maler ølby, maler herfølge"
+          content="maler køge, malerfirma køge, indvendig maling køge, facademaling køge, maler ølby, maler herfølge"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-koge" />
 
-        <meta property="og:title" content="Maler i Køge | MAN MALER" />
+        <meta property="og:title" content="Maler Køge | Malerfirma, indvendig maling & facade" />
         <meta
           property="og:description"
-          content="Professionelt malerfirma i Køge. Facademaling, indendørs maling og renovering. Gratis og uforpligtende tilbud."
+          content="Professionelt malerfirma i Køge. Indvendig maling, facademaling og renovering. Gratis og uforpligtende tilbud."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://manmaler.dk/maler-koge" />
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i Køge | MAN MALER" />
+        <meta name="twitter:title" content="Maler Køge | Malerfirma, indvendig maling & facade" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i Køge. Gratis og uforpligtende tilbud."
@@ -141,6 +184,106 @@ export default function MalerKoge() {
         </div>
       </section>
 
+      {/* ARTICLE — MALING I BYKERNEN OG NYERE OMRÅDER */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maling af historiske huse og nyere boliger i Køge
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Køge er en af de ældre købstæder på Sjælland, og det ses
+                tydeligt i bykernen med bindingsværkshuse, pudsede facader og
+                gamle vinduer med sprosser. Samtidig har kommunen nyere
+                boligområder som Ølby og Ll. Skensved, hvor husene er bygget
+                efter helt andre principper. Som maler i Køge arbejder vi
+                derfor med to meget forskellige tilgange, alt efter hvor
+                huset ligger og hvor gammelt det er.
+              </p>
+              <p>
+                I den historiske bykerne handler det først og fremmest om at
+                respektere bygningens oprindelige udtryk. Bindingsværk skal
+                behandles med åndbar maling, der følger træets bevægelser,
+                mens pudsede facader ofte kræver materialer, der passer til
+                den oprindelige puds. Mange af disse huse er desuden
+                bevaringsværdige, hvilket kan betyde, at kommunen har
+                retningslinjer for, hvilke facadefarver der er tilladt —
+                noget vi altid anbefaler at afklare, inden arbejdet
+                planlægges.
+              </p>
+              <p>
+                I de nyere boligområder omkring Køge er kravene mere
+                almindelige: vejrbestandig facademaling tilpasset husets
+                materiale, samt indendørs maling af nyere vægge og lofter,
+                der sjældent kræver samme grad af specialbehandling som de
+                gamle huse i bykernen.
+              </p>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Overblik: maling efter husets alder og type
+            </h3>
+
+            {/* Mobile: stacked cards, no horizontal scroll */}
+            <div className="grid gap-4 mb-10 md:hidden">
+              {SURFACE_TABLE.map((row) => (
+                <div key={row.p} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.p}</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-medium text-foreground">Vigtige egenskaber: </span>
+                    {row.d}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Forarbejde: </span>
+                    {row.h}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: full table, no scroll needed */}
+            <div className="hidden md:block mb-10">
+              <table className="w-full text-sm border-collapse table-fixed">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground w-1/5">Flade eller bygningstype</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground w-2/5">Vigtige egenskaber</th>
+                    <th className="py-3 font-semibold text-foreground w-2/5">Forarbejde og opmærksomhedspunkter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SURFACE_TABLE.map((row) => (
+                    <tr key={row.p} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.p}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.d}</td>
+                      <td className="py-3 text-muted-foreground">{row.h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-lg font-display font-semibold mb-4 text-foreground">
+              Sådan planlægger du malerarbejdet rigtigt
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Afklar om huset er bevaringsværdigt og om der gælder regler for facadefarver.",
+                "Vælg åndbar maling til bindingsværk, så træet ikke lukkes inde.",
+                "Få vurderet pudsede facaders stand, før farve og materiale vælges.",
+                "Afsæt ekstra tid til gamle vinduer med sprosser, da arbejdet er mere detaljeret.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICE HIGHLIGHT */}
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -174,6 +317,62 @@ export default function MalerKoge() {
             >
               Se eksempler på vores arbejde →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ARTICLE — MAN MALER I KØGE */}
+      <section className="py-20 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Skal det bindingsværkshus i Køges bykerne have nyt liv, eller
+              trænger villaen i Ølby til indvendig maling? MAN MALER er din
+              lokale maler i Køge, med erfaring i både den historiske
+              bykerne og de nyere boligområder i kommunen. Vi giver altid
+              et gratis, uforpligtende tilbud, efter vi har set opgaven.
+            </p>
+
+            <div className="p-6 rounded-xl bg-warm-surface border border-border mb-10">
+              <h4 className="font-display font-semibold mb-3 text-foreground">
+                ⚡ Kort opsummeret
+              </h4>
+              <ul className="space-y-2">
+                {KEY_TAKEAWAYS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground text-sm">
+                    <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-card-foreground">
+              MAN MALER: erfaring med Køges historiske bykerne
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                At male et hus i Køges bykerne er en anden opgave end at male
+                et nyere rækkehus i udkanten af kommunen. Vi besigtiger altid
+                huset, før vi giver et tilbud, så vi kan vurdere facadens
+                materiale, husets alder og eventuelle bevaringshensyn, der
+                skal tages. Det gælder især bindingsværk og ældre pudsede
+                facader, hvor forkert maling kan gøre mere skade end gavn.
+              </p>
+              <p>
+                Vi hjælper også gerne med at afklare, om et hus er omfattet
+                af kommunale retningslinjer for facadefarver, så du undgår
+                at vælge en farve, der senere skal laves om. I de nyere
+                boligområder som Ølby, Ll. Skensved og Herfølge er processen
+                mere ligetil, men vi lægger stadig vægt på grundigt
+                forarbejde og et tilbud, der er til at forstå.
+              </p>
+              <p>
+                Kontakt MAN MALER, hvis du vil have en uforpligtende
+                vurdering af dit hus i Køge-området — uanset om det er et
+                gammelt hus i bykernen eller en nyere bolig i omegnen.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
