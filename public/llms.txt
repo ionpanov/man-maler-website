@@ -17,6 +17,8 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 
 - [Home](https://manmaler.dk/): Company overview and service introduction
 - [Ydelser (Services)](https://manmaler.dk/ydelser): Full list of painting and renovation services
+- [Maler København](https://manmaler.dk/maler-koebenhavn): Dedicated city page for interior and exterior painting in Copenhagen
+- [Maler Roskilde](https://manmaler.dk/maler-roskilde): Dedicated city page for interior painting, surface guides and moving-out painting in Roskilde
 - [Referencer (Projects)](https://manmaler.dk/referencer): Completed project gallery and case examples
 - [Om os (About)](https://manmaler.dk/om-os): Company story, founders, and values
 - [Kontakt (Contact)](https://manmaler.dk/kontakt): Contact form, phone, email, and business information
