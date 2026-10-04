@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  ssr: { noExternal: ["react-helmet-async"] },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

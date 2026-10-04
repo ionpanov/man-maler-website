@@ -71,3 +71,18 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Static SEO build
+
+`npm run build` builds the browser assets, renders the React application on the
+server at build time, and generates an HTML document for every URL in
+`public/sitemap.xml`. It fails if a listed route is missing content or its own
+canonical URL. Keep the sitemap synchronized with the routes in `src/App.tsx`.
+
+Deploy `dist` using the complete build command (not `vite build` alone). Vercel
+serves the generated pages directly, redirects www.manmaler.dk to manmaler.dk,
+and serves unknown paths as 404 instead of rewriting every request to the homepage.
+The JavaScript client hydrates the existing HTML, preserving navigation, language
+switching and contact forms. Main content is visible even with JavaScript disabled.
+
+Run `npm run verify:seo` after building to validate all generated pages.
