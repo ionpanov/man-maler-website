@@ -145,7 +145,7 @@ content="Professionelle malerydelser i København og på Sjælland."
 
                   {category.href && (
                     <div className="mt-8">
-                      <Link to={category.href} className="text-primary font-medium hover:underline">
+                      <Link to={category.href} className="inline-block py-1 text-primary font-medium hover:underline">
                         {category.linkText} →
                       </Link>
                     </div>
@@ -161,10 +161,10 @@ content="Professionelle malerydelser i København og på Sjælland."
 
       {/* AREA LINK */}
       <section className="py-10 px-6 text-center flex flex-col items-center gap-3">
-        <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+        <Link to="/ofte-stillede-spoergsmaal" className="inline-block py-1 text-primary font-medium hover:underline">
           Ofte stillede spørgsmål om malerarbejde →
         </Link>
-        <Link to="/omraader" className="text-primary font-medium hover:underline">
+        <Link to="/omraader" className="inline-block py-1 text-primary font-medium hover:underline">
           Se alle de områder, vi dækker →
         </Link>
       </section>

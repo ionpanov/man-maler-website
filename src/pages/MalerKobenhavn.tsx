@@ -211,7 +211,7 @@ export default function MalerKobenhavn() {
             <p className="text-sm text-muted-foreground mb-6">— Mette H., København</p>
             <Link
               to="/referencer"
-              className="text-primary font-medium hover:underline"
+              className="inline-block py-1 text-primary font-medium hover:underline"
             >
               Se flere af vores projekter →
             </Link>
@@ -452,22 +452,22 @@ export default function MalerKobenhavn() {
               ))}
             </div>
             <div className="text-center mt-8 flex flex-col items-center gap-2">
-              <Link to="/ydelser" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
-              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/indendoers-maling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Indvendig maling i København →
               </Link>
-              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/facademaling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Facademaling i København →
               </Link>
-              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/renovering" className="inline-block py-1 text-primary font-medium hover:underline">
                 Renovering i København →
               </Link>
-              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/erhvervsmaling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Erhvervsmaling i København →
               </Link>
-              <Link to="/maler-roskilde" className="text-sm text-muted-foreground hover:underline">
+              <Link to="/maler-roskilde" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 Bor du i Roskilde-området? Se vores side om maler i Roskilde →
               </Link>
             </div>
@@ -495,7 +495,7 @@ export default function MalerKobenhavn() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+              <Link to="/ofte-stillede-spoergsmaal" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle ofte stillede spørgsmål om malerarbejde →
               </Link>
             </div>

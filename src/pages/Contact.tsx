@@ -401,7 +401,7 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
                       <div>
                         <p className="font-semibold mb-1 text-foreground">{item.title}</p>
                         {item.href ? (
-                          <a href={item.href} className="text-muted-foreground text-sm hover:text-primary transition">
+                          <a href={item.href} className="inline-block py-1 text-muted-foreground text-sm hover:text-primary transition">
                             {item.value}
                           </a>
                         ) : (

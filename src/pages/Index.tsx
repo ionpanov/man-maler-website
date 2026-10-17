@@ -440,13 +440,13 @@ return (
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <Link to="/maler-koebenhavn" className="text-primary font-medium hover:underline">
+          <Link to="/maler-koebenhavn" className="inline-block py-1 text-primary font-medium hover:underline">
             Maler i København
           </Link>
-          <Link to="/maler-roskilde" className="text-primary font-medium hover:underline">
+          <Link to="/maler-roskilde" className="inline-block py-1 text-primary font-medium hover:underline">
             Maler i Roskilde
           </Link>
-          <Link to="/omraader" className="text-primary font-medium hover:underline">
+          <Link to="/omraader" className="inline-block py-1 text-primary font-medium hover:underline">
             Se alle vores områder →
           </Link>
         </div>
@@ -478,7 +478,7 @@ return (
             {t("seo.services.interior")}
           </p>
 
-          <Link to="/ydelser/indendoers-maling" className="mt-4 text-sm font-medium text-primary hover:underline">
+          <Link to="/ydelser/indendoers-maling" className="mt-4 self-start py-1.5 text-sm font-medium text-primary hover:underline">
             {t("seo.services.interiorTitle")} →
           </Link>
 
@@ -500,7 +500,7 @@ return (
             {t("seo.services.exterior")}
           </p>
 
-          <Link to="/ydelser/facademaling" className="mt-4 text-sm font-medium text-primary hover:underline">
+          <Link to="/ydelser/facademaling" className="mt-4 self-start py-1.5 text-sm font-medium text-primary hover:underline">
             {t("seo.services.exteriorTitle")} →
           </Link>
 
@@ -522,7 +522,7 @@ return (
             {t("seo.services.renovation")}
           </p>
 
-          <Link to="/ydelser/renovering" className="mt-4 text-sm font-medium text-primary hover:underline">
+          <Link to="/ydelser/renovering" className="mt-4 self-start py-1.5 text-sm font-medium text-primary hover:underline">
             {t("seo.services.renovationTitle")} →
           </Link>
 
@@ -544,7 +544,7 @@ return (
             {t("seo.services.commercial")}
           </p>
 
-          <Link to="/ydelser/erhvervsmaling" className="mt-4 text-sm font-medium text-primary hover:underline">
+          <Link to="/ydelser/erhvervsmaling" className="mt-4 self-start py-1.5 text-sm font-medium text-primary hover:underline">
             {t("seo.services.commercialTitle")} →
           </Link>
 
@@ -577,7 +577,7 @@ return (
               ))}
             </div>
             <div className="text-center">
-              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+              <Link to="/ofte-stillede-spoergsmaal" className="inline-block py-1 text-primary font-medium hover:underline">
                 {t("home.areas.faq")} →
               </Link>
             </div>

@@ -69,7 +69,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   to={link.href}
-                  className="text-gray-200 hover:text-orange-500 transition text-sm"
+                  className="inline-block py-1 text-gray-200 hover:text-orange-500 transition text-sm"
                 >
                   {link.name}
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
           </h4>
 
           <p className="text-gray-200 text-sm">
-            <a href="tel:+4571316499" className="hover:text-orange-500 transition">
+            <a href="tel:+4571316499" className="inline-block py-2 hover:text-orange-500 transition">
               Tlf: 71 31 64 99
             </a>
           </p>
@@ -162,7 +162,7 @@ export default function Footer() {
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
                 {region.paths.map((path) => (
                   <li key={path}>
-                    <Link to={path} className="text-gray-200 hover:text-orange-500 transition text-sm">
+                    <Link to={path} className="inline-block py-1 text-gray-200 hover:text-orange-500 transition text-sm">
                       {cityByPath(path)!.name}
                     </Link>
                   </li>
@@ -175,19 +175,19 @@ export default function Footer() {
 
       {/* Legal Links */}
       <div className="max-w-6xl mx-auto px-6 pb-4 flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-        <Link to="/vilkar" className="hover:text-orange-500 transition">
+        <Link to="/vilkar" className="inline-block py-2 hover:text-orange-500 transition">
           {t("footer.terms")}
         </Link>
 
         <span>·</span>
 
-        <Link to="/privatliv" className="hover:text-orange-500 transition">
+        <Link to="/privatliv" className="inline-block py-2 hover:text-orange-500 transition">
           {t("footer.privacy")}
         </Link>
 
         <span>·</span>
 
-        <Link to="/cookies" className="hover:text-orange-500 transition">
+        <Link to="/cookies" className="inline-block py-2 hover:text-orange-500 transition">
           {t("footer.cookies")}
         </Link>
       </div>

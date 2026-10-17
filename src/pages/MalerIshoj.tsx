@@ -216,7 +216,7 @@ export default function MalerIshoj() {
             </p>
             <Link
               to="/referencer"
-              className="text-primary font-medium hover:underline"
+              className="inline-block py-1 text-primary font-medium hover:underline"
             >
               Se eksempler på vores arbejde →
             </Link>
@@ -399,22 +399,22 @@ export default function MalerIshoj() {
               ))}
             </div>
             <div className="text-center mt-8 flex flex-col items-center gap-2">
-              <Link to="/ydelser" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
-              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/indendoers-maling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Indvendig maling i Ishøj →
               </Link>
-              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/facademaling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Facademaling i Ishøj →
               </Link>
-              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/renovering" className="inline-block py-1 text-primary font-medium hover:underline">
                 Renovering i Ishøj →
               </Link>
-              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser/erhvervsmaling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Erhvervsmaling i Ishøj →
               </Link>
-              <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
+              <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>
             </div>
@@ -442,7 +442,7 @@ export default function MalerIshoj() {
               ))}
             </div>
             <div className="mt-10 text-center">
-              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+              <Link to="/ofte-stillede-spoergsmaal" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle ofte stillede spørgsmål om malerarbejde →
               </Link>
             </div>

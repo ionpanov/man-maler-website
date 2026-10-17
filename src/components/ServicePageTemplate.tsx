@@ -104,11 +104,11 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
           <nav aria-label="Brødkrumme" className="mb-8 flex justify-center">
             <ol className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
               <li className="flex items-center gap-1">
-                <Link to="/" className="hover:text-primary hover:underline">Forside</Link>
+                <Link to="/" className="inline-block py-1 hover:text-primary hover:underline">Forside</Link>
                 <ChevronRight size={14} aria-hidden="true" />
               </li>
               <li className="flex items-center gap-1">
-                <Link to="/ydelser" className="hover:text-primary hover:underline">Ydelser</Link>
+                <Link to="/ydelser" className="inline-block py-1 hover:text-primary hover:underline">Ydelser</Link>
                 <ChevronRight size={14} aria-hidden="true" />
               </li>
               <li aria-current="page" className="text-foreground font-medium">{data.name}</li>
@@ -376,13 +376,13 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               ))}
             </div>
             <div className="text-center flex flex-col items-center gap-2">
-              <Link to="/ydelser" className="text-primary font-medium hover:underline">
+              <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
-              <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
+              <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>
-              <Link to="/om-os" className="text-sm text-muted-foreground hover:underline">
+              <Link to="/om-os" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 Læs mere om MAN MALER →
               </Link>
             </div>

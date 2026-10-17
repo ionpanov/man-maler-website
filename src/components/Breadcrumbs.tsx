@@ -36,7 +36,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
               </li>
             ) : (
               <li key={item.name} className="flex items-center gap-1">
-                <Link to={item.to!} className="hover:text-primary hover:underline">
+                <Link to={item.to!} className="inline-block py-1 hover:text-primary hover:underline">
                   {item.name}
                 </Link>
                 <ChevronRight size={14} aria-hidden="true" />

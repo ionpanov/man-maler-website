@@ -47,11 +47,11 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
             </ul>
           </nav>
           <div className="mt-6 flex flex-col items-center gap-2 text-center">
-            <Link to={FAQ_PATH} className="text-primary font-medium hover:underline">
+            <Link to={FAQ_PATH} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.faq} →
             </Link>
             {showAreas && (
-              <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
+              <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 {text.areas} →
               </Link>
             )}
