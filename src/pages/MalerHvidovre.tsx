@@ -397,6 +397,12 @@ export default function MalerHvidovre() {
               <Link to="/ydelser" className="text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+                Indvendig maling i Hvidovre →
+              </Link>
+              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+                Facademaling i Hvidovre →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>

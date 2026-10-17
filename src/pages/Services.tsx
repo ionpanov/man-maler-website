@@ -11,9 +11,9 @@ import { Helmet } from "react-helmet-async";
 export default function Services() {
   const { t } = useI18n();
 
-  const categories = [
-    { icon: Paintbrush, key: "category1", items: 8, image: interiorImg },
-    { icon: Layers, key: "category2", items: 7, image: exteriorImg },
+  const categories: { icon: typeof Paintbrush; key: string; items: number; image: string; href?: string; linkText?: string }[] = [
+    { icon: Paintbrush, key: "category1", items: 8, image: interiorImg, href: "/ydelser/indendoers-maling", linkText: "Læs mere om indvendig maling" },
+    { icon: Layers, key: "category2", items: 7, image: exteriorImg, href: "/ydelser/facademaling", linkText: "Læs mere om facademaling" },
     { icon: Wrench, key: "category3", items: 7, image: renovationImg },
     { icon: Hammer, key: "category4", items: 6, image: commercialImg },
   ];
@@ -141,6 +141,15 @@ content="Professionelle malerydelser i København og på Sjælland."
                       </div>
                     ))}
                   </div>
+
+
+                  {category.href && (
+                    <div className="mt-8">
+                      <Link to={category.href} className="text-primary font-medium hover:underline">
+                        {category.linkText} →
+                      </Link>
+                    </div>
+                  )}
 
                 </div>
               </AnimatedSection>

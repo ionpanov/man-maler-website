@@ -20,6 +20,8 @@ export default function Footer() {
     { name: t("nav.projects"), href: "/referencer" },
     { name: t("nav.about"), href: "/om-os" },
     { name: t("nav.contact"), href: "/kontakt" },
+    { name: "Indvendig maling", href: "/ydelser/indendoers-maling" },
+    { name: "Facademaling", href: "/ydelser/facademaling" },
     { name: "Maler i København", href: "/maler-koebenhavn" },
     { name: "Maler i Roskilde", href: "/maler-roskilde" },
     { name: "Maler i Ballerup", href: "/maler-ballerup" },

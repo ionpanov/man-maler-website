@@ -397,6 +397,12 @@ export default function MalerGlostrup() {
               <Link to="/ydelser" className="text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+                Indvendig maling i Glostrup →
+              </Link>
+              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+                Facademaling i Glostrup →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>

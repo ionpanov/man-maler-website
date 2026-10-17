@@ -452,6 +452,12 @@ export default function MalerKobenhavn() {
               <Link to="/ydelser" className="text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+                Indvendig maling i København →
+              </Link>
+              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+                Facademaling i København →
+              </Link>
               <Link to="/maler-roskilde" className="text-sm text-muted-foreground hover:underline">
                 Bor du i Roskilde-området? Se vores side om maler i Roskilde →
               </Link>

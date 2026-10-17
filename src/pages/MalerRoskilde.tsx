@@ -502,6 +502,12 @@ export default function MalerRoskilde() {
               <Link to="/ydelser" className="text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+                Indvendig maling i Roskilde →
+              </Link>
+              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+                Facademaling i Roskilde →
+              </Link>
               <Link to="/maler-koebenhavn" className="text-sm text-muted-foreground hover:underline">
                 Bor du i København? Se vores side om maler i København →
               </Link>

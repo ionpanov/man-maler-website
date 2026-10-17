@@ -40,6 +40,8 @@ import MalerHillerod from "./pages/MalerHillerod";
 import MalerHelsingor from "./pages/MalerHelsingor";
 import MalerNaestved from "./pages/MalerNaestved";
 import MalerHedehusene from "./pages/MalerHedehusene";
+import ServiceIndoor from "./pages/ServiceIndoor";
+import ServiceFacade from "./pages/ServiceFacade";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import AnalyticsTracker from "@/components/AnalyticsTracker";
@@ -64,6 +66,8 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/ydelser" element={<Services />} />
+                  <Route path="/ydelser/indendoers-maling" element={<ServiceIndoor />} />
+                  <Route path="/ydelser/facademaling" element={<ServiceFacade />} />
                   <Route path="/referencer" element={<Projects />} />
                   <Route path="/om-os" element={<About />} />
                   <Route path="/kontakt" element={<Contact />} />

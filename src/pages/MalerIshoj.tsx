@@ -399,6 +399,12 @@ export default function MalerIshoj() {
               <Link to="/ydelser" className="text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/ydelser/indendoers-maling" className="text-primary font-medium hover:underline">
+                Indvendig maling i Ishøj →
+              </Link>
+              <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
+                Facademaling i Ishøj →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>
