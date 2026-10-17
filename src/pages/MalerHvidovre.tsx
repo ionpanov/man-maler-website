@@ -403,6 +403,12 @@ export default function MalerHvidovre() {
               <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
                 Facademaling i Hvidovre →
               </Link>
+              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+                Renovering i Hvidovre →
+              </Link>
+              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+                Erhvervsmaling i Hvidovre →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>

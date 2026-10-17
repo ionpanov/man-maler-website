@@ -415,6 +415,12 @@ export default function MalerBallerup() {
               <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
                 Facademaling i Ballerup →
               </Link>
+              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+                Renovering i Ballerup →
+              </Link>
+              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+                Erhvervsmaling i Ballerup →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>

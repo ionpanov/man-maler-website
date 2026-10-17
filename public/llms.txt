@@ -19,6 +19,9 @@ Copenhagen (København), Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, R�
 - [Ydelser (Services)](https://manmaler.dk/ydelser): Full list of painting and renovation services
 - [Indvendig maling](https://manmaler.dk/ydelser/indendoers-maling): Service page on interior painting: walls, ceilings, woodwork, process, price factors and FAQ
 - [Facademaling](https://manmaler.dk/ydelser/facademaling): Service page on facade painting: when to repaint, process by facade material, price factors and FAQ
+- [Renovering](https://manmaler.dk/ydelser/renovering): Service page on renovation and refurbishment: water damage, mould, ceilings, floors, wet rooms, price factors and FAQ
+- [Erhvervsmaling](https://manmaler.dk/ydelser/erhvervsmaling): Service page on commercial painting for offices, shops, institutions and industrial premises, planned around operations
+- [Ofte stillede spørgsmål](https://manmaler.dk/ofte-stillede-spoergsmaal): Frequently asked questions about quotes, price, process, services and service area
 - [Maler København](https://manmaler.dk/maler-koebenhavn): Dedicated city page for interior and exterior painting in Copenhagen
 - [Maler Roskilde](https://manmaler.dk/maler-roskilde): Dedicated city page for interior painting, surface guides and moving-out painting in Roskilde
 - [Maler Hedehusene](https://manmaler.dk/maler-hedehusene): Dedicated city page for villa facade and interior painting in Hedehusene

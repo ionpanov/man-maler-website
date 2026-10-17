@@ -458,6 +458,12 @@ export default function MalerKobenhavn() {
               <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
                 Facademaling i København →
               </Link>
+              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+                Renovering i København →
+              </Link>
+              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+                Erhvervsmaling i København →
+              </Link>
               <Link to="/maler-roskilde" className="text-sm text-muted-foreground hover:underline">
                 Bor du i Roskilde-området? Se vores side om maler i Roskilde →
               </Link>

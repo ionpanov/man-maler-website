@@ -162,7 +162,7 @@ const data: ServicePageData = {
       <>
         Har du også brug for at få malet indvendigt, kan du læse om vores{" "}
         <Link to="/ydelser/indendoers-maling" className={link}>indvendige maling</Link>. Og er du i tvivl om, om din facade
-        kræver reparation eller blot maling, så kontakt os for en uforpligtende vurdering.
+        kræver reparation eller blot maling, så kontakt os for en uforpligtende vurdering. Skal facaden på en erhvervsejendom males, kan du læse om <Link to="/ydelser/erhvervsmaling" className={link}>erhvervsmaling</Link>, og er der skader på facaden, der kræver mere end maling, se <Link to="/ydelser/renovering" className={link}>renovering</Link>.
       </>,
     ],
   },
@@ -196,11 +196,6 @@ const data: ServicePageData = {
       a: "Ja. Det er ofte en fordel at samle opgaverne, så stillads kun skal opstilles én gang, og hele huset fremstår ensartet.",
     },
   ],
-  related: {
-    to: "/ydelser/indendoers-maling",
-    title: "Indvendig maling",
-    text: "Vægge, lofter og træværk, med grundigt forarbejde og ren aflevering.",
-  },
   ctaTitle: "Klar til at få malet facaden?",
 };
 

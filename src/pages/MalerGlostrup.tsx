@@ -403,6 +403,12 @@ export default function MalerGlostrup() {
               <Link to="/ydelser/facademaling" className="text-primary font-medium hover:underline">
                 Facademaling i Glostrup →
               </Link>
+              <Link to="/ydelser/renovering" className="text-primary font-medium hover:underline">
+                Renovering i Glostrup →
+              </Link>
+              <Link to="/ydelser/erhvervsmaling" className="text-primary font-medium hover:underline">
+                Erhvervsmaling i Glostrup →
+              </Link>
               <Link to="/omraader" className="text-sm text-muted-foreground hover:underline">
                 Se alle de områder, vi dækker →
               </Link>

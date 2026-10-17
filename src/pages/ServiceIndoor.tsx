@@ -132,7 +132,7 @@ const data: ServicePageData = {
       </>,
       <>
         I kontorer og butikker planlægger vi arbejdet uden for åbningstid, så driften ikke forstyrres. Du kan læse om erhvervsopgaver og brandfarver på siderne for <Link to="/maler-ballerup" className="text-primary hover:underline">Ballerup</Link>, <Link to="/maler-herlev" className="text-primary hover:underline">Herlev</Link> og <Link to="/maler-naestved" className="text-primary hover:underline">Næstved</Link>.
-        Har du også brug for at få malet huset udvendigt, kan du læse om vores <Link to="/ydelser/facademaling" className="text-primary hover:underline">facademaling</Link>.
+        Har du også brug for at få malet huset udvendigt, kan du læse om vores <Link to="/ydelser/facademaling" className="text-primary hover:underline">facademaling</Link>. Er væggene eller loftet skadet af fugt eller skimmel, finder du mere under <Link to="/ydelser/renovering" className="text-primary hover:underline">renovering</Link>, og til kontorer og butikker se <Link to="/ydelser/erhvervsmaling" className="text-primary hover:underline">erhvervsmaling</Link>.
       </>,
     ],
   },
@@ -166,11 +166,6 @@ const data: ServicePageData = {
       a: "Ja, vi maler kontorer, butikker og andre erhvervslokaler. Arbejdet planlægges ofte uden for åbningstid eller i etaper, så driften kan fortsætte.",
     },
   ],
-  related: {
-    to: "/ydelser/facademaling",
-    title: "Facademaling",
-    text: "Afrensning, reparation og vejrbestandig maling til villaer, rækkehuse og ejendomme.",
-  },
   ctaTitle: "Klar til at få malet indvendigt?",
 };
 

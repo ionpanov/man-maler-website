@@ -14,8 +14,8 @@ export default function Services() {
   const categories: { icon: typeof Paintbrush; key: string; items: number; image: string; href?: string; linkText?: string }[] = [
     { icon: Paintbrush, key: "category1", items: 8, image: interiorImg, href: "/ydelser/indendoers-maling", linkText: "Læs mere om indvendig maling" },
     { icon: Layers, key: "category2", items: 7, image: exteriorImg, href: "/ydelser/facademaling", linkText: "Læs mere om facademaling" },
-    { icon: Wrench, key: "category3", items: 7, image: renovationImg },
-    { icon: Hammer, key: "category4", items: 6, image: commercialImg },
+    { icon: Wrench, key: "category3", items: 7, image: renovationImg, href: "/ydelser/renovering", linkText: "Læs mere om renovering" },
+    { icon: Hammer, key: "category4", items: 6, image: commercialImg, href: "/ydelser/erhvervsmaling", linkText: "Læs mere om erhvervsmaling" },
   ];
 
   return (
@@ -160,7 +160,10 @@ content="Professionelle malerydelser i København og på Sjælland."
       </section>
 
       {/* AREA LINK */}
-      <section className="py-10 px-6 text-center">
+      <section className="py-10 px-6 text-center flex flex-col items-center gap-3">
+        <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+          Ofte stillede spørgsmål om malerarbejde →
+        </Link>
         <Link to="/omraader" className="text-primary font-medium hover:underline">
           Se alle de områder, vi dækker →
         </Link>

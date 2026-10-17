@@ -22,6 +22,26 @@ export const CITIES = [
 ] as const;
 
 export const SERVICE_PAGES = [
-  { name: "Indvendig maling", path: "/ydelser/indendoers-maling" },
-  { name: "Facademaling", path: "/ydelser/facademaling" },
+  {
+    name: "Indvendig maling",
+    path: "/ydelser/indendoers-maling",
+    blurb: "Vægge, lofter og træværk, med grundigt forarbejde og ren aflevering.",
+  },
+  {
+    name: "Facademaling",
+    path: "/ydelser/facademaling",
+    blurb: "Afrensning, reparation og vejrbestandig maling til villaer, rækkehuse og ejendomme.",
+  },
+  {
+    name: "Renovering",
+    path: "/ydelser/renovering",
+    blurb: "Istandsættelse af overflader, fugt- og skimmelskader, lofter og komplet maling.",
+  },
+  {
+    name: "Erhvervsmaling",
+    path: "/ydelser/erhvervsmaling",
+    blurb: "Kontorer, butikker, institutioner og lagerlokaler, planlagt uden driftsforstyrrelser.",
+  },
 ] as const;
+
+export const FAQ_PATH = "/ofte-stillede-spoergsmaal";

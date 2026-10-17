@@ -477,6 +477,10 @@ return (
             {t("seo.services.interior")}
           </p>
 
+          <Link to="/ydelser/indendoers-maling" className="mt-4 text-sm font-medium text-primary hover:underline">
+            {t("seo.services.readMore")} →
+          </Link>
+
         </div>
       </AnimatedSection>
 
@@ -494,6 +498,10 @@ return (
           <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
             {t("seo.services.exterior")}
           </p>
+
+          <Link to="/ydelser/facademaling" className="mt-4 text-sm font-medium text-primary hover:underline">
+            {t("seo.services.readMore")} →
+          </Link>
 
         </div>
       </AnimatedSection>
@@ -513,6 +521,10 @@ return (
             {t("seo.services.renovation")}
           </p>
 
+          <Link to="/ydelser/renovering" className="mt-4 text-sm font-medium text-primary hover:underline">
+            {t("seo.services.readMore")} →
+          </Link>
+
         </div>
       </AnimatedSection>
 
@@ -530,6 +542,10 @@ return (
           <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
             {t("seo.services.commercial")}
           </p>
+
+          <Link to="/ydelser/erhvervsmaling" className="mt-4 text-sm font-medium text-primary hover:underline">
+            {t("seo.services.readMore")} →
+          </Link>
 
         </div>
       </AnimatedSection>

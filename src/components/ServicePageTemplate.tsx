@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, ChevronRight, Clock, MapPin, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import { CITIES } from "@/lib/cities";
+import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
 const ORIGIN = "https://manmaler.dk";
 
@@ -31,7 +31,6 @@ export interface ServicePageData {
   price: { heading: string; paragraphs: ReactNode[]; items: string[]; closing: ReactNode };
   context: { heading: string; paragraphs: ReactNode[] };
   faqs: { q: string; a: string }[];
-  related: { to: string; title: string; text: string };
   ctaTitle: string;
 }
 
@@ -331,13 +330,16 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               Se også
             </h2>
             <div className="grid md:grid-cols-2 gap-4 mb-14">
-              <Link
-                to={data.related.to}
-                className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
-              >
-                <span className="font-semibold text-foreground block mb-1">{data.related.title} →</span>
-                <span className="text-sm text-muted-foreground">{data.related.text}</span>
-              </Link>
+              {SERVICE_PAGES.filter((service) => service.path !== data.path).map((service) => (
+                <Link
+                  key={service.path}
+                  to={service.path}
+                  className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
+                >
+                  <span className="font-semibold text-foreground block mb-1">{service.name} →</span>
+                  <span className="text-sm text-muted-foreground">{service.blurb}</span>
+                </Link>
+              ))}
               <Link
                 to="/referencer"
                 className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
@@ -345,6 +347,15 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
                 <span className="font-semibold text-foreground block mb-1">Se vores referencer →</span>
                 <span className="text-sm text-muted-foreground">
                   Eksempler på malerarbejde, vi har udført for private og virksomheder.
+                </span>
+              </Link>
+              <Link
+                to={FAQ_PATH}
+                className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
+              >
+                <span className="font-semibold text-foreground block mb-1">Ofte stillede spørgsmål →</span>
+                <span className="text-sm text-muted-foreground">
+                  Svar om tilbud, pris, forløb og områder.
                 </span>
               </Link>
             </div>
