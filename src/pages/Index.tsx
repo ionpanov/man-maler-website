@@ -14,6 +14,7 @@ import video2 from "@/assets/projects/video3.mp4";
 import video3 from "@/assets/projects/video5.mp4";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { CITIES } from "@/lib/cities";
 
 
 export default function Index() {
@@ -478,7 +479,7 @@ return (
           </p>
 
           <Link to="/ydelser/indendoers-maling" className="mt-4 text-sm font-medium text-primary hover:underline">
-            {t("seo.services.readMore")} →
+            {t("seo.services.interiorTitle")} →
           </Link>
 
         </div>
@@ -500,7 +501,7 @@ return (
           </p>
 
           <Link to="/ydelser/facademaling" className="mt-4 text-sm font-medium text-primary hover:underline">
-            {t("seo.services.readMore")} →
+            {t("seo.services.exteriorTitle")} →
           </Link>
 
         </div>
@@ -522,7 +523,7 @@ return (
           </p>
 
           <Link to="/ydelser/renovering" className="mt-4 text-sm font-medium text-primary hover:underline">
-            {t("seo.services.readMore")} →
+            {t("seo.services.renovationTitle")} →
           </Link>
 
         </div>
@@ -544,7 +545,7 @@ return (
           </p>
 
           <Link to="/ydelser/erhvervsmaling" className="mt-4 text-sm font-medium text-primary hover:underline">
-            {t("seo.services.readMore")} →
+            {t("seo.services.commercialTitle")} →
           </Link>
 
         </div>
@@ -554,6 +555,36 @@ return (
 
   </div>
 </section>
+      {/* AREAS */}
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-3xl font-display font-semibold text-center mb-4 text-foreground">
+              {t("home.areas.title")}
+            </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+              {t("home.areas.intro")}
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {CITIES.map((city) => (
+                <Link
+                  key={city.path}
+                  to={city.path}
+                  className="px-4 py-2 rounded-full bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
+                >
+                  Maler i {city.name}
+                </Link>
+              ))}
+            </div>
+            <div className="text-center">
+              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+                {t("home.areas.faq")} →
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-28 px-6 bg-primary">
         <AnimatedSection>

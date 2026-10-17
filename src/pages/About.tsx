@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 import foundersImg from "@/assets/vicion4.webp";
 
+import ExploreLinks from "@/components/ExploreLinks";
 export default function About() {
   const { t } = useI18n();
 
@@ -284,6 +285,8 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
     </AnimatedSection>
   </div>
 </section>
+
+      <ExploreLinks />
 
       {/* CTA */}
       <section className="relative py-28 px-6 overflow-hidden bg-primary">

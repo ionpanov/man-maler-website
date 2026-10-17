@@ -20,6 +20,7 @@ import video5 from "@/assets/projects/video6.mp4";
 import video6 from "@/assets/projects/video2.mp4";
 import { Helmet } from "react-helmet-async";
 
+import ExploreLinks from "@/components/ExploreLinks";
 export default function Projects() {
   const { t } = useI18n();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -313,12 +314,7 @@ content="Se vores professionelle malerprojekter og referencer."
         </div>
       )}
 
-      {/* AREA LINK */}
-      <section className="py-10 px-6 text-center">
-        <Link to="/omraader" className="text-primary font-medium hover:underline">
-          Se alle de områder, vi dækker →
-        </Link>
-      </section>
+      <ExploreLinks />
 
       {/* CTA */}
       <section className="py-28 px-6 bg-primary">

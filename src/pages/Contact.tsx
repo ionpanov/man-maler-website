@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone, Clock, CheckCircle, Instagram, Facebook, ChevronDo
 import { toast } from "sonner";
 import { Helmet } from "react-helmet-async";
 
+import ExploreLinks from "@/components/ExploreLinks";
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -444,6 +445,8 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
           </AnimatedSection>
         </div>
       </section>
+
+      <ExploreLinks />
     </>
   );
 }

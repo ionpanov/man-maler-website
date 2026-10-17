@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import { REGIONS, cityByPath } from "@/lib/cities";
 import logo3 from "@/assets/logo3.webp";
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
@@ -25,9 +26,6 @@ export default function Footer() {
     { name: "Renovering", href: "/ydelser/renovering" },
     { name: "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
     { name: "Ofte stillede spørgsmål", href: "/ofte-stillede-spoergsmaal" },
-    { name: "Maler i København", href: "/maler-koebenhavn" },
-    { name: "Maler i Roskilde", href: "/maler-roskilde" },
-    { name: "Maler i Ballerup", href: "/maler-ballerup" },
     { name: "Alle Områder", href: "/omraader" },
   ];
 
@@ -151,6 +149,29 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* Areas */}
+      <nav aria-label="Områder" className="max-w-6xl mx-auto px-6 pb-12">
+        <h4 className="font-semibold mb-5 text-sm uppercase tracking-wider text-gray-300">
+          Maler i dit område
+        </h4>
+        <div className="grid sm:grid-cols-3 gap-8">
+          {REGIONS.map((region) => (
+            <div key={region.title}>
+              <p className="text-gray-400 text-xs uppercase tracking-wider mb-3">{region.title}</p>
+              <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                {region.paths.map((path) => (
+                  <li key={path}>
+                    <Link to={path} className="text-gray-200 hover:text-orange-500 transition text-sm">
+                      {cityByPath(path)!.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </nav>
 
       {/* Legal Links */}
       <div className="max-w-6xl mx-auto px-6 pb-4 flex flex-wrap justify-center gap-4 text-sm text-gray-400">

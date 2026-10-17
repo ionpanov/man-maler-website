@@ -287,7 +287,9 @@ const translations = {
 "seo.serviceAreas.text": "MAN MALER tilbyder professionelt malerarbejde i København, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved og resten af Sjælland. Vi udfører indendørs maling, udendørs maling, facademaling, renovering, spartling og erhvervsmaling for både private boliger og virksomheder.",
 
 "seo.services.title": "Vores maler- og renoveringsydelser",
-"seo.services.readMore": "Læs mere",
+"home.areas.title": "Maler i dit område",
+"home.areas.intro": "MAN MALER dækker København og hele Sjælland. Find din by herunder, eller læs svarene på de mest stillede spørgsmål om malerarbejde.",
+"home.areas.faq": "Ofte stillede spørgsmål om malerarbejde",
 
 "seo.services.interior": "Maling af vægge, loftmaling, træværk, paneler, tapetsering, spartling og klargøring af overflader, dekorative malerteknikker, farverådgivning og professionel finish.",
 
@@ -579,7 +581,9 @@ const translations = {
 "seo.serviceAreas.text": "MAN MALER provides professional painting services in Copenhagen, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved and across Zealand. We offer interior painting, exterior painting, facade painting, renovation and commercial painting for homes and businesses.",
 
 "seo.services.title": "Our painting and renovation services",
-"seo.services.readMore": "Read more",
+"home.areas.title": "Painters in your area",
+"home.areas.intro": "MAN MALER covers Copenhagen and all of Zealand. Find your town below, or read the answers to the most common questions about painting.",
+"home.areas.faq": "Frequently asked questions about painting",
 
 "seo.services.interior": "Wall painting in all colors, ceiling painting and treatment, woodwork and panels, wallpapering, filling and preparation, decorative painting techniques, color consultation and finishing touches.",
 

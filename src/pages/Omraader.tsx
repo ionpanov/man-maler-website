@@ -3,53 +3,13 @@ import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin } from "lucide-react";
 
-interface CityLink {
-  name: string;
-  href: string;
-}
-
-interface Group {
-  title: string;
-  cities: CityLink[];
-}
-
-const GROUPS: Group[] = [
-  {
-    title: "København og Vestegnen",
-    cities: [
-      { name: "København", href: "/maler-koebenhavn" },
-      { name: "Frederiksberg", href: "/maler-frederiksberg" },
-      { name: "Hvidovre", href: "/maler-hvidovre" },
-      { name: "Rødovre", href: "/maler-rodovre" },
-      { name: "Herlev", href: "/maler-herlev" },
-      { name: "Glostrup", href: "/maler-glostrup" },
-      { name: "Ballerup", href: "/maler-ballerup" },
-      { name: "Taastrup", href: "/maler-taastrup" },
-      { name: "Albertslund", href: "/maler-albertslund" },
-      { name: "Ishøj", href: "/maler-ishoj" },
-      { name: "Brøndby", href: "/maler-brondby" },
-    ],
-  },
-  {
-    title: "Nordsjælland",
-    cities: [
-      { name: "Lyngby", href: "/maler-lyngby" },
-      { name: "Gentofte", href: "/maler-gentofte" },
-      { name: "Hillerød", href: "/maler-hillerod" },
-      { name: "Helsingør", href: "/maler-helsingor" },
-    ],
-  },
-  {
-    title: "Roskilde og Sydsjælland",
-    cities: [
-      { name: "Roskilde", href: "/maler-roskilde" },
-      { name: "Hedehusene", href: "/maler-hedehusene" },
-      { name: "Greve", href: "/maler-greve" },
-      { name: "Køge", href: "/maler-koge" },
-      { name: "Næstved", href: "/maler-naestved" },
-    ],
-  },
-];
+import Breadcrumbs from "@/components/Breadcrumbs";
+import ExploreLinks from "@/components/ExploreLinks";
+import { REGIONS, cityByPath } from "@/lib/cities";
+const GROUPS = REGIONS.map((region) => ({
+  title: region.title,
+  cities: region.paths.map((path) => cityByPath(path)!),
+}));
 
 export default function Omraader() {
   return (
@@ -88,6 +48,7 @@ export default function Omraader() {
       <section className="relative py-28 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
+          <Breadcrumbs items={[{ name: "Forside", to: "/" }, { name: "Områder" }]} />
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
               Vores Områder på Sjælland
@@ -118,8 +79,8 @@ export default function Omraader() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {group.cities.map((city) => (
                   <Link
-                    key={city.href}
-                    to={city.href}
+                    key={city.path}
+                    to={city.path}
                     className="flex items-center gap-2 p-4 rounded-xl bg-card border border-border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm font-medium text-foreground"
                   >
                     <MapPin size={16} className="text-primary flex-shrink-0" />
@@ -131,6 +92,8 @@ export default function Omraader() {
           ))}
         </div>
       </section>
+
+      <ExploreLinks showAreas={false} />
 
       {/* CTA */}
       <section className="relative py-28 px-6 overflow-hidden bg-primary">

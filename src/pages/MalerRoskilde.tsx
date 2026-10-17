@@ -4,6 +4,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin, Clock, ShieldCheck } from "lucide-react";
 import exteriorImg from "@/assets/exterior.webp";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
+import NearbyAreas from "@/components/NearbyAreas";
 const AREAS = [
   "Roskilde by", "Viby Sjælland", "Vindinge", "Svogerslev",
   "Himmelev", "Gundsømagle", "Trekroner", "Jyllinge",
@@ -117,6 +119,7 @@ export default function MalerRoskilde() {
       <section className="relative py-28 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
+          <Breadcrumbs items={[{ name: "Forside", to: "/" }, { name: "Områder", to: "/omraader" }, { name: "Maler i Roskilde" }]} />
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
               Maler i Roskilde
@@ -522,39 +525,7 @@ export default function MalerRoskilde() {
         </div>
       </section>
 
-      {/* NEARBY AREAS */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-foreground text-center">
-              Malerarbejde i nærheden af Roskilde
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-                <Link
-                  to="/maler-hedehusene"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Hedehusene
-                </Link>
-                <Link
-                  to="/maler-greve"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Greve
-                </Link>
-                <Link
-                  to="/maler-koge"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Køge
-                </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <NearbyAreas current="/maler-roskilde" />
 
       {/* FAQ */}
       <section className="py-20 px-6 bg-card">
@@ -572,6 +543,11 @@ export default function MalerRoskilde() {
                   <p className="text-muted-foreground">{faq.a}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+                Se alle ofte stillede spørgsmål om malerarbejde →
+              </Link>
             </div>
           </AnimatedSection>
         </div>

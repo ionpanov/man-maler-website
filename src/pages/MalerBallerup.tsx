@@ -4,6 +4,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin, Clock, ShieldCheck } from "lucide-react";
 import renovationImg from "@/assets/renovation.webp";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
+import NearbyAreas from "@/components/NearbyAreas";
 const AREAS = [
   "Ballerup by", "Skovlunde", "Måløv", "Smørum", "Tapeten", "Egebjerg",
 ];
@@ -111,6 +113,7 @@ export default function MalerBallerup() {
       <section className="relative py-28 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
+          <Breadcrumbs items={[{ name: "Forside", to: "/" }, { name: "Områder", to: "/omraader" }, { name: "Maler i Ballerup" }]} />
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
               Maler i Ballerup
@@ -429,39 +432,7 @@ export default function MalerBallerup() {
         </div>
       </section>
 
-      {/* NEARBY AREAS */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-foreground text-center">
-              Malerarbejde i nærheden af Ballerup
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-                <Link
-                  to="/maler-herlev"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Herlev
-                </Link>
-                <Link
-                  to="/maler-glostrup"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Glostrup
-                </Link>
-                <Link
-                  to="/maler-taastrup"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
-                >
-                  <MapPin size={16} className="text-primary flex-shrink-0" />
-                  Maler i Taastrup
-                </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <NearbyAreas current="/maler-ballerup" />
 
       {/* FAQ */}
       <section className="py-20 px-6 bg-card">
@@ -479,6 +450,11 @@ export default function MalerBallerup() {
                   <p className="text-muted-foreground">{faq.a}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link to="/ofte-stillede-spoergsmaal" className="text-primary font-medium hover:underline">
+                Se alle ofte stillede spørgsmål om malerarbejde →
+              </Link>
             </div>
           </AnimatedSection>
         </div>
