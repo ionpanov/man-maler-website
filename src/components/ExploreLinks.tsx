@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useI18n } from "@/lib/i18n";
-import { B2B_PAGE_PATH, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
+import { FAQ_PATH, SERVICE_PAGES, b2bPath } from "@/lib/cities";
 
 const TEXT = {
   da: {
@@ -42,14 +42,14 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
                     className="block h-full p-4 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
                   >
                     <span className="font-semibold text-foreground block mb-1">{text.names[index]} →</span>
-                    <span className="text-sm text-muted-foreground">{service.blurb}</span>
+                    <span className="text-sm text-muted-foreground">{lang === "en" ? service.blurbEn : service.blurb}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
           <div className="mt-6 flex flex-col items-center gap-2 text-center">
-            <Link to={B2B_PAGE_PATH} className="inline-block py-1 text-primary font-medium hover:underline">
+            <Link to={b2bPath(lang)} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.b2b} →
             </Link>
             <Link to={FAQ_PATH} className="inline-block py-1 text-primary font-medium hover:underline">

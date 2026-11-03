@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import React, { createContext, useContext, useState, useCallback } from "react";
 
 type Lang = "da" | "en";
@@ -620,7 +621,8 @@ interface I18nContextType {
 const I18nContext = createContext<I18nContextType | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("da");
+  const { pathname } = useLocation();
+  const [lang, setLang] = useState<Lang>(pathname.startsWith("/en/") ? "en" : "da");
 
   const t = useCallback(
     (key: TranslationKey): string => {

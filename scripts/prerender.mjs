@@ -21,7 +21,7 @@ if (!routes.includes("/") || new Set(routes).size !== routes.length) {
 
 // Use the same React components and Helmet metadata as the interactive website.
 for (const route of [...routes, "/404"]) {
-  const { html, head } = render(route);
+  const { html, head, htmlAttributes } = render(route);
   if (!html.includes("<h1") || html.includes("Oops! Page not found") && route !== "/404") {
     throw new Error(`Missing page content for ${route}`);
   }
@@ -31,7 +31,8 @@ for (const route of [...routes, "/404"]) {
   if (route !== "/404" && !metadata.includes(`href="${origin}${route === "/" ? "/" : route}"`)) {
     throw new Error(`Missing self canonical for ${route}`);
   }
-  const output = template.replace(/<title>[\s\S]*?<\/title>/, "")
+  const output = template.replace(/<html[^>]*>/, htmlAttributes ? `<html ${htmlAttributes.trim()}>` : "<html lang=\"da\">")
+    .replace(/<title>[\s\S]*?<\/title>/, "")
     .replace("</head>", `${metadata}\n</head>`)
     .replace('<div id="root"></div>', `<div id="root">${html}</div>`);
   const directory = route === "/" ? "dist" : `dist${route}`;

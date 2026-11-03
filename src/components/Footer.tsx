@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
-import { REGIONS, cityByPath } from "@/lib/cities";
+import { REGIONS, b2bPath, cityByPath } from "@/lib/cities";
 import logo3 from "@/assets/logo3.webp";
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
@@ -13,7 +13,7 @@ function TikTokIcon({ size = 20 }: { size?: number }) {
 }
 
 export default function Footer() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   const navLinks = [
     { name: t("nav.home"), href: "/" },
@@ -25,7 +25,7 @@ export default function Footer() {
     { name: "Facademaling", href: "/ydelser/facademaling" },
     { name: "Renovering", href: "/ydelser/renovering" },
     { name: "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
-    { name: "B2B-samarbejde", href: "/b2b" },
+    { name: lang === "en" ? "B2B partnerships" : "B2B-samarbejde", href: b2bPath(lang) },
     { name: "Ofte stillede spørgsmål", href: "/ofte-stillede-spoergsmaal" },
     { name: "Alle Områder", href: "/omraader" },
   ];

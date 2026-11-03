@@ -24,23 +24,31 @@ export const CITIES = [
 export const SERVICE_PAGES = [
   {
     name: "Indvendig maling",
+    nameEn: "Interior painting",
     path: "/ydelser/indendoers-maling",
     blurb: "Vægge, lofter og træværk, med grundigt forarbejde og ren aflevering.",
+    blurbEn: "Walls, ceilings and woodwork, with thorough preparation and a clean handover.",
   },
   {
     name: "Facademaling",
+    nameEn: "Facade painting",
     path: "/ydelser/facademaling",
     blurb: "Afrensning, reparation og vejrbestandig maling til villaer, rækkehuse og ejendomme.",
+    blurbEn: "Cleaning, repairs and weather-resistant paint for houses, terraced homes and properties.",
   },
   {
     name: "Renovering",
+    nameEn: "Renovation",
     path: "/ydelser/renovering",
     blurb: "Istandsættelse af overflader, fugt- og skimmelskader, lofter og komplet maling.",
+    blurbEn: "Refurbishing surfaces, moisture and mould damage, ceilings and complete repainting.",
   },
   {
     name: "Erhvervsmaling",
+    nameEn: "Commercial painting",
     path: "/ydelser/erhvervsmaling",
     blurb: "Kontorer, butikker, institutioner og lagerlokaler, planlagt uden driftsforstyrrelser.",
+    blurbEn: "Offices, shops, institutions and warehouses, planned around your operations.",
   },
 ] as const;
 
@@ -119,3 +127,8 @@ for (const [a, b] of NEARBY_EDGES) {
 }
 
 export const B2B_PAGE_PATH = "/b2b";
+export const B2B_PAGE_PATH_EN = "/en/b2b";
+
+export function b2bPath(lang: "da" | "en") {
+  return lang === "en" ? B2B_PAGE_PATH_EN : B2B_PAGE_PATH;
+}

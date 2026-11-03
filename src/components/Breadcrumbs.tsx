@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight } from "lucide-react";
 
@@ -9,7 +9,8 @@ export interface Crumb {
   to?: string;
 }
 
-export default function Breadcrumbs({ items }: { items: Crumb[] }) {
+export default function Breadcrumbs({ items, ariaLabel = "Brødkrumme" }: { items: Crumb[]; ariaLabel?: string }) {
+  const { pathname } = useLocation();
   const last = items.length - 1;
   const schema = {
     "@context": "https://schema.org",
@@ -18,7 +19,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${ORIGIN}${item.to ?? ""}`,
+      item: `${ORIGIN}${item.to ?? pathname}`,
     })),
   };
 
@@ -27,7 +28,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
-      <nav aria-label="Brødkrumme" className="mb-8 flex justify-center">
+      <nav aria-label={ariaLabel} className="mb-8 flex justify-center">
         <ol className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
           {items.map((item, index) =>
             index === last ? (

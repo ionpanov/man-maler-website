@@ -13,5 +13,6 @@ export function render(url: string) {
   const { helmet } = context;
   const head = [helmet.title, helmet.meta, helmet.link, helmet.script]
     .map((item) => item.toString()).join("\n");
-  return { html, head };
+  const htmlAttributes = helmet.htmlAttributes.toString();
+  return { html, head, htmlAttributes };
 }

@@ -14,11 +14,11 @@ import video2 from "@/assets/projects/video3.mp4";
 import video3 from "@/assets/projects/video5.mp4";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { B2B_PAGE_PATH, CITIES } from "@/lib/cities";
+import { b2bPath, CITIES } from "@/lib/cities";
 
 
 export default function Index() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
 const services = [
   {
@@ -192,7 +192,7 @@ return (
             </ul>
           </div>
           <Link
-            to={B2B_PAGE_PATH}
+            to={b2bPath(lang)}
             className="inline-block self-start md:self-center bg-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold hover:bg-cta-hover transition-all hover:scale-105 hover:shadow-lg"
           >
             {t("b2b.cta")} →

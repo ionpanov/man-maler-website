@@ -6,6 +6,39 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Breadcrumbs, { Crumb } from "@/components/Breadcrumbs";
 import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
+export interface ServicePageLabels {
+  ctaButton: string;
+  seeAlso: string;
+  references: { title: string; text: string };
+  faqCard: { title: string; text: string };
+  cityPrefix: string;
+  allServices: string;
+  allAreas: string;
+  about: string;
+  ctaText: string;
+  breadcrumbAria: string;
+  faqHeading: (name: string) => string;
+  citiesHeading: (name: string) => string;
+}
+
+const DA_LABELS: ServicePageLabels = {
+  ctaButton: "Få et gratis tilbud",
+  seeAlso: "Se også",
+  references: {
+    title: "Se vores referencer",
+    text: "Eksempler på malerarbejde, vi har udført for private og virksomheder.",
+  },
+  faqCard: { title: "Ofte stillede spørgsmål", text: "Svar om tilbud, pris, forløb og områder." },
+  cityPrefix: "Maler i",
+  allServices: "Se alle vores malerydelser",
+  allAreas: "Se alle de områder, vi dækker",
+  about: "Læs mere om MAN MALER",
+  ctaText: "Kontakt os i dag for et gratis og uforpligtende tilbud.",
+  breadcrumbAria: "Brødkrumme",
+  faqHeading: (name) => `Ofte stillede spørgsmål om ${name.toLowerCase()}`,
+  citiesHeading: (name) => `${name} i dit område`,
+};
+
 const ORIGIN = "https://manmaler.dk";
 
 export interface ServicePageData {
@@ -21,6 +54,9 @@ export interface ServicePageData {
   image: { src: string; alt: string };
   imageHeading: string;
   imageParagraphs: ReactNode[];
+  lang?: "da" | "en";
+  labels?: ServicePageLabels;
+  alternates?: { hreflang: string; href: string }[];
   breadcrumb?: Crumb[];
   summary?: { heading: string; items: string[] };
   intro: { heading: string; paragraphs: ReactNode[] };
@@ -39,6 +75,8 @@ export interface ServicePageData {
 
 export default function ServicePageTemplate({ data }: { data: ServicePageData }) {
   const url = `${ORIGIN}${data.path}`;
+  const lang = data.lang ?? "da";
+  const L = data.labels ?? DA_LABELS;
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -69,11 +107,15 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
   return (
     <>
       <Helmet>
+        <html lang={lang} />
         <title>{data.title}</title>
         <meta name="description" content={data.description} />
         <meta name="keywords" content={data.keywords} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={url} />
+        {data.alternates?.map((alternate) => (
+          <link key={alternate.hreflang} rel="alternate" hrefLang={alternate.hreflang} href={alternate.href} />
+        ))}
 
         <meta property="og:title" content={data.title} />
         <meta property="og:description" content={data.description} />
@@ -94,6 +136,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
           <Breadcrumbs
+            ariaLabel={L.breadcrumbAria}
             items={
               data.breadcrumb ?? [
                 { name: "Forside", to: "/" },
@@ -125,7 +168,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               to="/kontakt"
               className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-lg font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
             >
-              Få et gratis tilbud
+              {L.ctaButton}
             </Link>
           </AnimatedSection>
         </div>
@@ -319,7 +362,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-10 text-center text-card-foreground">
-              Ofte stillede spørgsmål om {data.name.toLowerCase()}
+              {L.faqHeading(data.name)}
             </h2>
             <div className="space-y-8">
               {data.faqs.map((faq) => (
@@ -338,7 +381,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-foreground text-center">
-              Se også
+              {L.seeAlso}
             </h2>
             <div className="grid md:grid-cols-2 gap-4 mb-14">
               {SERVICE_PAGES.filter((service) => service.path !== data.path).map((service) => (
@@ -347,32 +390,36 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
                   to={service.path}
                   className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
                 >
-                  <span className="font-semibold text-foreground block mb-1">{service.name} →</span>
-                  <span className="text-sm text-muted-foreground">{service.blurb}</span>
+                  <span className="font-semibold text-foreground block mb-1">
+                    {lang === "en" ? service.nameEn : service.name} →
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    {lang === "en" ? service.blurbEn : service.blurb}
+                  </span>
                 </Link>
               ))}
               <Link
                 to="/referencer"
                 className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
               >
-                <span className="font-semibold text-foreground block mb-1">Se vores referencer →</span>
+                <span className="font-semibold text-foreground block mb-1">{L.references.title} →</span>
                 <span className="text-sm text-muted-foreground">
-                  Eksempler på malerarbejde, vi har udført for private og virksomheder.
+                  {L.references.text}
                 </span>
               </Link>
               <Link
                 to={FAQ_PATH}
                 className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
               >
-                <span className="font-semibold text-foreground block mb-1">Ofte stillede spørgsmål →</span>
+                <span className="font-semibold text-foreground block mb-1">{L.faqCard.title} →</span>
                 <span className="text-sm text-muted-foreground">
-                  Svar om tilbud, pris, forløb og områder.
+                  {L.faqCard.text}
                 </span>
               </Link>
             </div>
 
             <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-foreground text-center">
-              {data.name} i dit område
+              {L.citiesHeading(data.name)}
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {CITIES.map((city) => (
@@ -382,19 +429,19 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
                 >
                   <MapPin size={14} className="text-primary flex-shrink-0" />
-                  Maler i {city.name}
+                  {L.cityPrefix} {city.name}
                 </Link>
               ))}
             </div>
             <div className="text-center flex flex-col items-center gap-2">
               <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
-                Se alle vores malerydelser →
+                {L.allServices} →
               </Link>
               <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
-                Se alle de områder, vi dækker →
+                {L.allAreas} →
               </Link>
               <Link to="/om-os" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
-                Læs mere om MAN MALER →
+                {L.about} →
               </Link>
             </div>
           </AnimatedSection>
@@ -409,13 +456,13 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               {data.ctaTitle}
             </h2>
             <p className="text-lg mb-10 text-primary-foreground/90">
-              Kontakt os i dag for et gratis og uforpligtende tilbud.
+              {L.ctaText}
             </p>
             <Link
               to="/kontakt"
               className="inline-block bg-primary-foreground text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
             >
-              Få et gratis tilbud
+              {L.ctaButton}
             </Link>
           </div>
         </AnimatedSection>

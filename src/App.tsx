@@ -76,6 +76,7 @@ const App = () => (
                   <Route path="/ydelser/erhvervsmaling" element={<ServiceCommercial />} />
                   <Route path="/ofte-stillede-spoergsmaal" element={<FaqPage />} />
                   <Route path="/b2b" element={<PageB2B />} />
+                  <Route path="/en/b2b" element={<PageB2B />} />
                   <Route path="/referencer" element={<Projects />} />
                   <Route path="/om-os" element={<About />} />
                   <Route path="/kontakt" element={<Contact />} />
