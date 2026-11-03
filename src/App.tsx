@@ -45,6 +45,7 @@ import ServiceFacade from "./pages/ServiceFacade";
 import ServiceRenovation from "./pages/ServiceRenovation";
 import ServiceCommercial from "./pages/ServiceCommercial";
 import FaqPage from "./pages/FaqPage";
+import PageB2B from "./pages/PageB2B";
 import ScrollToTop from "@/components/ScrollToTop";
 
 import AnalyticsTracker from "@/components/AnalyticsTracker";
@@ -74,6 +75,7 @@ const App = () => (
                   <Route path="/ydelser/renovering" element={<ServiceRenovation />} />
                   <Route path="/ydelser/erhvervsmaling" element={<ServiceCommercial />} />
                   <Route path="/ofte-stillede-spoergsmaal" element={<FaqPage />} />
+                  <Route path="/b2b" element={<PageB2B />} />
                   <Route path="/referencer" element={<Projects />} />
                   <Route path="/om-os" element={<About />} />
                   <Route path="/kontakt" element={<Contact />} />

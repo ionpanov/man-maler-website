@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle, ChevronRight, Clock, MapPin, ShieldCheck } from "lucide-react";
+import { CheckCircle, Clock, MapPin, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import Breadcrumbs, { Crumb } from "@/components/Breadcrumbs";
 import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
 const ORIGIN = "https://manmaler.dk";
@@ -20,6 +21,8 @@ export interface ServicePageData {
   image: { src: string; alt: string };
   imageHeading: string;
   imageParagraphs: ReactNode[];
+  breadcrumb?: Crumb[];
+  summary?: { heading: string; items: string[] };
   intro: { heading: string; paragraphs: ReactNode[] };
   steps: { heading: string; items: { title: string; text: string }[] };
   table: {
@@ -53,16 +56,6 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
     },
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Forside", item: `${ORIGIN}/` },
-      { "@type": "ListItem", position: 2, name: "Ydelser", item: `${ORIGIN}/ydelser` },
-      { "@type": "ListItem", position: 3, name: data.name, item: url },
-    ],
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -93,7 +86,6 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         <meta name="twitter:description" content={data.description} />
 
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
@@ -101,19 +93,15 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
       <section className="relative pt-12 pb-24 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
-          <nav aria-label="Brødkrumme" className="mb-8 flex justify-center">
-            <ol className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
-              <li className="flex items-center gap-1">
-                <Link to="/" className="inline-block py-1 hover:text-primary hover:underline">Forside</Link>
-                <ChevronRight size={14} aria-hidden="true" />
-              </li>
-              <li className="flex items-center gap-1">
-                <Link to="/ydelser" className="inline-block py-1 hover:text-primary hover:underline">Ydelser</Link>
-                <ChevronRight size={14} aria-hidden="true" />
-              </li>
-              <li aria-current="page" className="text-foreground font-medium">{data.name}</li>
-            </ol>
-          </nav>
+          <Breadcrumbs
+            items={
+              data.breadcrumb ?? [
+                { name: "Forside", to: "/" },
+                { name: "Ydelser", to: "/ydelser" },
+                { name: data.name },
+              ]
+            }
+          />
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
               {data.h1}
@@ -170,6 +158,29 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
           </AnimatedSection>
         </div>
       </section>
+
+      {/* SUMMARY */}
+      {data.summary && (
+        <section className="px-6 pt-20">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection>
+              <div className="p-6 md:p-8 rounded-2xl bg-warm-surface border border-border">
+                <h2 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground">
+                  {data.summary.heading}
+                </h2>
+                <ul className="space-y-3">
+                  {data.summary.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-foreground leading-relaxed">
+                      <CheckCircle size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      )}
 
       {/* INTRO */}
       <section className="py-20 px-6">

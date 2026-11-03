@@ -180,7 +180,8 @@ const data: ServicePageData = {
         <Link to="/maler-roskilde" className={link}>Roskilde</Link>, dækker vi også dig.
       </>,
       <>
-        Har virksomheden også brug for at få renoveret efter en skade, kan du læse om vores{" "}
+        Vil I samarbejde løbende, eller er I et firma, der søger en maler til større projekter, kan du læse om vores{" "}
+        <Link to="/b2b" className={link}>B2B-samarbejde</Link>. Har virksomheden også brug for at få renoveret efter en skade, kan du læse om vores{" "}
         <Link to="/ydelser/renovering" className={link}>renovering</Link>. Til ejendommens ydre kan du se vores{" "}
         <Link to="/ydelser/facademaling" className={link}>facademaling</Link>, og til lokalerne indvendigt vores{" "}
         <Link to="/ydelser/indendoers-maling" className={link}>indvendige maling</Link>.

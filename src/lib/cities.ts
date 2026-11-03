@@ -118,5 +118,4 @@ for (const [a, b] of NEARBY_EDGES) {
   (NEARBY[b] ??= []).push(a);
 }
 
-// Temporary B2B target; point this at the dedicated B2B page once it exists.
-export const B2B_PAGE_PATH = "/ydelser/erhvervsmaling";
+export const B2B_PAGE_PATH = "/b2b";

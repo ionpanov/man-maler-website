@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useI18n } from "@/lib/i18n";
-import { FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
+import { B2B_PAGE_PATH, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
 const TEXT = {
   da: {
     title: "Udforsk mere",
     services: "Vores ydelser",
+    b2b: "B2B-samarbejde for virksomheder",
     faq: "Ofte stillede spørgsmål om malerarbejde",
     areas: "Se alle områder, vi dækker",
     names: ["Indvendig maling", "Facademaling", "Renovering", "Erhvervsmaling"],
@@ -14,6 +15,7 @@ const TEXT = {
   en: {
     title: "Explore more",
     services: "Our services",
+    b2b: "B2B partnerships for businesses",
     faq: "Frequently asked questions about painting",
     areas: "See all areas we cover",
     names: ["Interior painting", "Facade painting", "Renovation", "Commercial painting"],
@@ -47,6 +49,9 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
             </ul>
           </nav>
           <div className="mt-6 flex flex-col items-center gap-2 text-center">
+            <Link to={B2B_PAGE_PATH} className="inline-block py-1 text-primary font-medium hover:underline">
+              {text.b2b} →
+            </Link>
             <Link to={FAQ_PATH} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.faq} →
             </Link>
