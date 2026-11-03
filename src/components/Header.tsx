@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import type { MouseEvent } from "react";
 import { useI18n } from "@/lib/i18n";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +10,20 @@ export default function Header() {
   const location = useLocation();
   const { lang, setLang, t } = useI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const goToB2B = (event: MouseEvent) => {
+    const menuWasOpen = mobileOpen;
+    setMobileOpen(false);
+    if (location.pathname === "/") {
+      event.preventDefault();
+      window.history.replaceState(null, "", "/#b2b");
+      // The open mobile menu pushes content down; wait for it to collapse before measuring.
+      window.setTimeout(
+        () => document.getElementById("b2b")?.scrollIntoView({ behavior: "smooth", block: "start" }),
+        menuWasOpen ? 400 : 0,
+      );
+    }
+  };
 
   const navItems = [
     { name: t("nav.home"), href: "/" },
@@ -44,6 +59,13 @@ export default function Header() {
               </Link>
             );
           })}
+          <Link
+            to="/#b2b"
+            onClick={goToB2B}
+            className="ml-2 px-4 py-2 rounded-full border border-primary text-primary font-semibold hover:bg-primary/10 transition-all duration-200"
+          >
+            B2B
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -113,6 +135,13 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                to="/#b2b"
+                onClick={goToB2B}
+                className="px-4 py-3 rounded-lg border border-primary text-primary font-semibold text-center"
+              >
+                B2B
+              </Link>
               <Link
                 to="/kontakt"
                 onClick={() => setMobileOpen(false)}

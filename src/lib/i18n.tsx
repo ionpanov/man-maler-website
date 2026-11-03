@@ -287,6 +287,11 @@ const translations = {
 "seo.serviceAreas.text": "MAN MALER tilbyder professionelt malerarbejde i København, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved og resten af Sjælland. Vi udfører indendørs maling, udendørs maling, facademaling, renovering, spartling og erhvervsmaling for både private boliger og virksomheder.",
 
 "seo.services.title": "Vores maler- og renoveringsydelser",
+"b2b.tag": "B2B",
+"b2b.title": "Vi arbejder også med virksomheder",
+"b2b.text": "Kontorer, butikker, institutioner, lagerlokaler og ejendomme. Vi planlægger arbejdet efter jeres drift og aftaler gerne løbende vedligeholdelse.",
+"b2b.chips": "Kontor|Butik|Institution|Lager|Ejendomme",
+"b2b.cta": "Se erhvervsmaling",
 "home.areas.title": "Maler i dit område",
 "home.areas.intro": "MAN MALER dækker København og hele Sjælland. Find din by herunder, eller læs svarene på de mest stillede spørgsmål om malerarbejde.",
 "home.areas.faq": "Ofte stillede spørgsmål om malerarbejde",
@@ -581,6 +586,11 @@ const translations = {
 "seo.serviceAreas.text": "MAN MALER provides professional painting services in Copenhagen, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved and across Zealand. We offer interior painting, exterior painting, facade painting, renovation and commercial painting for homes and businesses.",
 
 "seo.services.title": "Our painting and renovation services",
+"b2b.tag": "B2B",
+"b2b.title": "We also work with businesses",
+"b2b.text": "Offices, shops, institutions, warehouses and property portfolios. We plan the work around your operations and are happy to agree on ongoing maintenance.",
+"b2b.chips": "Office|Retail|Institution|Warehouse|Property",
+"b2b.cta": "See commercial painting",
 "home.areas.title": "Painters in your area",
 "home.areas.intro": "MAN MALER covers Copenhagen and all of Zealand. Find your town below, or read the answers to the most common questions about painting.",
 "home.areas.faq": "Frequently asked questions about painting",

@@ -14,7 +14,7 @@ import video2 from "@/assets/projects/video3.mp4";
 import video3 from "@/assets/projects/video5.mp4";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { CITIES } from "@/lib/cities";
+import { B2B_PAGE_PATH, CITIES } from "@/lib/cities";
 
 
 export default function Index() {
@@ -169,9 +169,40 @@ return (
         </div>
       </section>
 
+      {/* B2B */}
+      <section id="b2b" className="scroll-mt-20 px-6 py-12 bg-card border-y border-border">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
+          <div className="flex-1">
+            <span className="inline-block mb-3 px-3 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+              {t("b2b.tag")}
+            </span>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-3 text-card-foreground">
+              {t("b2b.title")}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4 max-w-2xl">{t("b2b.text")}</p>
+            <ul className="flex flex-wrap gap-2">
+              {t("b2b.chips").split("|").map((chip) => (
+                <li
+                  key={chip}
+                  className="px-3 py-1 rounded-full bg-warm-surface border border-border text-sm text-foreground"
+                >
+                  {chip}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Link
+            to={B2B_PAGE_PATH}
+            className="inline-block self-start md:self-center bg-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold hover:bg-cta-hover transition-all hover:scale-105 hover:shadow-lg"
+          >
+            {t("b2b.cta")} →
+          </Link>
+        </div>
+      </section>
+
 {/* SERVICES */}
-<section className="relative px-6 pb-24 gradient-warm">
-  <div className="max-w-6xl mx-auto -mt-12 z-20 relative">
+<section className="relative px-6 pt-16 pb-24 gradient-warm">
+  <div className="max-w-6xl mx-auto z-20 relative">
     <AnimatedSection>
       <div className="bg-card rounded-2xl shadow-xl p-10 md:p-14">
         <h2 className="text-3xl font-display font-semibold text-center mb-12 text-card-foreground">
