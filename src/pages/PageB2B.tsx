@@ -6,6 +6,21 @@ import { B2B_PAGE_PATH, B2B_PAGE_PATH_EN } from "@/lib/cities";
 import hallwayImg from "@/assets/b2b-team-hallway.webp";
 import paintedWallImg from "@/assets/b2b-painted-wall.webp";
 
+import g1t from "@/assets/b2b-gallery-1-t.webp";
+import g1f from "@/assets/b2b-gallery-1-f.webp";
+import g2t from "@/assets/b2b-gallery-2-t.webp";
+import g2f from "@/assets/b2b-gallery-2-f.webp";
+import g3t from "@/assets/b2b-gallery-3-t.webp";
+import g3f from "@/assets/b2b-gallery-3-f.webp";
+import g4t from "@/assets/b2b-gallery-4-t.webp";
+import g4f from "@/assets/b2b-gallery-4-f.webp";
+import g5t from "@/assets/b2b-gallery-5-t.webp";
+import g5f from "@/assets/b2b-gallery-5-f.webp";
+import g6t from "@/assets/b2b-gallery-6-t.webp";
+import g6f from "@/assets/b2b-gallery-6-f.webp";
+import g7t from "@/assets/b2b-gallery-7-t.webp";
+import g7f from "@/assets/b2b-gallery-7-f.webp";
+
 const link = "text-primary hover:underline";
 
 const ORIGIN = "https://manmaler.dk";
@@ -196,6 +211,26 @@ const daData: ServicePageData = {
       a: "Vi dækker København og hele Sjælland.",
     },
   ],
+  gallery: {
+    heading: "Fra vores projekter: arbejdet bag et flot resultat",
+    intro: "Billeder fra rigtige opgaver, hvor vi fjerner tapet, spartler og glitter vægge og lofter, før der males. Klik på et billede for at se det i stor størrelse.",
+    photos: [
+    { thumb: g1t, full: g1f, alt: "Maler spartler væg over dør i entré med rød glittebrætte", caption: "Maler på stige spartler væg i entré" },
+    { thumb: g2t, full: g2f, alt: "Maler fjerner gammel tapet i entré i en lejlighed", caption: "Maler fjerner gammel tapet i entré" },
+    { thumb: g3t, full: g3f, alt: "Maler river tapetbaner af væggen i en entré med afdækket gulv", caption: "Tapetfjernelse med afdækket gulv" },
+    { thumb: g4t, full: g4f, alt: "Maler trækker gammel tapet af væggen før maling og spartling", caption: "Gammel tapet fjernes før spartling" },
+    { thumb: g5t, full: g5f, alt: "Maler på stige glitter væg ved stuklister og franske døre i en lejlighed", caption: "Glitning af væg ved stuklister" },
+    { thumb: g6t, full: g6f, alt: "Maler glitter væg med rød glittebrætte i en lejlighed", caption: "Finspartling med glittebrætte" },
+    { thumb: g7t, full: g7f, alt: "Maler spartler langs stuklisten i loftet i en lejlighed i København", caption: "Spartling langs stuklisten i loftet" },
+  ],
+    labels: {
+    open: (alt) => `Åbn billede: ${alt}`,
+    close: "Luk",
+    prev: "Forrige billede",
+    next: "Næste billede",
+    counter: (current, total) => `${current} / ${total}`,
+  },
+  },
   ctaTitle: "Skal vi tale om jeres opgave?",
 };
 
@@ -395,6 +430,26 @@ const enData: ServicePageData = {
       a: "We cover Copenhagen and all of Zealand.",
     },
   ],
+  gallery: {
+    heading: "From our projects: the work behind a great result",
+    intro: "Photos from real jobs where we remove wallpaper, fill and smooth walls and ceilings before painting. Click a photo to view it full size.",
+    photos: [
+    { thumb: g1t, full: g1f, alt: "Painter skim-coating a wall above a door in a hallway with a red float", caption: "Painter on a ladder filling a hallway wall" },
+    { thumb: g2t, full: g2f, alt: "Painter removing old wallpaper in an apartment hallway", caption: "Removing old wallpaper in a hallway" },
+    { thumb: g3t, full: g3f, alt: "Painter pulling strips of wallpaper off a hallway wall with the floor protected", caption: "Wallpaper removal with the floor protected" },
+    { thumb: g4t, full: g4f, alt: "Painter peeling old wallpaper off the wall before skim-coating and painting", caption: "Old wallpaper removed before filling" },
+    { thumb: g5t, full: g5f, alt: "Painter on a ladder smoothing a wall next to a decorative cornice and French doors", caption: "Smoothing a wall by the cornice" },
+    { thumb: g6t, full: g6f, alt: "Painter smoothing a wall with a red float in an apartment", caption: "Fine filling with a float" },
+    { thumb: g7t, full: g7f, alt: "Painter filling along the cornice at the ceiling of a Copenhagen apartment", caption: "Filling along the ceiling cornice" },
+  ],
+    labels: {
+    open: (alt) => `Open photo: ${alt}`,
+    close: "Close",
+    prev: "Previous photo",
+    next: "Next photo",
+    counter: (current, total) => `${current} / ${total}`,
+  },
+  },
   ctaTitle: "Shall we talk about your project?",
 };
 

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle, Clock, MapPin, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Breadcrumbs, { Crumb } from "@/components/Breadcrumbs";
+import PhotoGallery, { GalleryLabels, GalleryPhoto } from "@/components/PhotoGallery";
 import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
 export interface ServicePageLabels {
@@ -70,6 +71,7 @@ export interface ServicePageData {
   };
   price: { heading: string; paragraphs: ReactNode[]; items: string[]; closing: ReactNode };
   context: { heading: string; paragraphs: ReactNode[] };
+  gallery?: { heading: string; intro: string; photos: GalleryPhoto[]; labels: GalleryLabels };
   faqs: { q: string; a: string }[];
   ctaTitle: string;
 }
@@ -105,6 +107,22 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
     })),
   };
 
+  const abs = (src: string) => (src.startsWith("http") ? src : `${ORIGIN}${src}`);
+  const gallerySchema = data.gallery && {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: data.gallery.heading,
+    url,
+    image: data.gallery.photos.map((photo) => ({
+      "@type": "ImageObject",
+      contentUrl: abs(photo.full),
+      thumbnailUrl: abs(photo.thumb),
+      name: photo.caption,
+      description: photo.alt,
+      creator: { "@id": `${ORIGIN}/#organization` },
+    })),
+  };
+
   return (
     <>
       <Helmet>
@@ -130,6 +148,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
 
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {gallerySchema && <script type="application/ld+json">{JSON.stringify(gallerySchema)}</script>}
       </Helmet>
 
       {/* HERO */}
@@ -375,8 +394,27 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         </div>
       </section>
 
+      {/* GALLERY */}
+      {data.gallery && (
+        <section className="py-20 px-6 bg-card">
+          <div className="max-w-5xl mx-auto">
+            <AnimatedSection>
+              <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">
+                {data.gallery.heading}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">{data.gallery.intro}</p>
+              <PhotoGallery
+                photos={data.gallery.photos}
+                labels={data.gallery.labels}
+                title={data.gallery.heading}
+              />
+            </AnimatedSection>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
-      <section className="py-20 px-6 bg-card">
+      <section className={`py-20 px-6 ${data.gallery ? "" : "bg-card"}`}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-10 text-center text-card-foreground">
