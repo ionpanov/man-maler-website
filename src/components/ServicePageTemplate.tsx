@@ -52,6 +52,7 @@ export interface ServicePageData {
   lead: string;
   heroPoints: [string, string, string];
   image: { src: string; alt: string };
+  images?: { src: string; alt: string }[];
   imageHeading: string;
   imageParagraphs: ReactNode[];
   lang?: "da" | "en";
@@ -178,16 +179,33 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
       <section className="py-20 px-6 bg-card">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={data.image.src}
-                alt={data.image.alt}
-                width={800}
-                height={600}
-                loading="eager"
-                className="w-full h-72 object-cover"
-              />
-            </div>
+            {data.images && data.images.length > 1 ? (
+              <div className="grid grid-cols-2 gap-3">
+                {data.images.map((photo, index) => (
+                  <div key={photo.src} className="rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={800}
+                      height={1067}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      className="w-full aspect-[3/4] object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={data.image.src}
+                  alt={data.image.alt}
+                  width={800}
+                  height={600}
+                  loading="eager"
+                  className="w-full h-72 object-cover"
+                />
+              </div>
+            )}
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-card-foreground">

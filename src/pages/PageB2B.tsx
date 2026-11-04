@@ -3,7 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import ServicePageTemplate, { ServicePageData, ServicePageLabels } from "@/components/ServicePageTemplate";
 import { useI18n } from "@/lib/i18n";
 import { B2B_PAGE_PATH, B2B_PAGE_PATH_EN } from "@/lib/cities";
-import commercialImg from "@/assets/commercial.webp";
+import hallwayImg from "@/assets/b2b-team-hallway.webp";
+import paintedWallImg from "@/assets/b2b-painted-wall.webp";
 
 const link = "text-primary hover:underline";
 
@@ -31,9 +32,13 @@ const daData: ServicePageData = {
     "Vi maler for virksomheder og samarbejder med entreprenører, ejendomsadministratorer og andre fagfolk. Fast kontaktperson, klar tidsplan og et tilbud, der er til at forstå.",
   heroPoints: ["Gratis og uforpligtende tilbud", "Svar inden for 24 timer", "Dækker København og hele Sjælland"],
   image: {
-    src: commercialImg,
-    alt: "Malerarbejde i erhvervslokaler",
+    src: hallwayImg,
+    alt: "To malere i en entré, klar til at gå i gang med istandsættelsen",
   },
+  images: [
+    { src: hallwayImg, alt: "To malere i en entré, klar til at gå i gang med istandsættelsen" },
+    { src: paintedWallImg, alt: "Maler ved en nymalet væg med stuklister i en lejlighed" },
+  ],
   imageHeading: "Malerarbejde, der passer ind i jeres forretning",
   imageParagraphs: [
     "For en virksomhed handler et malerprojekt om mere end maling. Lokalerne skal kunne bruges, kunder og medarbejdere må ikke forstyrres, og tidsplanen skal holde.",
@@ -230,9 +235,13 @@ const enData: ServicePageData = {
     "We paint for businesses and work with contractors, property administrators and other professionals. One contact person, a clear schedule and a quote that is easy to understand.",
   heroPoints: ["Free, non-binding quote", "Reply within 24 hours", "Covering Copenhagen and all of Zealand"],
   image: {
-    src: commercialImg,
-    alt: "Painting work in commercial premises",
+    src: hallwayImg,
+    alt: "Two painters in a hallway, ready to start the refurbishment",
   },
+  images: [
+    { src: hallwayImg, alt: "Two painters in a hallway, ready to start the refurbishment" },
+    { src: paintedWallImg, alt: "Painter next to a freshly painted wall with a decorative cornice in an apartment" },
+  ],
   imageHeading: "Painting that fits into your business",
   imageParagraphs: [
     "For a business, a painting project is about more than paint. The premises must stay usable, customers and staff must not be disturbed, and the schedule has to hold.",
