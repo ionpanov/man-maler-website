@@ -5,6 +5,8 @@ import { Mail, MapPin, Phone, Clock, CheckCircle, Instagram, Facebook, ChevronDo
 import { toast } from "sonner";
 import { Helmet } from "react-helmet-async";
 
+import PhotoUpload from "@/components/PhotoUpload";
+import { upload } from "@vercel/blob/client";
 import ExploreLinks from "@/components/ExploreLinks";
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (
@@ -26,6 +28,7 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "",phone: "", message: "" });
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [photos, setPhotos] = useState<File[]>([]);
   const [sending, setSending] = useState(false);
 const [sent, setSent] = useState(false);
   const serviceOptions = SERVICE_KEYS.map((key) => ({
@@ -74,6 +77,26 @@ if (!form.message.trim()) {
   setSending(true);
 
   try {
+    let photoUrls: string[] = [];
+    if (photos.length > 0) {
+      try {
+        const batch = Date.now().toString(36);
+        const uploaded = await Promise.all(
+          photos.map((file, index) =>
+            upload(`inquiries/${batch}-${index}-${file.name.replace(/[^\w.-]/g, "_")}`, file, {
+              access: "public",
+              handleUploadUrl: "/api/upload",
+            })
+          )
+        );
+        photoUrls = uploaded.map((blob) => blob.url);
+      } catch (uploadError) {
+        console.error("Photo upload error:", uploadError);
+        toast.error(t("contact.photos.uploadError" as any));
+        return;
+      }
+    }
+
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -85,6 +108,7 @@ if (!form.message.trim()) {
         phone: form.phone, // ✅ NEW
         message: form.message,
         services: selectedServices,
+        photos: photoUrls,
       }),
     });
 
@@ -112,6 +136,7 @@ setSent(true);
     });
 
     setSelectedServices([]);
+    setPhotos([]);
 
   } catch (err) {
     console.error("Contact form error:", err);
@@ -359,6 +384,25 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder={t("contact.details.placeholder" as any)}
                     className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none transition resize-none placeholder:text-muted-foreground/60"
+                  />
+                </div>
+
+                {/* Photos (optional) */}
+                <div>
+                  <span className="block text-sm font-medium mb-2 text-foreground">
+                    {t("contact.photos.label" as any)}
+                  </span>
+                  <PhotoUpload
+                    files={photos}
+                    onChange={setPhotos}
+                    disabled={sending}
+                    labels={{
+                      button: t("contact.photos.button" as any),
+                      hint: t("contact.photos.hint" as any),
+                      remove: t("contact.photos.remove" as any),
+                      tooLarge: t("contact.photos.tooLarge" as any),
+                      limit: t("contact.photos.limit" as any),
+                    }}
                   />
                 </div>
 

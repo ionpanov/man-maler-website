@@ -1,5 +1,11 @@
 import nodemailer from "nodemailer";
 
+const MAX_PHOTOS = 8;
+const BLOB_HOST = /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\/inquiries\//;
+
+const escapeHtml = (value) =>
+  String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+
 export default async function handler(req, res) {
 
   if (req.method !== "POST") {
@@ -9,6 +15,9 @@ export default async function handler(req, res) {
   try {
 
     const { name, email, phone, services, message } = req.body;
+    const photos = Array.isArray(req.body.photos)
+      ? req.body.photos.filter((url) => typeof url === "string" && BLOB_HOST.test(url)).slice(0, MAX_PHOTOS)
+      : [];
 
     // Basic validation
     if (!name || !email || !phone || !message || !services?.length) {
@@ -29,7 +38,15 @@ export default async function handler(req, res) {
       },
     });
 
-    const servicesList = services.map(service => `<li>${service}</li>`).join("");
+    const servicesList = services.map(service => `<li>${escapeHtml(service)}</li>`).join("");
+
+    const photosHtml = photos.length
+      ? `<h3 style="margin-bottom:5px;margin-top:20px;">Photos (${photos.length})</h3>
+        <p style="font-size:13px;color:#666;margin-top:0;">Links expire automatically after 45 days.</p>
+        <p>${photos
+          .map((url) => `<a href="${escapeHtml(url)}" style="display:inline-block;margin:0 8px 8px 0"><img src="${escapeHtml(url)}" width="160" alt="Customer photo" style="border-radius:6px;border:1px solid #ddd"></a>`)
+          .join("")}</p>`
+      : "";
 
     const emailHTML = `
       <div style="font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222">
@@ -45,16 +62,16 @@ export default async function handler(req, res) {
         <h3 style="margin-bottom:5px;">Customer Information</h3>
 
         <p>
-          <strong>Name:</strong> ${name}
+          <strong>Name:</strong> ${escapeHtml(name)}
         </p>
 
         <p>
           <strong>Email:</strong> 
-          <a href="mailto:${email}" style="color:#2563eb">${email}</a>
+          <a href="mailto:${escapeHtml(email)}" style="color:#2563eb">${escapeHtml(email)}</a>
         </p>
 <p>
   <strong>Phone:</strong> 
-  <a href="tel:${phone}" style="color:#2563eb">${phone}</a>
+  <a href="tel:${escapeHtml(phone)}" style="color:#2563eb">${escapeHtml(phone)}</a>
 </p>
         <h3 style="margin-bottom:5px;margin-top:20px;">Requested Services</h3>
 
@@ -65,8 +82,10 @@ export default async function handler(req, res) {
         <h3 style="margin-bottom:5px;margin-top:20px;">Project Details</h3>
 
         <p style="white-space:pre-line;background:#f5f5f5;padding:12px;border-radius:6px;">
-          ${message}
+          ${escapeHtml(message)}
         </p>
+
+        ${photosHtml}
 
         <hr style="margin:20px 0;">
 
