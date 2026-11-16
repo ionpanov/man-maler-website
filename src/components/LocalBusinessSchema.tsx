@@ -14,7 +14,8 @@ export default function LocalBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: "Sporstræde 39",
-      addressLocality: "Nærheden",
+      postalCode: "2640",
+      addressLocality: "Hedehusene",
       addressCountry: "DK",
     },
     areaServed: [
