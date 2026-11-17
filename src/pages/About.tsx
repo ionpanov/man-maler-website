@@ -231,7 +231,7 @@ content="Læs om vores malerfirma og vores værdier. Professionelt malerarbejde 
           >
             <img
               src={img}
-              alt={`work-${i + 1}`}
+              alt={["Maler spartler væg i en entré", "Maler glitter væg ved stuklister", "Maler glitter væg med glittebrætte"][i]}
               loading="lazy"
               className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
             />
