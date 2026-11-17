@@ -190,7 +190,8 @@ const translations = {
     "contact.info.phone": "71 31 64 99",
     "contact.info.phone.title": "Telefon",
     "contact.info.hours": "Åbningstider",
-    "contact.info.hours.weekdays": "Man-Fre: 08:00 – 16:00",
+    "contact.info.hours.weekdays": "Man-Fre: 07:00 – 20:00",
+    "contact.info.hours.note": "Vi tilrettelægger vores tid efter dig. Skal vi komme tidligt, sent eller på et tidspunkt, der passer ind i din hverdag, finder vi en løsning.",
     "contact.success.title": "Tak for din henvendelse!",
 "contact.success.description": "Vi har modtaget din besked og vender typisk tilbage inden for få timer.",
 "contact.success.button": "Send en ny besked",
@@ -210,7 +211,7 @@ const translations = {
 "footer.companyName": "MAN Maler ApS",
 "footer.cvr": "CVR",
 "footer.hours": "Åbningstider",
-"footer.hours.weekdays": "Man–Fre · 08:00–16:00",
+"footer.hours.weekdays": "Man–Fre · 07:00–20:00",
 
 "legal.terms.title": "Handelsbetingelser",
 
@@ -496,7 +497,8 @@ const translations = {
     "contact.info.phone": "71 31 64 99",
     "contact.info.phone.title": "Phone",
     "contact.info.hours": "Opening Hours",
-    "contact.info.hours.weekdays": "Mon-Fri: 08:00 – 16:00",
+    "contact.info.hours.weekdays": "Mon-Fri: 07:00 – 20:00",
+    "contact.info.hours.note": "We plan our time around yours. If you need us early, late or at a time that fits your day, we will find a solution.",
     "contact.success.title": "Thank you for your message!",
 "contact.success.description": "Your inquiry has been received. We usually reply within a few hours.",
 "contact.success.button": "Send another message",
@@ -516,7 +518,7 @@ const translations = {
     "footer.companyName": "MAN Maler ApS",
     "footer.cvr": "CVR",
     "footer.hours": "Opening Hours",
-    "footer.hours.weekdays": "Mon–Fri · 08:00–16:00",
+    "footer.hours.weekdays": "Mon–Fri · 07:00–20:00",
 
 "legal.terms.title": "Terms & Conditions",
 

@@ -150,7 +150,7 @@ setSent(true);
     { icon: Phone, title: t("contact.info.phone.title"), value: t("contact.info.phone"), href: "tel:+4571316499" },
     { icon: Mail, title: "Email", value: t("contact.info.email") },
     { icon: MapPin, title: t("footer.address"), value: t("contact.info.address") },
-    { icon: Clock, title: t("contact.info.hours"), value: `${t("contact.info.hours.weekdays")}` },
+    { icon: Clock, title: t("contact.info.hours"), value: `${t("contact.info.hours.weekdays")}`, note: t("contact.info.hours.note" as any) },
   ];
 
   return (
@@ -450,6 +450,9 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
                           </a>
                         ) : (
                           <p className="text-muted-foreground text-sm">{item.value}</p>
+                        )}
+                        {item.note && (
+                          <p className="text-muted-foreground/80 text-sm mt-1 leading-relaxed">{item.note}</p>
                         )}
                       </div>
                     </div>

@@ -28,8 +28,8 @@ export default function LocalBusinessSchema() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "16:00",
+        opens: "07:00",
+        closes: "20:00",
       },
     ],
     sameAs: [
