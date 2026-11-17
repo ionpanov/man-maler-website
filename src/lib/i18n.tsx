@@ -12,8 +12,8 @@ const translations = {
     "nav.contact": "Kontakt",
     "nav.cta": "Få et tilbud",
 
-    "hero.title": "Professionel Maler i København og på Sjælland",
-    "hero.subtitle": "Professionelt malerfirma i København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge og hele Sjælland. Vi udfører indendørs maling, udendørs maling, facademaling, spartling og renovering af lejligheder, huse og erhvervsejendomme.",
+    "hero.title": "Professionel Maler i Hedehusene og på hele Sjælland",
+    "hero.subtitle": "Professionelt malerfirma i Hedehusene med opgaver i København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge og hele Sjælland. Vi udfører indendørs maling, udendørs maling, facademaling, spartling og renovering af lejligheder, huse og erhvervsejendomme.",
     "hero.cta": "Få et gratis tilbud",
     "hero.services": "Se vores ydelser",
 
@@ -291,8 +291,8 @@ const translations = {
 
 "legal.cookies.section6.title": "Kontakt",
 "legal.cookies.section6.text": "Hvis du har spørgsmål til vores brug af cookies, er du velkommen til at kontakte os:\n\nMAN MALER drives under MAN Maler ApS\nCVR: 46787773\nAdresse: Sporstræde 39, 2640 Hedehusene\nEmail: info@manmaler.dk",
-  "seo.text1": "Leder du efter en professionel maler i København eller på Sjælland? MAN MALER tilbyder professionelt malerarbejde i København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød, Helsingør og resten af Sjælland.",
-"seo.serviceAreas.title": "Professionel maler i København og på Sjælland",
+  "seo.text1": "Leder du efter en professionel maler i Hedehusene eller på Sjælland? MAN MALER tilbyder professionelt malerarbejde fra Hedehusene til København, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød, Helsingør og resten af Sjælland.",
+"seo.serviceAreas.title": "Professionel maler i Hedehusene og på hele Sjælland",
 
 "seo.serviceAreas.text": "MAN MALER tilbyder professionelt malerarbejde i København, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved og resten af Sjælland. Vi udfører indendørs maling, udendørs maling, facademaling, renovering, spartling og erhvervsmaling for både private boliger og virksomheder.",
 
@@ -325,7 +325,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.cta": "Get a quote",
 
-    "hero.title": "Professional Painter in Copenhagen and Across Zealand",
+    "hero.title": "Professional Painter in Hedehusene and Across Zealand",
     "hero.subtitle": "Professional painting company serving Copenhagen, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge and across Zealand. We provide interior painting, exterior painting, facade painting, renovation and commercial painting for apartments, houses and businesses.",
     "hero.cta": "Get a free quote",
     "hero.services": "See our services",
@@ -599,8 +599,8 @@ const translations = {
 
 "legal.cookies.section6.title": "Contact information",
 "legal.cookies.section6.text": "If you have any questions regarding our use of cookies, please feel free to contact us:\n\nMAN MALER is operated under MAN Maler ApS\nCVR: 46787773\nAddress: Sporstræde 39, 2640 Hedehusene, Denmark\nEmail: info@manmaler.dk",
-  "seo.text1": "Looking for a professional painter in Copenhagen or Zealand? MAN MALER provides professional painting services in Copenhagen, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød and Helsingør.",
-"seo.serviceAreas.title": "Professional painter in Copenhagen and across Zealand",
+  "seo.text1": "Looking for a professional painter in Hedehusene or Zealand? MAN MALER provides professional painting services from Hedehusene to Copenhagen, Ballerup, Roskilde, Hvidovre, Herlev, Glostrup, Lyngby, Gentofte, Greve, Køge, Hillerød and Helsingør.",
+"seo.serviceAreas.title": "Professional painter in Hedehusene and across Zealand",
 
 "seo.serviceAreas.text": "MAN MALER provides professional painting services in Copenhagen, Frederiksberg, Ballerup, Herlev, Glostrup, Hvidovre, Rødovre, Taastrup, Albertslund, Lyngby, Gentofte, Roskilde, Greve, Køge, Hillerød, Helsingør, Næstved and across Zealand. We offer interior painting, exterior painting, facade painting, renovation and commercial painting for homes and businesses.",
 

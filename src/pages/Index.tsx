@@ -81,11 +81,11 @@ useEffect(() => {
 return (
   <>
     <Helmet>
-      <title>Maler i København | Professionel Maler på Sjælland | MAN MALER</title>
+      <title>Maler i Hedehusene og på Sjælland | MAN MALER</title>
 
       <meta
         name="description"
-        content="Professionel maler i København, Ballerup og Roskilde. Vi tilbyder indendørs maling, facademaling, renovering og erhvervsmaling på hele Sjælland."
+        content="Professionel maler i Hedehusene med opgaver i København og på hele Sjælland. Indendørs maling, facademaling, renovering og erhvervsmaling."
       />
 
       <meta
@@ -96,20 +96,20 @@ return (
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://manmaler.dk/" />
 
-      <meta property="og:title" content="Maler i København | Professionel Maler på Sjælland | MAN MALER" />
+      <meta property="og:title" content="Maler i Hedehusene og på Sjælland | MAN MALER" />
       <meta
         property="og:description"
-        content="Professionel maler i København, Ballerup og Roskilde. Vi tilbyder indendørs maling, facademaling, renovering og erhvervsmaling på hele Sjælland."
+        content="Professionel maler i Hedehusene med opgaver i København og på hele Sjælland. Indendørs maling, facademaling, renovering og erhvervsmaling."
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://manmaler.dk/" />
       <meta property="og:image" content="https://manmaler.dk/og-home.jpg" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Maler i København | Professionel Maler på Sjælland | MAN MALER" />
+      <meta name="twitter:title" content="Maler i Hedehusene og på Sjælland | MAN MALER" />
       <meta
         name="twitter:description"
-        content="Professionel maler i København, Ballerup og Roskilde. Indendørs maling, facademaling, renovering og erhvervsmaling."
+        content="Professionel maler i Hedehusene med opgaver i København og på hele Sjælland. Indendørs maling, facademaling, renovering og erhvervsmaling."
       />
       <meta name="twitter:image" content="https://manmaler.dk/og-home.jpg" />
     </Helmet>
