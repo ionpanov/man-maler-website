@@ -25,6 +25,7 @@ export default function Footer() {
     { name: "Facademaling", href: "/ydelser/facademaling" },
     { name: "Renovering", href: "/ydelser/renovering" },
     { name: "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
+    { name: "Maler aften og weekend", href: "/ydelser/maler-aften-weekend" },
     { name: lang === "en" ? "B2B partnerships" : "B2B-samarbejde", href: b2bPath(lang) },
     { name: "Ofte stillede spørgsmål", href: "/ofte-stillede-spoergsmaal" },
     { name: "Alle Områder", href: "/omraader" },

@@ -50,6 +50,13 @@ export const SERVICE_PAGES = [
     blurb: "Kontorer, butikker, institutioner og lagerlokaler, planlagt uden driftsforstyrrelser.",
     blurbEn: "Offices, shops, institutions and warehouses, planned around your operations.",
   },
+  {
+    name: "Fleksibel maler",
+    nameEn: "Flexible painter",
+    path: "/ydelser/maler-aften-weekend",
+    blurb: "Maler om aftenen og i weekenden, med et program tilpasset dit.",
+    blurbEn: "Painting in the evening and at weekends, on a schedule that suits you.",
+  },
 ] as const;
 
 export const FAQ_PATH = "/ofte-stillede-spoergsmaal";

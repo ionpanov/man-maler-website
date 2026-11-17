@@ -10,7 +10,7 @@ const TEXT = {
     b2b: "B2B-samarbejde for virksomheder",
     faq: "Ofte stillede spørgsmål om malerarbejde",
     areas: "Se alle områder, vi dækker",
-    names: ["Indvendig maling", "Facademaling", "Renovering", "Erhvervsmaling"],
+    names: ["Indvendig maling", "Facademaling", "Renovering", "Erhvervsmaling", "Fleksibel maler (aften og weekend)"],
   },
   en: {
     title: "Explore more",
@@ -18,7 +18,7 @@ const TEXT = {
     b2b: "B2B partnerships for businesses",
     faq: "Frequently asked questions about painting",
     areas: "See all areas we cover",
-    names: ["Interior painting", "Facade painting", "Renovation", "Commercial painting"],
+    names: ["Interior painting", "Facade painting", "Renovation", "Commercial painting", "Flexible painter (evenings and weekends)"],
   },
 } as const;
 

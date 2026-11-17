@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Mail, MapPin, Phone, Clock, CheckCircle, Instagram, Facebook, ChevronDown, X, Loader2 } from "lucide-react";
@@ -150,7 +151,7 @@ setSent(true);
     { icon: Phone, title: t("contact.info.phone.title"), value: t("contact.info.phone"), href: "tel:+4571316499" },
     { icon: Mail, title: "Email", value: t("contact.info.email") },
     { icon: MapPin, title: t("footer.address"), value: t("contact.info.address") },
-    { icon: Clock, title: t("contact.info.hours"), value: `${t("contact.info.hours.weekdays")}`, note: t("contact.info.hours.note" as any) },
+    { icon: Clock, title: t("contact.info.hours"), value: `${t("contact.info.hours.weekdays")}`, note: t("contact.info.hours.note" as any), noteLink: { to: "/ydelser/maler-aften-weekend", label: t("contact.info.hours.link" as any) } },
   ];
 
   return (
@@ -453,6 +454,11 @@ content="Kontakt vores malerfirma i København og få et gratis tilbud."
                         )}
                         {item.note && (
                           <p className="text-muted-foreground/80 text-sm mt-1 leading-relaxed">{item.note}</p>
+                        )}
+                        {item.noteLink && (
+                          <Link to={item.noteLink.to} className="inline-block py-1 text-sm text-primary hover:underline">
+                            {item.noteLink.label} →
+                          </Link>
                         )}
                       </div>
                     </div>
