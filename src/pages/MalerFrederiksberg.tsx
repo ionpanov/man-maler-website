@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import PriceTable from "@/components/PriceTable";
+import { PRICES_COMMON, PRICE_PATH } from "@/lib/prices";
 import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin, Clock, ShieldCheck } from "lucide-react";
@@ -74,10 +76,10 @@ export default function MalerFrederiksberg() {
   return (
     <>
       <Helmet>
-        <title>Maler Frederiksberg | Malerfirma, indvendig maling & facade</title>
+        <title>Maler Frederiksberg | Priser fra 65 kr./m² – MAN MALER</title>
         <meta
           name="description"
-          content="Maler på Frederiksberg til ældre etageejendomme og lejligheder. Indvendig maling, tapetnedtagning, stuklofter og facademaling. Gratis tilbud."
+          content="Maler på Frederiksberg til lejligheder og ældre ejendomme. Se priserne, fx vægge fra 65 kr./m² inkl. moms, og få et gratis tilbud inden for 24 timer."
         />
         <meta
           name="keywords"
@@ -86,7 +88,7 @@ export default function MalerFrederiksberg() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-frederiksberg" />
 
-        <meta property="og:title" content="Maler Frederiksberg | Malerfirma, indvendig maling & facade" />
+        <meta property="og:title" content="Maler Frederiksberg | Priser fra 65 kr./m² – MAN MALER" />
         <meta
           property="og:description"
           content="Professionelt malerfirma på Frederiksberg. Indendørs maling, facademaling og renovering. Gratis og uforpligtende tilbud."
@@ -96,7 +98,7 @@ export default function MalerFrederiksberg() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler Frederiksberg | Malerfirma, indvendig maling & facade" />
+        <meta name="twitter:title" content="Maler Frederiksberg | Priser fra 65 kr./m² – MAN MALER" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma på Frederiksberg. Gratis og uforpligtende tilbud."
@@ -321,6 +323,36 @@ export default function MalerFrederiksberg() {
                 </li>
               ))}
             </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* PRIS */}
+      <section id="priser" className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Hvad koster en maler på Frederiksberg?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Priserne er de samme på Frederiksberg som i resten af København og på Sjælland. Her er de mest
+              almindelige opgaver. Priserne er i danske kroner inkl. 25 % moms og vejledende, for den endelige pris
+              afhænger af opgaven. I ældre lejligheder med stuklofter, tapet og høje lofter kan forarbejdet fylde
+              mere, så send gerne billeder.
+            </p>
+            <div className="mb-6">
+              <PriceTable rows={PRICES_COMMON} />
+            </div>
+            <p className="text-sm text-muted-foreground mb-8">
+              Se alle priser, også på spartling, tapet, døre og reparationer, på{" "}
+              <Link to={PRICE_PATH} className="text-primary hover:underline">prissiden</Link>.
+            </p>
+            <Link
+              to="/kontakt"
+              className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300"
+            >
+              Få et gratis tilbud
+            </Link>
           </AnimatedSection>
         </div>
       </section>

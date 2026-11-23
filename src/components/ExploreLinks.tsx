@@ -10,6 +10,7 @@ const TEXT = {
     b2b: "B2B-samarbejde for virksomheder",
     faq: "Ofte stillede spørgsmål om malerarbejde",
     areas: "Se alle områder, vi dækker",
+    prices: "Se priser på malerarbejde",
     names: ["Indvendig maling", "Facademaling", "Renovering", "Erhvervsmaling", "Fleksibel maler (aften og weekend)"],
   },
   en: {
@@ -18,6 +19,7 @@ const TEXT = {
     b2b: "B2B partnerships for businesses",
     faq: "Frequently asked questions about painting",
     areas: "See all areas we cover",
+    prices: "See our prices",
     names: ["Interior painting", "Facade painting", "Renovation", "Commercial painting", "Flexible painter (evenings and weekends)"],
   },
 } as const;
@@ -49,6 +51,9 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
             </ul>
           </nav>
           <div className="mt-6 flex flex-col items-center gap-2 text-center">
+            <Link to="/priser" className="inline-block py-1 text-primary font-medium hover:underline">
+              {text.prices} →
+            </Link>
             <Link to={b2bPath(lang)} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.b2b} →
             </Link>

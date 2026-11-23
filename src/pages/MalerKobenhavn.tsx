@@ -6,6 +6,8 @@ import projectImg from "@/assets/projects/proj53.webp";
 
 import Breadcrumbs from "@/components/Breadcrumbs";
 import NearbyAreas from "@/components/NearbyAreas";
+import PriceTable from "@/components/PriceTable";
+import { PRICES, PRICE_PATH, priceOfferCatalog } from "@/lib/prices";
 const NEIGHBORHOODS = [
   "Indre By", "Nørrebro", "Østerbro", "Vesterbro", "Amager",
   "Frederiksberg", "Valby", "Sydhavn", "Nordvest", "Brønshøj",
@@ -47,27 +49,6 @@ const CHECKLIST = [
     d: "Hvornår arbejdet kan begynde, hvor længe det forventes at vare, og hvordan arbejdet tilrettelægges, hvis du bliver boende undervejs.",
     h: "Gør det lettere at vurdere, hvordan projektet påvirker hverdagen.",
   },
-];
-
-const PRICES: { work: string; unit: string; hour: string; min?: number; max?: number; unitText?: string }[] = [
-  { work: "Maling af vægge, 2 strøg", unit: "65–150 kr./m²", hour: "625 kr.", min: 65, max: 150, unitText: "m²" },
-  { work: "Maling af lofter", unit: "115 kr./m²", hour: "656,25 kr.", min: 115, max: 115, unitText: "m²" },
-  { work: "Spartling af vægge, 2 lag", unit: "Fra 85 kr./m²", hour: "687,50 kr.", min: 85, unitText: "m²" },
-  { work: "Spartling af lofter", unit: "Efter opgaven", hour: "718,75 kr." },
-  { work: "Slibning af vægge", unit: "Efter opgaven", hour: "593,75 kr." },
-  { work: "Opsætning af glasfilt", unit: "Fra 75 kr./m²", hour: "687,50 kr.", min: 75, unitText: "m²" },
-  { work: "Tapetsering, almindeligt tapet", unit: "Efter opgaven", hour: "687,50 kr." },
-  { work: "Tapetsering, tapet med mønster og pasning", unit: "Efter opgaven", hour: "750 kr." },
-  { work: "Fjernelse af almindeligt tapet", unit: "155 kr./m²", hour: "656,25 kr.", min: 155, max: 155, unitText: "m²" },
-  { work: "Fjernelse af tapet med træspåner", unit: "165 kr./m²", hour: "656,25 kr.", min: 165, max: 165, unitText: "m²" },
-  { work: "Afrensning af gammel, flossende maling", unit: "Efter opgaven", hour: "718,75 kr." },
-  { work: "Komplet finish af vægge: spartling, grunder, glasfilt og maling", unit: "Fra 350 kr./m²", hour: "Efter etape", min: 350, unitText: "m²" },
-  { work: "Maling af fodlister", unit: "100 kr./lbm", hour: "687,50 kr.", min: 100, max: 100, unitText: "lbm" },
-  { work: "Maling af dør og karm, hvid", unit: "700 kr./stk.", hour: "718,75 kr.", min: 700, max: 700, unitText: "stk." },
-  { work: "Maling af dør og karm, farveskift", unit: "1.200 kr./stk.", hour: "718,75 kr.", min: 1200, max: 1200, unitText: "stk." },
-  { work: "Reparation af huller og revner", unit: "Efter opgaven", hour: "750 kr." },
-  { work: "Fuger med acryl og silikone", unit: "Efter opgaven", hour: "750 kr." },
-  { work: "Mindre rettelser", unit: "Efter opgaven", hour: "812,50 kr." },
 ];
 
 const FAQS = [
@@ -128,23 +109,7 @@ export default function MalerKobenhavn() {
     url: "https://manmaler.dk/maler-koebenhavn",
     provider: { "@id": "https://manmaler.dk/#organization" },
     areaServed: { "@type": "City", name: "København" },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Priser på malerarbejde (inkl. 25 % moms)",
-      itemListElement: PRICES.filter((row) => row.min).map((row) => ({
-        "@type": "Offer",
-        itemOffered: { "@type": "Service", name: row.work },
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          priceCurrency: "DKK",
-          valueAddedTaxIncluded: true,
-          ...(row.max && row.max !== row.min
-            ? { minPrice: row.min, maxPrice: row.max }
-            : { price: row.min }),
-          unitText: row.unitText,
-        },
-      })),
-    },
+    hasOfferCatalog: priceOfferCatalog(PRICES),
   };
 
   return (
@@ -311,43 +276,13 @@ export default function MalerKobenhavn() {
               </p>
             </div>
 
-            {/* Mobile: compact list */}
-            <div className="mb-6 md:hidden rounded-2xl border border-border bg-warm-surface divide-y divide-border">
-              {PRICES.map((row) => (
-                <div key={row.work} className="flex items-start justify-between gap-4 px-4 py-3">
-                  <div className="min-w-0">
-                    <p className="text-sm font-medium text-foreground leading-snug">{row.work}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">Pr. time: {row.hour}</p>
-                  </div>
-                  <p className="text-sm font-semibold text-foreground text-right shrink-0 max-w-[45%]">{row.unit}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Tablet/desktop: table */}
-            <div className="hidden md:block mb-6">
-              <table className="w-full text-sm border-collapse">
-                <thead>
-                  <tr className="border-b border-border text-left">
-                    <th className="py-3 pr-4 font-semibold text-foreground">Arbejde</th>
-                    <th className="py-3 pr-4 font-semibold text-foreground">Pris inkl. moms</th>
-                    <th className="py-3 font-semibold text-foreground">Pris pr. time inkl. moms</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRICES.map((row) => (
-                    <tr key={row.work} className="border-b border-border align-top">
-                      <td className="py-3 pr-4 font-medium text-foreground">{row.work}</td>
-                      <td className="py-3 pr-4 text-muted-foreground">{row.unit}</td>
-                      <td className="py-3 text-muted-foreground">{row.hour}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="mb-6">
+              <PriceTable rows={PRICES} />
             </div>
             <p className="text-sm text-muted-foreground mb-10">
               Priserne er i DKK inkl. 25 % moms. Pris pr. time bruges, hvor opgaven ikke kan måles i
-              m², stk. eller meter.
+              m², stk. eller meter. Du kan også se priserne på{" "}
+              <Link to={PRICE_PATH} className="text-primary hover:underline">vores prisside</Link>.
             </p>
 
             <h3 className="text-xl font-display font-semibold mb-4 text-foreground">

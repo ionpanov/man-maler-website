@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle, Clock, MapPin, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Breadcrumbs, { Crumb } from "@/components/Breadcrumbs";
+import PriceTable from "@/components/PriceTable";
+import type { PriceRow } from "@/lib/prices";
 import PhotoGallery, { GalleryLabels, GalleryPhoto } from "@/components/PhotoGallery";
 import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
@@ -69,7 +71,7 @@ export interface ServicePageData {
     columns: [string, string, string];
     rows: { p: string; d: ReactNode; h: ReactNode }[];
   };
-  price: { heading: string; paragraphs: ReactNode[]; items: string[]; closing: ReactNode };
+  price: { heading: string; paragraphs: ReactNode[]; items: string[]; closing: ReactNode; priceList?: PriceRow[]; priceListAfter?: number };
   context: { heading: string; paragraphs: ReactNode[] };
   gallery?: { heading: string; intro: string; photos: GalleryPhoto[]; labels: GalleryLabels };
   faqs: { q: string; a: string }[];
@@ -361,10 +363,26 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               {data.price.heading}
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
-              {data.price.paragraphs.map((paragraph, index) => (
+              {data.price.paragraphs.slice(0, data.price.priceListAfter ?? data.price.paragraphs.length).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
+            {data.price.priceList && (
+              <div className="mb-8">
+                <PriceTable rows={data.price.priceList} />
+                <p className="text-sm text-muted-foreground mt-3">
+                  Priserne er i DKK inkl. 25 % moms og vejledende. Se alle priser på{" "}
+                  <Link to="/priser" className="text-primary hover:underline">prissiden</Link>.
+                </p>
+              </div>
+            )}
+            {data.price.priceListAfter !== undefined && (
+              <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
+                {data.price.paragraphs.slice(data.price.priceListAfter).map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            )}
             <ul className="space-y-2 mb-8">
               {data.price.items.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-muted-foreground">

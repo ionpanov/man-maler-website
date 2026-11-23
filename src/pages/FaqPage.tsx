@@ -31,12 +31,13 @@ const GROUPS: { id: string; title: string; faqs: Faq[] }[] = [
       },
       {
         q: "Hvad koster en maler?",
-        a: "Prisen afhænger af opgavens omfang, underlagets stand, antal strøg, adgangsforhold og materialer. To rum af samme størrelse kan have forskellig pris, fordi forarbejdet fylder mest. Derfor giver vi et skriftligt tilbud frem for et løst prisoverslag.",
-        more: { to: "/ydelser/indendoers-maling", label: "Se, hvad der påvirker prisen på indvendig maling" },
+        a: "Maling af vægge i to strøg koster 65–150 kr./m² og lofter 115 kr./m². Spartling af vægge starter fra 85 kr./m², og et komplet finish fra 350 kr./m². Alle priser er inkl. 25 % moms og vejledende, for den endelige pris afhænger af opgavens omfang, underlagets stand og adgangsforhold. Derfor giver vi et skriftligt tilbud.",
+        more: { to: "/priser", label: "Se alle priser på malerarbejde" },
       },
       {
-        q: "Hvorfor kan I ikke give en pris pr. kvadratmeter i telefonen?",
-        a: "Fordi en kvadratmeterpris sjældent siger noget om den rigtige pris. Huller, revner, tapet, nikotinpletter, loftshøjde og adgangsforhold kan ændre opgaven meget. Med billeder eller en besigtigelse kan vi give et tilbud, du kan stole på.",
+        q: "Kan I give en pris pr. kvadratmeter i telefonen?",
+        a: "Vores vejledende priser pr. m² står på prissiden. Den rigtige pris afhænger dog af huller, revner, tapet, loftshøjde og adgangsforhold. Med billeder eller en besigtigelse kan vi give et tilbud, du kan stole på.",
+        more: { to: "/priser", label: "Se vores priser" },
       },
       {
         q: "Hvor hurtigt svarer I på en henvendelse?",

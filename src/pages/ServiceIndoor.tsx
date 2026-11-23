@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PRICES } from "@/lib/prices";
 import ServicePageTemplate, { ServicePageData } from "@/components/ServicePageTemplate";
 import interiorImg from "@/assets/interior.webp";
 
@@ -6,9 +7,9 @@ const data: ServicePageData = {
   path: "/ydelser/indendoers-maling",
   name: "Indvendig maling",
   serviceType: "Indvendig maling og malerarbejde",
-  title: "Indvendig maling | Maler til vægge & lofter – MAN MALER",
+  title: "Indvendig maling | Priser fra 65 kr./m² – MAN MALER",
   description:
-    "Professionel indvendig maling af vægge, lofter og træværk i København og på Sjælland. Grundigt forarbejde, ren aflevering og gratis, uforpligtende tilbud.",
+    "Indvendig maling af vægge, lofter og træværk i København og på Sjælland. Se priserne, fx vægge fra 65 kr./m² inkl. moms, og få et gratis tilbud.",
   keywords:
     "indvendig maling, indendørs maling, maler vægge og lofter, maling af lejlighed, malerfirma københavn, maler pris, fraflytningsmaling, spartling",
   h1: "Indvendig maling i København og på Sjælland",
@@ -96,11 +97,13 @@ const data: ServicePageData = {
     ],
   },
   price: {
-    heading: "Hvad påvirker prisen på indvendig maling?",
+    heading: "Priser på indvendig maling og hvad der påvirker dem",
     paragraphs: [
-      "Mange søger efter en pris pr. kvadratmeter, men to rum af samme størrelse kan have vidt forskellig pris. Det skyldes, at det er forarbejdet og detaljerne, der fylder mest, ikke selve malingen.",
+      "Her kan du se vores priser på de mest almindelige opgaver. Vi regner dem i danske kroner inkl. 25 % moms. De er vejledende, fordi forarbejdet og detaljerne ofte fylder mere end selve malingen, så to rum af samme størrelse kan have forskellig pris.",
       "Disse forhold har størst betydning for prisen:",
     ],
+    priceList: PRICES,
+    priceListAfter: 1,
     items: [
       "Areal og loftshøjde, samt antal rum der skal males.",
       "Antal strøg, og om der skal skiftes fra mørk til lys farve.",

@@ -15,6 +15,7 @@ import video3 from "@/assets/projects/video5.mp4";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { b2bPath, CITIES } from "@/lib/cities";
+import { PRICE_PATH } from "@/lib/prices";
 
 
 export default function Index() {
@@ -235,6 +236,50 @@ return (
   })}
 </div>
 
+      </div>
+    </AnimatedSection>
+  </div>
+</section>
+
+{/* PRICES */}
+<section className="py-20 px-6 bg-background">
+  <div className="max-w-5xl mx-auto">
+    <AnimatedSection>
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4 text-foreground">
+          {lang === "en" ? "Our prices" : "Priser på malerarbejde"}
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          {lang === "en"
+            ? "A few of our most common jobs. Prices in DKK including 25% VAT, and indicative until we have seen the job."
+            : "Her er nogle af vores mest almindelige opgaver. Priserne er i kroner inkl. 25 % moms og vejledende, indtil vi har set opgaven."}
+        </p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {(lang === "en"
+          ? [
+              ["Painting walls, 2 coats", "65–150 DKK/m²"],
+              ["Painting ceilings", "115 DKK/m²"],
+              ["Filling walls, 2 coats", "from 85 DKK/m²"],
+              ["Complete wall finish", "from 350 DKK/m²"],
+            ]
+          : [
+              ["Maling af vægge, 2 strøg", "65–150 kr./m²"],
+              ["Maling af lofter", "115 kr./m²"],
+              ["Spartling af vægge, 2 lag", "Fra 85 kr./m²"],
+              ["Komplet finish af vægge", "Fra 350 kr./m²"],
+            ]
+        ).map(([work, price]) => (
+          <div key={work} className="p-4 rounded-xl bg-warm-surface border border-border text-center">
+            <p className="text-sm text-muted-foreground mb-2">{work}</p>
+            <p className="text-lg font-semibold text-foreground">{price}</p>
+          </div>
+        ))}
+      </div>
+      <div className="text-center">
+        <Link to={PRICE_PATH} className="inline-block py-2 text-primary font-medium hover:underline">
+          {lang === "en" ? "See all prices →" : "Se alle priser →"}
+        </Link>
       </div>
     </AnimatedSection>
   </div>
