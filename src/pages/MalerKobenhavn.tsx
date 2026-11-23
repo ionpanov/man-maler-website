@@ -55,6 +55,22 @@ const FAQS = [
     a: "Prisen afhænger af opgavens størrelse, underlag, forarbejde, materialer og adgangsforhold. En besigtigelse eller en detaljeret beskrivelse med mål og billeder giver det bedste grundlag for et præcist, skriftligt tilbud.",
   },
   {
+    q: "Hvad er timeprisen for en maler i København?",
+    a: "Timeprisen siger sjældent noget om, hvad opgaven ender med at koste, fordi to malere kan bruge forskellig tid på det samme. Vi giver derfor et tilbud på hele opgaven, så du kender prisen, før vi går i gang.",
+  },
+  {
+    q: "Hvad koster malerarbejde pr. m²?",
+    a: "Det varierer med underlag, forarbejde og maling. En lav pris pr. m² kan skjule, at forarbejdet er skåret væk, så spørg altid, hvad tilbuddet dækker. Send mål og billeder, så får du en pris på din egen opgave.",
+  },
+  {
+    q: "Hvad koster det at få malet 50 m² eller 100 m²?",
+    a: "Det afhænger af, om der skal spartles, hvor høje lofterne er, og hvordan der er adgang. To boliger med samme størrelse kan ligge langt fra hinanden i pris. Send billeder og mål, så vender vi tilbage inden for 24 timer.",
+  },
+  {
+    q: "Hvor finder jeg en billig maler i København?",
+    a: "Den billigste maler er ikke altid den billigste løsning. Hent to eller tre tilbud, og se efter, hvad hvert tilbud indeholder: forarbejde, antal lag, afdækning og oprydning. Så sammenligner du det samme.",
+  },
+  {
     q: "Hvad skal være med i et tilbud på malerarbejde?",
     a: "Tilbuddet bør beskrive fladerne, forarbejdet, antal lag, malingstype, materialer, afdækning, oprydning og tidsplan. Det gør det lettere at sammenligne malertilbud og undgå uventede ekstraudgifter.",
   },
@@ -73,22 +89,32 @@ const FAQS = [
 ];
 
 export default function MalerKobenhavn() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <>
       <Helmet>
-        <title>Maler i København | Professionelt Malerfirma – MAN MALER</title>
+        <title>Maler København | Pris & gratis tilbud – MAN MALER</title>
         <meta
           name="description"
-          content="Søger du en pålidelig maler i København? MAN MALER udfører indendørs og udendørs maling, renovering og erhvervsmaling i hele København. Gratis tilbud."
+          content="Maler i København? Få et gratis tilbud fra MAN MALER. Se, hvad der afgør prisen på malerarbejde, og send billeder, så vender vi tilbage inden for 24 timer."
         />
         <meta
           name="keywords"
-          content="maler københavn, malerfirma københavn, maler indre by, maler nørrebro, maler østerbro, maler frederiksberg"
+          content="maler københavn, malerfirma københavn, maler pris københavn, maler tilbud københavn, malerarbejde københavn, maler lejlighed københavn, maler østerbro, maler nørrebro"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-koebenhavn" />
 
-        <meta property="og:title" content="Maler i København | MAN MALER" />
+        <meta property="og:title" content="Maler København | Pris & gratis tilbud – MAN MALER" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i København. Indendørs maling, facademaling, renovering og erhvervsmaling. Gratis og uforpligtende tilbud."
@@ -97,8 +123,10 @@ export default function MalerKobenhavn() {
         <meta property="og:url" content="https://manmaler.dk/maler-koebenhavn" />
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler i København | MAN MALER" />
+        <meta name="twitter:title" content="Maler København | Pris & gratis tilbud – MAN MALER" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i København. Gratis og uforpligtende tilbud."
@@ -215,6 +243,74 @@ export default function MalerKobenhavn() {
             >
               Se flere af vores projekter →
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* PRIS */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Hvad koster en maler i København?
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
+              <p>
+                Det korte svar er, at det afhænger af opgaven. To lejligheder på 60 m² kan koste
+                vidt forskelligt, hvis den ene skal have nye vægge og den anden blot en frisk
+                farve. Derfor har vi ingen prisliste. Vi giver et tilbud på netop din opgave.
+              </p>
+              <p>Det er som regel disse ting, der gør størst forskel:</p>
+            </div>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Størrelsen: hvor mange rum, og hvor meget væg og loft der skal males.",
+                "Underlaget: er væggene glatte, eller skal der spartles, rettes revner op eller tages tapet ned først?",
+                "Malingen: almindelig vægmaling eller noget, der tåler mere slid i køkken og entré, og hvor mange lag der skal på.",
+                "Loftshøjden: høje lofter, som i mange københavnerlejligheder, tager længere tid.",
+                "Adgangen: fjerde sal uden elevator, parkering, og om du bor i boligen, mens vi arbejder.",
+                "Tidspunktet: skal arbejdet ske om aftenen eller i weekenden?",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle size={18} className="text-primary flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Pris pr. kvadratmeter og timepris bruges ofte, når man sammenligner malere. Det
+                fortæller bare ikke, hvad der er med. En lav kvadratmeterpris kan betyde, at
+                forarbejdet er sparet væk, og det er netop det, man ser bagefter. Spørg derfor
+                altid, hvad tilbuddet dækker.
+              </p>
+              <p>
+                Når vi har set opgaven, kan vi aftale en fast pris, så du ved, hvad det ender på.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-warm-surface border border-border">
+              <h3 className="text-lg font-display font-semibold mb-3 text-foreground">
+                Sådan får du et prisoverslag
+              </h3>
+              <p className="text-muted-foreground mb-3">Skriv til os med:</p>
+              <ul className="space-y-1 text-muted-foreground text-sm mb-4 list-disc pl-5">
+                <li>Hvor i København boligen ligger</li>
+                <li>Antal rum og cirka hvor mange kvadratmeter</li>
+                <li>Hvad der skal males: vægge, lofter, træværk</li>
+                <li>Billeder af rummene og eventuelle skader</li>
+              </ul>
+              <p className="text-muted-foreground text-sm mb-5">
+                Billederne kan du lægge direkte ind i kontaktformularen. Vi svarer inden for 24
+                timer, og tilbuddet er gratis og uforpligtende.
+              </p>
+              <Link
+                to="/kontakt"
+                className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300"
+              >
+                Få et gratis tilbud
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -355,6 +451,42 @@ export default function MalerKobenhavn() {
                   {n}
                 </span>
               ))}
+            </div>
+            <p className="text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto mt-8">
+              Uanset om du bor på Østerbro, Nørrebro, Vesterbro eller Amager, aftaler vi besigtigelse
+              og tidspunkt, så det passer dig. Det gælder alle postnumre i byen, fra København K til
+              NV, S og Ø. Bor du på Frederiksberg, kan du læse om{" "}
+              <Link to="/maler-frederiksberg" className="text-primary hover:underline">maler på Frederiksberg</Link>.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* LEJLIGHED, FRAFLYTNING, ERHVERV */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
+              Maler til lejlighed, fraflytning og erhverv
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Mange henvender sig, når en lejlighed skal afleveres eller udlejes. Så er der en
+                dato, vægge og lofter skal være klar til. Skriv fristen, når du kontakter os, så
+                planlægger vi efter den. Du kan også læse om vores{" "}
+                <Link to="/ydelser/indendoers-maling" className="text-primary hover:underline">indvendige maling</Link>{" "}
+                og{" "}
+                <Link to="/ydelser/renovering" className="text-primary hover:underline">renovering</Link>.
+              </p>
+              <p>
+                Kontorer, butikker og boligforeninger males ofte uden for åbningstid, så driften
+                kan fortsætte. Vi tilpasser vores program efter jeres, også{" "}
+                <Link to="/ydelser/maler-aften-weekend" className="text-primary hover:underline">om aftenen og i weekenden</Link>.
+                Se mere under{" "}
+                <Link to="/ydelser/erhvervsmaling" className="text-primary hover:underline">erhvervsmaling</Link>{" "}
+                eller vores{" "}
+                <Link to="/b2b" className="text-primary hover:underline">B2B-samarbejde</Link>.
+              </p>
             </div>
           </AnimatedSection>
         </div>
