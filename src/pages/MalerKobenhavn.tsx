@@ -49,6 +49,27 @@ const CHECKLIST = [
   },
 ];
 
+const PRICES: { work: string; unit: string; hour: string; min?: number; max?: number; unitText?: string }[] = [
+  { work: "Maling af vægge, 2 strøg", unit: "65–150 kr./m²", hour: "625 kr.", min: 65, max: 150, unitText: "m²" },
+  { work: "Maling af lofter", unit: "115 kr./m²", hour: "656,25 kr.", min: 115, max: 115, unitText: "m²" },
+  { work: "Spartling af vægge, 2 lag", unit: "Fra 85 kr./m²", hour: "687,50 kr.", min: 85, unitText: "m²" },
+  { work: "Spartling af lofter", unit: "Efter opgaven", hour: "718,75 kr." },
+  { work: "Slibning af vægge", unit: "Efter opgaven", hour: "593,75 kr." },
+  { work: "Opsætning af glasfilt", unit: "Fra 75 kr./m²", hour: "687,50 kr.", min: 75, unitText: "m²" },
+  { work: "Tapetsering, almindeligt tapet", unit: "Efter opgaven", hour: "687,50 kr." },
+  { work: "Tapetsering, tapet med mønster og pasning", unit: "Efter opgaven", hour: "750 kr." },
+  { work: "Fjernelse af almindeligt tapet", unit: "155 kr./m²", hour: "656,25 kr.", min: 155, max: 155, unitText: "m²" },
+  { work: "Fjernelse af tapet med træspåner", unit: "165 kr./m²", hour: "656,25 kr.", min: 165, max: 165, unitText: "m²" },
+  { work: "Afrensning af gammel, flossende maling", unit: "Efter opgaven", hour: "718,75 kr." },
+  { work: "Komplet finish af vægge: spartling, grunder, glasfilt og maling", unit: "Fra 350 kr./m²", hour: "Efter etape", min: 350, unitText: "m²" },
+  { work: "Maling af fodlister", unit: "100 kr./lbm", hour: "687,50 kr.", min: 100, max: 100, unitText: "lbm" },
+  { work: "Maling af dør og karm, hvid", unit: "700 kr./stk.", hour: "718,75 kr.", min: 700, max: 700, unitText: "stk." },
+  { work: "Maling af dør og karm, farveskift", unit: "1.200 kr./stk.", hour: "718,75 kr.", min: 1200, max: 1200, unitText: "stk." },
+  { work: "Reparation af huller og revner", unit: "Efter opgaven", hour: "750 kr." },
+  { work: "Fuger med acryl og silikone", unit: "Efter opgaven", hour: "750 kr." },
+  { work: "Mindre rettelser", unit: "Efter opgaven", hour: "812,50 kr." },
+];
+
 const FAQS = [
   {
     q: "Hvad koster en maler i København?",
@@ -56,15 +77,15 @@ const FAQS = [
   },
   {
     q: "Hvad er timeprisen for en maler i København?",
-    a: "Timeprisen siger sjældent noget om, hvad opgaven ender med at koste, fordi to malere kan bruge forskellig tid på det samme. Vi giver derfor et tilbud på hele opgaven, så du kender prisen, før vi går i gang.",
+    a: "Vores timepriser ligger typisk mellem 593,75 og 812,50 kr. inkl. moms, afhængigt af arbejdet. Slibning ligger i den lave ende, mindre rettelser i den høje. Til større opgaver giver vi som regel en samlet pris, så du kender beløbet, før vi går i gang.",
   },
   {
     q: "Hvad koster malerarbejde pr. m²?",
-    a: "Det varierer med underlag, forarbejde og maling. En lav pris pr. m² kan skjule, at forarbejdet er skåret væk, så spørg altid, hvad tilbuddet dækker. Send mål og billeder, så får du en pris på din egen opgave.",
+    a: "Maling af vægge i to strøg koster 65–150 kr./m² inkl. moms, og lofter 115 kr./m². Spartling af vægge starter fra 85 kr./m², og et komplet finish med spartling, grunder, glasfilt og maling fra 350 kr./m². Prisen afhænger af underlag og forarbejde.",
   },
   {
     q: "Hvad koster det at få malet 50 m² eller 100 m²?",
-    a: "Det afhænger af, om der skal spartles, hvor høje lofterne er, og hvordan der er adgang. To boliger med samme størrelse kan ligge langt fra hinanden i pris. Send billeder og mål, så vender vi tilbage inden for 24 timer.",
+    a: "Det afhænger af, om det er gulvarealet eller væg- og loftsfladerne, der menes, og af forarbejdet. Tag priserne pr. m² i tabellen ovenfor og gang med de flader, der skal males. Send mål og billeder, så får du en samlet pris på din egen opgave.",
   },
   {
     q: "Hvor finder jeg en billig maler i København?",
@@ -99,13 +120,40 @@ export default function MalerKobenhavn() {
     })),
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Malerarbejde i København",
+    serviceType: "Malerarbejde",
+    url: "https://manmaler.dk/maler-koebenhavn",
+    provider: { "@id": "https://manmaler.dk/#organization" },
+    areaServed: { "@type": "City", name: "København" },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Priser på malerarbejde (inkl. 25 % moms)",
+      itemListElement: PRICES.filter((row) => row.min).map((row) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: row.work },
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          priceCurrency: "DKK",
+          valueAddedTaxIncluded: true,
+          ...(row.max && row.max !== row.min
+            ? { minPrice: row.min, maxPrice: row.max }
+            : { price: row.min }),
+          unitText: row.unitText,
+        },
+      })),
+    },
+  };
+
   return (
     <>
       <Helmet>
-        <title>Maler København | Pris & gratis tilbud – MAN MALER</title>
+        <title>Maler København | Priser fra 65 kr./m² – MAN MALER</title>
         <meta
           name="description"
-          content="Maler i København? Få et gratis tilbud fra MAN MALER. Se, hvad der afgør prisen på malerarbejde, og send billeder, så vender vi tilbage inden for 24 timer."
+          content="Maler i København? Se vores priser på malerarbejde, fx maling af vægge fra 65 kr./m² inkl. moms. Få et gratis tilbud inden for 24 timer fra MAN MALER."
         />
         <meta
           name="keywords"
@@ -114,7 +162,7 @@ export default function MalerKobenhavn() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://manmaler.dk/maler-koebenhavn" />
 
-        <meta property="og:title" content="Maler København | Pris & gratis tilbud – MAN MALER" />
+        <meta property="og:title" content="Maler København | Priser fra 65 kr./m² – MAN MALER" />
         <meta
           property="og:description"
           content="Professionelt malerfirma i København. Indendørs maling, facademaling, renovering og erhvervsmaling. Gratis og uforpligtende tilbud."
@@ -124,9 +172,10 @@ export default function MalerKobenhavn() {
         <meta property="og:image" content="https://manmaler.dk/og-image.jpg" />
 
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maler København | Pris & gratis tilbud – MAN MALER" />
+        <meta name="twitter:title" content="Maler København | Priser fra 65 kr./m² – MAN MALER" />
         <meta
           name="twitter:description"
           content="Professionelt malerfirma i København. Gratis og uforpligtende tilbud."
@@ -248,7 +297,7 @@ export default function MalerKobenhavn() {
       </section>
 
       {/* PRIS */}
-      <section className="py-20 px-6">
+      <section id="priser" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-foreground">
@@ -256,17 +305,62 @@ export default function MalerKobenhavn() {
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
               <p>
-                Det korte svar er, at det afhænger af opgaven. To lejligheder på 60 m² kan koste
-                vidt forskelligt, hvis den ene skal have nye vægge og den anden blot en frisk
-                farve. Derfor har vi ingen prisliste. Vi giver et tilbud på netop din opgave.
+                Her er vores priser på de mest almindelige opgaver. Alle priser er i danske kroner
+                og inkl. 25 % moms, og de gælder i København og på Sjælland. De er vejledende, fordi
+                den endelige pris afhænger af opgaven.
               </p>
-              <p>Det er som regel disse ting, der gør størst forskel:</p>
             </div>
+
+            {/* Mobile: cards */}
+            <div className="grid gap-3 mb-6 md:hidden">
+              {PRICES.map((row) => (
+                <div key={row.work} className="p-4 rounded-xl bg-warm-surface border border-border">
+                  <p className="font-semibold text-foreground mb-2">{row.work}</p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Pris: </span>
+                    {row.unit}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Pr. time: </span>
+                    {row.hour}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tablet/desktop: table */}
+            <div className="hidden md:block mb-6">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-border text-left">
+                    <th className="py-3 pr-4 font-semibold text-foreground">Arbejde</th>
+                    <th className="py-3 pr-4 font-semibold text-foreground">Pris inkl. moms</th>
+                    <th className="py-3 font-semibold text-foreground">Pris pr. time inkl. moms</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PRICES.map((row) => (
+                    <tr key={row.work} className="border-b border-border align-top">
+                      <td className="py-3 pr-4 font-medium text-foreground">{row.work}</td>
+                      <td className="py-3 pr-4 text-muted-foreground">{row.unit}</td>
+                      <td className="py-3 text-muted-foreground">{row.hour}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-muted-foreground mb-10">
+              Priserne er i DKK inkl. 25 % moms. Pris pr. time bruges, hvor opgaven ikke kan måles i
+              m², stk. eller meter.
+            </p>
+
+            <h3 className="text-xl font-display font-semibold mb-4 text-foreground">
+              Hvad gør, at prisen bliver højere eller lavere?
+            </h3>
             <ul className="space-y-3 mb-8">
               {[
-                "Størrelsen: hvor mange rum, og hvor meget væg og loft der skal males.",
-                "Underlaget: er væggene glatte, eller skal der spartles, rettes revner op eller tages tapet ned først?",
-                "Malingen: almindelig vægmaling eller noget, der tåler mere slid i køkken og entré, og hvor mange lag der skal på.",
+                "Underlaget: skal der spartles, rettes revner op eller tages tapet ned først?",
+                "Malingen og antal strøg: almindelig vægmaling eller noget, der tåler mere slid i køkken og entré.",
                 "Loftshøjden: høje lofter, som i mange københavnerlejligheder, tager længere tid.",
                 "Adgangen: fjerde sal uden elevator, parkering, og om du bor i boligen, mens vi arbejder.",
                 "Tidspunktet: skal arbejdet ske om aftenen eller i weekenden?",
@@ -277,21 +371,13 @@ export default function MalerKobenhavn() {
                 </li>
               ))}
             </ul>
-            <div className="space-y-5 text-muted-foreground leading-relaxed mb-10">
-              <p>
-                Pris pr. kvadratmeter og timepris bruges ofte, når man sammenligner malere. Det
-                fortæller bare ikke, hvad der er med. En lav kvadratmeterpris kan betyde, at
-                forarbejdet er sparet væk, og det er netop det, man ser bagefter. Spørg derfor
-                altid, hvad tilbuddet dækker.
-              </p>
-              <p>
-                Når vi har set opgaven, kan vi aftale en fast pris, så du ved, hvad det ender på.
-              </p>
-            </div>
+            <p className="text-muted-foreground leading-relaxed mb-10">
+              Når vi har set opgaven, kan vi aftale en fast pris, så du ved, hvad det ender på.
+            </p>
 
             <div className="p-6 rounded-2xl bg-warm-surface border border-border">
               <h3 className="text-lg font-display font-semibold mb-3 text-foreground">
-                Sådan får du et prisoverslag
+                Sådan får du en pris på din opgave
               </h3>
               <p className="text-muted-foreground mb-3">Skriv til os med:</p>
               <ul className="space-y-1 text-muted-foreground text-sm mb-4 list-disc pl-5">
