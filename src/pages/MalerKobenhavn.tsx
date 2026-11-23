@@ -311,19 +311,15 @@ export default function MalerKobenhavn() {
               </p>
             </div>
 
-            {/* Mobile: cards */}
-            <div className="grid gap-3 mb-6 md:hidden">
+            {/* Mobile: compact list */}
+            <div className="mb-6 md:hidden rounded-2xl border border-border bg-warm-surface divide-y divide-border">
               {PRICES.map((row) => (
-                <div key={row.work} className="p-4 rounded-xl bg-warm-surface border border-border">
-                  <p className="font-semibold text-foreground mb-2">{row.work}</p>
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Pris: </span>
-                    {row.unit}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Pr. time: </span>
-                    {row.hour}
-                  </p>
+                <div key={row.work} className="flex items-start justify-between gap-4 px-4 py-3">
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-foreground leading-snug">{row.work}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">Pr. time: {row.hour}</p>
+                  </div>
+                  <p className="text-sm font-semibold text-foreground text-right shrink-0 max-w-[45%]">{row.unit}</p>
                 </div>
               ))}
             </div>
