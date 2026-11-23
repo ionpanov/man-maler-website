@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useI18n } from "@/lib/i18n";
+import { langPath } from "@/lib/enRoutes";
 import { FAQ_PATH, SERVICE_PAGES, b2bPath } from "@/lib/cities";
 
 const TEXT = {
@@ -51,13 +52,13 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
             </ul>
           </nav>
           <div className="mt-6 flex flex-col items-center gap-2 text-center">
-            <Link to="/priser" className="inline-block py-1 text-primary font-medium hover:underline">
+            <Link to={langPath("/priser", lang)} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.prices} →
             </Link>
             <Link to={b2bPath(lang)} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.b2b} →
             </Link>
-            <Link to={FAQ_PATH} className="inline-block py-1 text-primary font-medium hover:underline">
+            <Link to={langPath(FAQ_PATH, lang)} className="inline-block py-1 text-primary font-medium hover:underline">
               {text.faq} →
             </Link>
             {showAreas && (

@@ -369,10 +369,19 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
             </div>
             {data.price.priceList && (
               <div className="mb-8">
-                <PriceTable rows={data.price.priceList} />
+                <PriceTable rows={data.price.priceList} lang={lang} />
                 <p className="text-sm text-muted-foreground mt-3">
-                  Priserne er i DKK inkl. 25 % moms og vejledende. Se alle priser på{" "}
-                  <Link to="/priser" className="text-primary hover:underline">prissiden</Link>.
+                  {lang === "en" ? (
+                    <>
+                      Prices are in DKK incl. 25% VAT and indicative. See all prices on the{" "}
+                      <Link to="/en/prices" className="text-primary hover:underline">prices page</Link>.
+                    </>
+                  ) : (
+                    <>
+                      Priserne er i DKK inkl. 25 % moms og vejledende. Se alle priser på{" "}
+                      <Link to="/priser" className="text-primary hover:underline">prissiden</Link>.
+                    </>
+                  )}
                 </p>
               </div>
             )}

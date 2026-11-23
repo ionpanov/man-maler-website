@@ -229,4 +229,34 @@
   <priority>0.3</priority>
 </url>
 
+<url>
+  <loc>https://manmaler.dk/en/prices</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/en/services/interior-painting</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/en/painter-copenhagen</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/en/painter-frederiksberg</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://manmaler.dk/en/faq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.7</priority>
+</url>
+
 </urlset>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HreflangLinks from "@/components/HreflangLinks";
 import PriceTable from "@/components/PriceTable";
 import { PRICES_COMMON, PRICE_PATH } from "@/lib/prices";
 import { Helmet } from "react-helmet-async";
@@ -75,6 +76,7 @@ const FAQS = [
 export default function MalerFrederiksberg() {
   return (
     <>
+      <HreflangLinks daPath="/maler-frederiksberg" lang="da" />
       <Helmet>
         <title>Maler Frederiksberg | Priser fra 65 kr./m² – MAN MALER</title>
         <meta

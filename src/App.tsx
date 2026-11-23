@@ -46,6 +46,12 @@ import ServiceRenovation from "./pages/ServiceRenovation";
 import ServiceCommercial from "./pages/ServiceCommercial";
 import ServiceFlexible from "./pages/ServiceFlexible";
 import PagePriser from "./pages/PagePriser";
+import BilingualRoute from "./components/BilingualRoute";
+import ServiceIndoorEn from "./pages/ServiceIndoorEn";
+import MalerKobenhavnEn from "./pages/MalerKobenhavnEn";
+import MalerFrederiksbergEn from "./pages/MalerFrederiksbergEn";
+import FaqPageEn from "./pages/FaqPageEn";
+
 import FaqPage from "./pages/FaqPage";
 import PageB2B from "./pages/PageB2B";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -72,23 +78,28 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/ydelser" element={<Services />} />
-                  <Route path="/ydelser/indendoers-maling" element={<ServiceIndoor />} />
+                  <Route path="/ydelser/indendoers-maling" element={<BilingualRoute daPath="/ydelser/indendoers-maling" da={<ServiceIndoor />} en={<ServiceIndoorEn />} />} />
+                  <Route path="/en/services/interior-painting" element={<BilingualRoute daPath="/ydelser/indendoers-maling" da={<ServiceIndoor />} en={<ServiceIndoorEn />} />} />
                   <Route path="/ydelser/facademaling" element={<ServiceFacade />} />
                   <Route path="/ydelser/renovering" element={<ServiceRenovation />} />
                   <Route path="/ydelser/erhvervsmaling" element={<ServiceCommercial />} />
                   <Route path="/ydelser/maler-aften-weekend" element={<ServiceFlexible />} />
-                  <Route path="/priser" element={<PagePriser />} />
-                  <Route path="/ofte-stillede-spoergsmaal" element={<FaqPage />} />
+                  <Route path="/priser" element={<BilingualRoute daPath="/priser" da={<PagePriser />} en={<PagePriser lang="en" />} />} />
+                  <Route path="/en/prices" element={<BilingualRoute daPath="/priser" da={<PagePriser />} en={<PagePriser lang="en" />} />} />
+                  <Route path="/ofte-stillede-spoergsmaal" element={<BilingualRoute daPath="/ofte-stillede-spoergsmaal" da={<FaqPage />} en={<FaqPageEn />} />} />
+                  <Route path="/en/faq" element={<BilingualRoute daPath="/ofte-stillede-spoergsmaal" da={<FaqPage />} en={<FaqPageEn />} />} />
                   <Route path="/b2b" element={<PageB2B />} />
                   <Route path="/en/b2b" element={<PageB2B />} />
                   <Route path="/referencer" element={<Projects />} />
                   <Route path="/om-os" element={<About />} />
                   <Route path="/kontakt" element={<Contact />} />
-                  <Route path="/maler-koebenhavn" element={<MalerKobenhavn />} />
+                  <Route path="/maler-koebenhavn" element={<BilingualRoute daPath="/maler-koebenhavn" da={<MalerKobenhavn />} en={<MalerKobenhavnEn />} />} />
+                  <Route path="/en/painter-copenhagen" element={<BilingualRoute daPath="/maler-koebenhavn" da={<MalerKobenhavn />} en={<MalerKobenhavnEn />} />} />
                   <Route path="/maler-roskilde" element={<MalerRoskilde />} />
                   <Route path="/omraader" element={<Omraader />} />
                   <Route path="/maler-ballerup" element={<MalerBallerup />} />
-                  <Route path="/maler-frederiksberg" element={<MalerFrederiksberg />} />
+                  <Route path="/maler-frederiksberg" element={<BilingualRoute daPath="/maler-frederiksberg" da={<MalerFrederiksberg />} en={<MalerFrederiksbergEn />} />} />
+                  <Route path="/en/painter-frederiksberg" element={<BilingualRoute daPath="/maler-frederiksberg" da={<MalerFrederiksberg />} en={<MalerFrederiksbergEn />} />} />
                   <Route path="/maler-hvidovre" element={<MalerHvidovre />} />
                   <Route path="/maler-rodovre" element={<MalerRodovre />} />
                   <Route path="/maler-herlev" element={<MalerHerlev />} />

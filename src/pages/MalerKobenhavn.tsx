@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HreflangLinks from "@/components/HreflangLinks";
 import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin, Clock, ShieldCheck } from "lucide-react";
@@ -114,6 +115,7 @@ export default function MalerKobenhavn() {
 
   return (
     <>
+      <HreflangLinks daPath="/maler-koebenhavn" lang="da" />
       <Helmet>
         <title>Maler København | Priser fra 65 kr./m² – MAN MALER</title>
         <meta

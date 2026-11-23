@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { hreflangAlternates } from "@/lib/enRoutes";
 import { PRICES } from "@/lib/prices";
 import ServicePageTemplate, { ServicePageData } from "@/components/ServicePageTemplate";
 import interiorImg from "@/assets/interior.webp";
 
 const data: ServicePageData = {
+  alternates: hreflangAlternates("/ydelser/indendoers-maling"),
   path: "/ydelser/indendoers-maling",
   name: "Indvendig maling",
   serviceType: "Indvendig maling og malerarbejde",

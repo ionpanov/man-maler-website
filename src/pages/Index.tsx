@@ -16,6 +16,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { b2bPath, CITIES } from "@/lib/cities";
 import { PRICE_PATH } from "@/lib/prices";
+import { langPath } from "@/lib/enRoutes";
 
 
 export default function Index() {
@@ -277,7 +278,7 @@ return (
         ))}
       </div>
       <div className="text-center">
-        <Link to={PRICE_PATH} className="inline-block py-2 text-primary font-medium hover:underline">
+        <Link to={langPath(PRICE_PATH, lang)} className="inline-block py-2 text-primary font-medium hover:underline">
           {lang === "en" ? "See all prices →" : "Se alle priser →"}
         </Link>
       </div>

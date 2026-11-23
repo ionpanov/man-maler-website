@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HreflangLinks from "@/components/HreflangLinks";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, Clock, MapPin, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -149,6 +150,7 @@ export default function FaqPage() {
 
   return (
     <>
+      <HreflangLinks daPath="/ofte-stillede-spoergsmaal" lang="da" />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />

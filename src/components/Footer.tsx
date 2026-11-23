@@ -1,3 +1,4 @@
+import { langPath } from "@/lib/enRoutes";
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -21,15 +22,15 @@ export default function Footer() {
     { name: t("nav.projects"), href: "/referencer" },
     { name: t("nav.about"), href: "/om-os" },
     { name: t("nav.contact"), href: "/kontakt" },
-    { name: "Indvendig maling", href: "/ydelser/indendoers-maling" },
-    { name: "Facademaling", href: "/ydelser/facademaling" },
-    { name: "Renovering", href: "/ydelser/renovering" },
-    { name: "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
-    { name: "Maler aften og weekend", href: "/ydelser/maler-aften-weekend" },
+    { name: lang === "en" ? "Interior painting" : "Indvendig maling", href: langPath("/ydelser/indendoers-maling", lang) },
+    { name: lang === "en" ? "Facade painting" : "Facademaling", href: "/ydelser/facademaling" },
+    { name: lang === "en" ? "Renovation" : "Renovering", href: "/ydelser/renovering" },
+    { name: lang === "en" ? "Commercial painting" : "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
+    { name: lang === "en" ? "Evenings and weekends" : "Maler aften og weekend", href: "/ydelser/maler-aften-weekend" },
     { name: lang === "en" ? "B2B partnerships" : "B2B-samarbejde", href: b2bPath(lang) },
-    { name: lang === "en" ? "Prices" : "Priser", href: "/priser" },
-    { name: "Ofte stillede spørgsmål", href: "/ofte-stillede-spoergsmaal" },
-    { name: "Alle Områder", href: "/omraader" },
+    { name: lang === "en" ? "Prices" : "Priser", href: langPath("/priser", lang) },
+    { name: lang === "en" ? "FAQ" : "Ofte stillede spørgsmål", href: langPath("/ofte-stillede-spoergsmaal", lang) },
+    { name: lang === "en" ? "All areas" : "Alle Områder", href: "/omraader" },
   ];
 
   const socials = [
