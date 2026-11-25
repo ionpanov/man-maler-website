@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { hreflangAlternates } from "@/lib/enRoutes";
 import ServicePageTemplate, { ServicePageData } from "@/components/ServicePageTemplate";
 import exteriorImg from "@/assets/exterior.webp";
 
 const link = "text-primary hover:underline";
 
 const data: ServicePageData = {
+  alternates: hreflangAlternates("/ydelser/facademaling"),
   path: "/ydelser/facademaling",
   name: "Facademaling",
   serviceType: "Facademaling og udvendig maling",

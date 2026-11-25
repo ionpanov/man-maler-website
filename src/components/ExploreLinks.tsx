@@ -41,7 +41,7 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
               {SERVICE_PAGES.map((service, index) => (
                 <li key={service.path}>
                   <Link
-                    to={service.path}
+                    to={langPath(service.path, lang)}
                     className="block h-full p-4 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
                   >
                     <span className="font-semibold text-foreground block mb-1">{text.names[index]} →</span>
@@ -62,7 +62,7 @@ export default function ExploreLinks({ showAreas = true }: { showAreas?: boolean
               {text.faq} →
             </Link>
             {showAreas && (
-              <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
+              <Link to={langPath("/omraader", lang)} className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 {text.areas} →
               </Link>
             )}

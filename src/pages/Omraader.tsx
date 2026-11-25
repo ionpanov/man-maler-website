@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HreflangLinks from "@/components/HreflangLinks";
 import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin } from "lucide-react";
@@ -14,6 +15,7 @@ const GROUPS = REGIONS.map((region) => ({
 export default function Omraader() {
   return (
     <>
+      <HreflangLinks daPath="/omraader" lang="da" />
       <Helmet>
         <title>Malerfirma på Sjælland | Se Alle Vores Områder – MAN MALER</title>
         <meta

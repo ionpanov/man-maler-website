@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { hreflangAlternates } from "@/lib/enRoutes";
 import ServicePageTemplate, { ServicePageData } from "@/components/ServicePageTemplate";
 import flexibleImg from "@/assets/b2b-gallery-5-f.webp";
 
 const link = "text-primary hover:underline";
 
 const data: ServicePageData = {
+  alternates: hreflangAlternates("/ydelser/maler-aften-weekend"),
   path: "/ydelser/maler-aften-weekend",
   name: "Fleksibel maler",
   serviceType: "Malerarbejde om aftenen og i weekenden efter aftale",

@@ -51,6 +51,30 @@ import ServiceIndoorEn from "./pages/ServiceIndoorEn";
 import MalerKobenhavnEn from "./pages/MalerKobenhavnEn";
 import MalerFrederiksbergEn from "./pages/MalerFrederiksbergEn";
 import FaqPageEn from "./pages/FaqPageEn";
+import ServiceFacadeEn from "./pages/ServiceFacadeEn";
+import ServiceRenovationEn from "./pages/ServiceRenovationEn";
+import ServiceCommercialEn from "./pages/ServiceCommercialEn";
+import ServiceFlexibleEn from "./pages/ServiceFlexibleEn";
+import OmraaderEn from "./pages/OmraaderEn";
+import MalerRoskildeEn from "./pages/MalerRoskildeEn";
+import MalerBallerupEn from "./pages/MalerBallerupEn";
+import MalerHvidovreEn from "./pages/MalerHvidovreEn";
+import MalerRodovreEn from "./pages/MalerRodovreEn";
+import MalerHerlevEn from "./pages/MalerHerlevEn";
+import MalerGlostrupEn from "./pages/MalerGlostrupEn";
+import MalerTaastrupEn from "./pages/MalerTaastrupEn";
+import MalerAlbertslundEn from "./pages/MalerAlbertslundEn";
+import MalerIshojEn from "./pages/MalerIshojEn";
+import MalerBrondbyEn from "./pages/MalerBrondbyEn";
+import MalerLyngbyEn from "./pages/MalerLyngbyEn";
+import MalerGentofteEn from "./pages/MalerGentofteEn";
+import MalerGreveEn from "./pages/MalerGreveEn";
+import MalerKogeEn from "./pages/MalerKogeEn";
+import MalerHillerodEn from "./pages/MalerHillerodEn";
+import MalerHelsingorEn from "./pages/MalerHelsingorEn";
+import MalerNaestvedEn from "./pages/MalerNaestvedEn";
+import MalerHedehuseneEn from "./pages/MalerHedehuseneEn";
+
 
 import FaqPage from "./pages/FaqPage";
 import PageB2B from "./pages/PageB2B";
@@ -80,10 +104,14 @@ const App = () => (
                   <Route path="/ydelser" element={<Services />} />
                   <Route path="/ydelser/indendoers-maling" element={<BilingualRoute daPath="/ydelser/indendoers-maling" da={<ServiceIndoor />} en={<ServiceIndoorEn />} />} />
                   <Route path="/en/services/interior-painting" element={<BilingualRoute daPath="/ydelser/indendoers-maling" da={<ServiceIndoor />} en={<ServiceIndoorEn />} />} />
-                  <Route path="/ydelser/facademaling" element={<ServiceFacade />} />
-                  <Route path="/ydelser/renovering" element={<ServiceRenovation />} />
-                  <Route path="/ydelser/erhvervsmaling" element={<ServiceCommercial />} />
-                  <Route path="/ydelser/maler-aften-weekend" element={<ServiceFlexible />} />
+                  <Route path="/ydelser/facademaling" element={<BilingualRoute daPath="/ydelser/facademaling" da={<ServiceFacade />} en={<ServiceFacadeEn />} />} />
+                  <Route path="/en/services/facade-painting" element={<BilingualRoute daPath="/ydelser/facademaling" da={<ServiceFacade />} en={<ServiceFacadeEn />} />} />
+                  <Route path="/ydelser/renovering" element={<BilingualRoute daPath="/ydelser/renovering" da={<ServiceRenovation />} en={<ServiceRenovationEn />} />} />
+                  <Route path="/en/services/renovation" element={<BilingualRoute daPath="/ydelser/renovering" da={<ServiceRenovation />} en={<ServiceRenovationEn />} />} />
+                  <Route path="/ydelser/erhvervsmaling" element={<BilingualRoute daPath="/ydelser/erhvervsmaling" da={<ServiceCommercial />} en={<ServiceCommercialEn />} />} />
+                  <Route path="/en/services/commercial-painting" element={<BilingualRoute daPath="/ydelser/erhvervsmaling" da={<ServiceCommercial />} en={<ServiceCommercialEn />} />} />
+                  <Route path="/ydelser/maler-aften-weekend" element={<BilingualRoute daPath="/ydelser/maler-aften-weekend" da={<ServiceFlexible />} en={<ServiceFlexibleEn />} />} />
+                  <Route path="/en/services/evenings-weekends" element={<BilingualRoute daPath="/ydelser/maler-aften-weekend" da={<ServiceFlexible />} en={<ServiceFlexibleEn />} />} />
                   <Route path="/priser" element={<BilingualRoute daPath="/priser" da={<PagePriser />} en={<PagePriser lang="en" />} />} />
                   <Route path="/en/prices" element={<BilingualRoute daPath="/priser" da={<PagePriser />} en={<PagePriser lang="en" />} />} />
                   <Route path="/ofte-stillede-spoergsmaal" element={<BilingualRoute daPath="/ofte-stillede-spoergsmaal" da={<FaqPage />} en={<FaqPageEn />} />} />
@@ -95,27 +123,46 @@ const App = () => (
                   <Route path="/kontakt" element={<Contact />} />
                   <Route path="/maler-koebenhavn" element={<BilingualRoute daPath="/maler-koebenhavn" da={<MalerKobenhavn />} en={<MalerKobenhavnEn />} />} />
                   <Route path="/en/painter-copenhagen" element={<BilingualRoute daPath="/maler-koebenhavn" da={<MalerKobenhavn />} en={<MalerKobenhavnEn />} />} />
-                  <Route path="/maler-roskilde" element={<MalerRoskilde />} />
-                  <Route path="/omraader" element={<Omraader />} />
-                  <Route path="/maler-ballerup" element={<MalerBallerup />} />
+                  <Route path="/maler-roskilde" element={<BilingualRoute daPath="/maler-roskilde" da={<MalerRoskilde />} en={<MalerRoskildeEn />} />} />
+                  <Route path="/en/painter-roskilde" element={<BilingualRoute daPath="/maler-roskilde" da={<MalerRoskilde />} en={<MalerRoskildeEn />} />} />
+                  <Route path="/omraader" element={<BilingualRoute daPath="/omraader" da={<Omraader />} en={<OmraaderEn />} />} />
+                  <Route path="/en/areas" element={<BilingualRoute daPath="/omraader" da={<Omraader />} en={<OmraaderEn />} />} />
+                  <Route path="/maler-ballerup" element={<BilingualRoute daPath="/maler-ballerup" da={<MalerBallerup />} en={<MalerBallerupEn />} />} />
+                  <Route path="/en/painter-ballerup" element={<BilingualRoute daPath="/maler-ballerup" da={<MalerBallerup />} en={<MalerBallerupEn />} />} />
                   <Route path="/maler-frederiksberg" element={<BilingualRoute daPath="/maler-frederiksberg" da={<MalerFrederiksberg />} en={<MalerFrederiksbergEn />} />} />
                   <Route path="/en/painter-frederiksberg" element={<BilingualRoute daPath="/maler-frederiksberg" da={<MalerFrederiksberg />} en={<MalerFrederiksbergEn />} />} />
-                  <Route path="/maler-hvidovre" element={<MalerHvidovre />} />
-                  <Route path="/maler-rodovre" element={<MalerRodovre />} />
-                  <Route path="/maler-herlev" element={<MalerHerlev />} />
-                  <Route path="/maler-glostrup" element={<MalerGlostrup />} />
-                  <Route path="/maler-taastrup" element={<MalerTaastrup />} />
-                  <Route path="/maler-albertslund" element={<MalerAlbertslund />} />
-                  <Route path="/maler-ishoj" element={<MalerIshoj />} />
-                  <Route path="/maler-brondby" element={<MalerBrondby />} />
-                  <Route path="/maler-lyngby" element={<MalerLyngby />} />
-                  <Route path="/maler-gentofte" element={<MalerGentofte />} />
-                  <Route path="/maler-greve" element={<MalerGreve />} />
-                  <Route path="/maler-koge" element={<MalerKoge />} />
-                  <Route path="/maler-hillerod" element={<MalerHillerod />} />
-                  <Route path="/maler-helsingor" element={<MalerHelsingor />} />
-                  <Route path="/maler-naestved" element={<MalerNaestved />} />
-                  <Route path="/maler-hedehusene" element={<MalerHedehusene />} />
+                  <Route path="/maler-hvidovre" element={<BilingualRoute daPath="/maler-hvidovre" da={<MalerHvidovre />} en={<MalerHvidovreEn />} />} />
+                  <Route path="/en/painter-hvidovre" element={<BilingualRoute daPath="/maler-hvidovre" da={<MalerHvidovre />} en={<MalerHvidovreEn />} />} />
+                  <Route path="/maler-rodovre" element={<BilingualRoute daPath="/maler-rodovre" da={<MalerRodovre />} en={<MalerRodovreEn />} />} />
+                  <Route path="/en/painter-rodovre" element={<BilingualRoute daPath="/maler-rodovre" da={<MalerRodovre />} en={<MalerRodovreEn />} />} />
+                  <Route path="/maler-herlev" element={<BilingualRoute daPath="/maler-herlev" da={<MalerHerlev />} en={<MalerHerlevEn />} />} />
+                  <Route path="/en/painter-herlev" element={<BilingualRoute daPath="/maler-herlev" da={<MalerHerlev />} en={<MalerHerlevEn />} />} />
+                  <Route path="/maler-glostrup" element={<BilingualRoute daPath="/maler-glostrup" da={<MalerGlostrup />} en={<MalerGlostrupEn />} />} />
+                  <Route path="/en/painter-glostrup" element={<BilingualRoute daPath="/maler-glostrup" da={<MalerGlostrup />} en={<MalerGlostrupEn />} />} />
+                  <Route path="/maler-taastrup" element={<BilingualRoute daPath="/maler-taastrup" da={<MalerTaastrup />} en={<MalerTaastrupEn />} />} />
+                  <Route path="/en/painter-taastrup" element={<BilingualRoute daPath="/maler-taastrup" da={<MalerTaastrup />} en={<MalerTaastrupEn />} />} />
+                  <Route path="/maler-albertslund" element={<BilingualRoute daPath="/maler-albertslund" da={<MalerAlbertslund />} en={<MalerAlbertslundEn />} />} />
+                  <Route path="/en/painter-albertslund" element={<BilingualRoute daPath="/maler-albertslund" da={<MalerAlbertslund />} en={<MalerAlbertslundEn />} />} />
+                  <Route path="/maler-ishoj" element={<BilingualRoute daPath="/maler-ishoj" da={<MalerIshoj />} en={<MalerIshojEn />} />} />
+                  <Route path="/en/painter-ishoj" element={<BilingualRoute daPath="/maler-ishoj" da={<MalerIshoj />} en={<MalerIshojEn />} />} />
+                  <Route path="/maler-brondby" element={<BilingualRoute daPath="/maler-brondby" da={<MalerBrondby />} en={<MalerBrondbyEn />} />} />
+                  <Route path="/en/painter-brondby" element={<BilingualRoute daPath="/maler-brondby" da={<MalerBrondby />} en={<MalerBrondbyEn />} />} />
+                  <Route path="/maler-lyngby" element={<BilingualRoute daPath="/maler-lyngby" da={<MalerLyngby />} en={<MalerLyngbyEn />} />} />
+                  <Route path="/en/painter-lyngby" element={<BilingualRoute daPath="/maler-lyngby" da={<MalerLyngby />} en={<MalerLyngbyEn />} />} />
+                  <Route path="/maler-gentofte" element={<BilingualRoute daPath="/maler-gentofte" da={<MalerGentofte />} en={<MalerGentofteEn />} />} />
+                  <Route path="/en/painter-gentofte" element={<BilingualRoute daPath="/maler-gentofte" da={<MalerGentofte />} en={<MalerGentofteEn />} />} />
+                  <Route path="/maler-greve" element={<BilingualRoute daPath="/maler-greve" da={<MalerGreve />} en={<MalerGreveEn />} />} />
+                  <Route path="/en/painter-greve" element={<BilingualRoute daPath="/maler-greve" da={<MalerGreve />} en={<MalerGreveEn />} />} />
+                  <Route path="/maler-koge" element={<BilingualRoute daPath="/maler-koge" da={<MalerKoge />} en={<MalerKogeEn />} />} />
+                  <Route path="/en/painter-koge" element={<BilingualRoute daPath="/maler-koge" da={<MalerKoge />} en={<MalerKogeEn />} />} />
+                  <Route path="/maler-hillerod" element={<BilingualRoute daPath="/maler-hillerod" da={<MalerHillerod />} en={<MalerHillerodEn />} />} />
+                  <Route path="/en/painter-hillerod" element={<BilingualRoute daPath="/maler-hillerod" da={<MalerHillerod />} en={<MalerHillerodEn />} />} />
+                  <Route path="/maler-helsingor" element={<BilingualRoute daPath="/maler-helsingor" da={<MalerHelsingor />} en={<MalerHelsingorEn />} />} />
+                  <Route path="/en/painter-helsingor" element={<BilingualRoute daPath="/maler-helsingor" da={<MalerHelsingor />} en={<MalerHelsingorEn />} />} />
+                  <Route path="/maler-naestved" element={<BilingualRoute daPath="/maler-naestved" da={<MalerNaestved />} en={<MalerNaestvedEn />} />} />
+                  <Route path="/en/painter-naestved" element={<BilingualRoute daPath="/maler-naestved" da={<MalerNaestved />} en={<MalerNaestvedEn />} />} />
+                  <Route path="/maler-hedehusene" element={<BilingualRoute daPath="/maler-hedehusene" da={<MalerHedehusene />} en={<MalerHedehuseneEn />} />} />
+                  <Route path="/en/painter-hedehusene" element={<BilingualRoute daPath="/maler-hedehusene" da={<MalerHedehusene />} en={<MalerHedehuseneEn />} />} />
                   <Route path="/vilkar" element={<Terms />} />
                   <Route path="/privatliv" element={<Privacy />} />
                   <Route path="/cookies" element={<Cookies />} />

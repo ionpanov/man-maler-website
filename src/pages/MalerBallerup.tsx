@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HreflangLinks from "@/components/HreflangLinks";
 import { Helmet } from "react-helmet-async";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, MapPin, Clock, ShieldCheck } from "lucide-react";
@@ -79,6 +80,7 @@ const FAQS = [
 export default function MalerBallerup() {
   return (
     <>
+      <HreflangLinks daPath="/maler-ballerup" lang="da" />
       <Helmet>
         <title>Maler Ballerup | Malerfirma, kontorer & erhverv</title>
         <meta

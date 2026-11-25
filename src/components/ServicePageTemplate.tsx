@@ -7,6 +7,7 @@ import Breadcrumbs, { Crumb } from "@/components/Breadcrumbs";
 import PriceTable from "@/components/PriceTable";
 import type { PriceRow } from "@/lib/prices";
 import PhotoGallery, { GalleryLabels, GalleryPhoto } from "@/components/PhotoGallery";
+import { cityNameEn, langPath } from "@/lib/enRoutes";
 import { CITIES, FAQ_PATH, SERVICE_PAGES } from "@/lib/cities";
 
 export interface ServicePageLabels {
@@ -470,7 +471,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               {SERVICE_PAGES.filter((service) => service.path !== data.path).map((service) => (
                 <Link
                   key={service.path}
-                  to={service.path}
+                  to={langPath(service.path, lang)}
                   className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
                 >
                   <span className="font-semibold text-foreground block mb-1">
@@ -491,7 +492,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
                 </span>
               </Link>
               <Link
-                to={FAQ_PATH}
+                to={langPath(FAQ_PATH, lang)}
                 className="block p-5 rounded-xl bg-warm-surface hover:bg-warm-surface-hover transition border border-border"
               >
                 <span className="font-semibold text-foreground block mb-1">{L.faqCard.title} →</span>
@@ -508,11 +509,11 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               {CITIES.map((city) => (
                 <Link
                   key={city.path}
-                  to={city.path}
+                  to={langPath(city.path, lang)}
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-warm-surface hover:bg-warm-surface-hover transition text-sm font-medium text-foreground border border-border"
                 >
                   <MapPin size={14} className="text-primary flex-shrink-0" />
-                  {L.cityPrefix} {city.name}
+                  {L.cityPrefix} {lang === "en" ? cityNameEn(city.name) : city.name}
                 </Link>
               ))}
             </div>
@@ -520,7 +521,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
                 {L.allServices} →
               </Link>
-              <Link to="/omraader" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
+              <Link to={langPath("/omraader", lang)} className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">
                 {L.allAreas} →
               </Link>
               <Link to="/om-os" className="inline-block py-1.5 text-sm text-muted-foreground hover:underline">

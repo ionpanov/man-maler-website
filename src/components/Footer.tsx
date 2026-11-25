@@ -1,4 +1,4 @@
-import { langPath } from "@/lib/enRoutes";
+import { cityNameEn, langPath } from "@/lib/enRoutes";
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -13,6 +13,12 @@ function TikTokIcon({ size = 20 }: { size?: number }) {
   );
 }
 
+const REGION_TITLES_EN: Record<string, string> = {
+  "København og Vestegnen": "Copenhagen and the western suburbs",
+  "Nordsjælland": "North Zealand",
+  "Roskilde og Sydsjælland": "Roskilde and South Zealand",
+};
+
 export default function Footer() {
   const { t, lang } = useI18n();
 
@@ -23,14 +29,14 @@ export default function Footer() {
     { name: t("nav.about"), href: "/om-os" },
     { name: t("nav.contact"), href: "/kontakt" },
     { name: lang === "en" ? "Interior painting" : "Indvendig maling", href: langPath("/ydelser/indendoers-maling", lang) },
-    { name: lang === "en" ? "Facade painting" : "Facademaling", href: "/ydelser/facademaling" },
-    { name: lang === "en" ? "Renovation" : "Renovering", href: "/ydelser/renovering" },
-    { name: lang === "en" ? "Commercial painting" : "Erhvervsmaling", href: "/ydelser/erhvervsmaling" },
-    { name: lang === "en" ? "Evenings and weekends" : "Maler aften og weekend", href: "/ydelser/maler-aften-weekend" },
+    { name: lang === "en" ? "Facade painting" : "Facademaling", href: langPath("/ydelser/facademaling", lang) },
+    { name: lang === "en" ? "Renovation" : "Renovering", href: langPath("/ydelser/renovering", lang) },
+    { name: lang === "en" ? "Commercial painting" : "Erhvervsmaling", href: langPath("/ydelser/erhvervsmaling", lang) },
+    { name: lang === "en" ? "Evenings and weekends" : "Maler aften og weekend", href: langPath("/ydelser/maler-aften-weekend", lang) },
     { name: lang === "en" ? "B2B partnerships" : "B2B-samarbejde", href: b2bPath(lang) },
     { name: lang === "en" ? "Prices" : "Priser", href: langPath("/priser", lang) },
     { name: lang === "en" ? "FAQ" : "Ofte stillede spørgsmål", href: langPath("/ofte-stillede-spoergsmaal", lang) },
-    { name: lang === "en" ? "All areas" : "Alle Områder", href: "/omraader" },
+    { name: lang === "en" ? "All areas" : "Alle Områder", href: langPath("/omraader", lang) },
   ];
 
   const socials = [
@@ -155,19 +161,19 @@ export default function Footer() {
       </div>
 
       {/* Areas */}
-      <nav aria-label="Områder" className="max-w-6xl mx-auto px-6 pb-12">
+      <nav aria-label={lang === "en" ? "Areas" : "Områder"} className="max-w-6xl mx-auto px-6 pb-12">
         <h4 className="font-semibold mb-5 text-sm uppercase tracking-wider text-gray-300">
-          Maler i dit område
+          {lang === "en" ? "Painters in your area" : "Maler i dit område"}
         </h4>
         <div className="grid sm:grid-cols-3 gap-8">
           {REGIONS.map((region) => (
             <div key={region.title}>
-              <p className="text-gray-400 text-xs uppercase tracking-wider mb-3">{region.title}</p>
+              <p className="text-gray-400 text-xs uppercase tracking-wider mb-3">{lang === "en" ? REGION_TITLES_EN[region.title] ?? region.title : region.title}</p>
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
                 {region.paths.map((path) => (
                   <li key={path}>
-                    <Link to={path} className="inline-block py-1 text-gray-200 hover:text-orange-500 transition text-sm">
-                      {cityByPath(path)!.name}
+                    <Link to={langPath(path, lang)} className="inline-block py-1 text-gray-200 hover:text-orange-500 transition text-sm">
+                      {lang === "en" ? cityNameEn(cityByPath(path)!.name) : cityByPath(path)!.name}
                     </Link>
                   </li>
                 ))}
