@@ -153,15 +153,15 @@ const data: ServicePageData = {
       <>
         In older apartment buildings, where we often work in <Link to={p("/maler-frederiksberg")} className={link}>Frederiksberg</Link> and
         in <Link to={p("/maler-koebenhavn")} className={link}>Copenhagen</Link>, stucco ceilings, panels and old wallpaper need extra care.
-        For houses with several rooms and buildings on the plot, we plan the work as a whole, as described for <Link to="/maler-lyngby" className={link}>Lyngby</Link> and <Link to="/maler-gentofte" className={link}>Gentofte</Link>.
+        For houses with several rooms and buildings on the plot, we plan the work as a whole, as described for <Link to={langPath("/maler-lyngby", "en")} className={link}>Lyngby</Link> and <Link to={langPath("/maler-gentofte", "en")} className={link}>Gentofte</Link>.
       </>,
       <>
-        If the home is being made ready for sale, it can pay to prioritise the hallway, living room and kitchen. Read more under <Link to="/maler-taastrup" className={link}>Taastrup</Link>.
-        At move-out, fast and even painting matters, both in private rentals (see <Link to="/maler-roskilde" className={link}>Roskilde</Link>) and in social housing, as in <Link to="/maler-ishoj" className={link}>Ishøj</Link>.
+        If the home is being made ready for sale, it can pay to prioritise the hallway, living room and kitchen. Read more under <Link to={langPath("/maler-taastrup", "en")} className={link}>Taastrup</Link>.
+        At move-out, fast and even painting matters, both in private rentals (see <Link to={langPath("/maler-roskilde", "en")} className={link}>Roskilde</Link>) and in social housing, as in <Link to={langPath("/maler-ishoj", "en")} className={link}>Ishøj</Link>.
       </>,
       <>
-        In offices and shops we plan the work outside opening hours, so operations are not disturbed. You can read about business jobs and brand colours on the pages for <Link to="/maler-ballerup" className={link}>Ballerup</Link>, <Link to="/maler-herlev" className={link}>Herlev</Link> and <Link to="/maler-naestved" className={link}>Næstved</Link>.
-        If you also need the outside of the house painted, read about our <Link to="/ydelser/facademaling" className={link}>facade painting</Link>. If the walls or ceiling are damaged by damp or mould, you will find more under <Link to="/ydelser/renovering" className={link}>renovation</Link>, and for offices and shops see <Link to="/ydelser/erhvervsmaling" className={link}>commercial painting</Link>.
+        In offices and shops we plan the work outside opening hours, so operations are not disturbed. You can read about business jobs and brand colours on the pages for <Link to={langPath("/maler-ballerup", "en")} className={link}>Ballerup</Link>, <Link to={langPath("/maler-herlev", "en")} className={link}>Herlev</Link> and <Link to={langPath("/maler-naestved", "en")} className={link}>Næstved</Link>.
+        If you also need the outside of the house painted, read about our <Link to={langPath("/ydelser/facademaling", "en")} className={link}>facade painting</Link>. If the walls or ceiling are damaged by damp or mould, you will find more under <Link to={langPath("/ydelser/renovering", "en")} className={link}>renovation</Link>, and for offices and shops see <Link to={langPath("/ydelser/erhvervsmaling", "en")} className={link}>commercial painting</Link>.
       </>,
     ],
   },

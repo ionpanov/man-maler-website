@@ -271,10 +271,10 @@ export default function PagePriser({ lang = "da" }: { lang?: Lang }) {
             <p className="text-muted-foreground leading-relaxed">
               {c.notOnList}{" "}
               <Link to={L("/ydelser/indendoers-maling")} className={link}>{c.linkIndoor}</Link>,{" "}
-              <Link to="/ydelser/renovering" className={link}>{c.linkReno}</Link> {c.and}{" "}
-              <Link to="/ydelser/erhvervsmaling" className={link}>{c.linkCommercial}</Link>
+              <Link to={L("/ydelser/renovering")} className={link}>{c.linkReno}</Link> {c.and}{" "}
+              <Link to={L("/ydelser/erhvervsmaling")} className={link}>{c.linkCommercial}</Link>
               {c.orSee}{" "}
-              <Link to="/ydelser/maler-aften-weekend" className={link}>{c.linkFlex}</Link> {c.after}
+              <Link to={L("/ydelser/maler-aften-weekend")} className={link}>{c.linkFlex}</Link> {c.after}
             </p>
           </AnimatedSection>
         </div>

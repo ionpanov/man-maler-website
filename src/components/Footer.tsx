@@ -1,7 +1,7 @@
-import { cityNameEn, langPath } from "@/lib/enRoutes";
+import { DA_ROUTES, EN_ROUTES, cityNameEn, langPath } from "@/lib/enRoutes";
 import { useI18n } from "@/lib/i18n";
 import { Instagram, Facebook } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { REGIONS, b2bPath, cityByPath } from "@/lib/cities";
 import logo3 from "@/assets/logo3.webp";
 
@@ -21,6 +21,9 @@ const REGION_TITLES_EN: Record<string, string> = {
 
 export default function Footer() {
   const { t, lang } = useI18n();
+  const { pathname } = useLocation();
+  const normalized = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
+  const twin = lang === "en" ? DA_ROUTES[normalized] : EN_ROUTES[normalized];
 
   const navLinks = [
     { name: t("nav.home"), href: "/" },
@@ -205,6 +208,13 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="text-center py-5 border-t border-footer-border text-sm text-footer-muted space-y-1">
         <p>© {new Date().getFullYear()} MANMALER. {t("footer.rights")}</p>
+        {twin && (
+          <p>
+            <a href={twin} hrefLang={lang === "en" ? "da" : "en"} className="inline-block py-1 text-gray-300 hover:text-orange-500 underline">
+              {lang === "en" ? "Dansk version" : "English version"}
+            </a>
+          </p>
+        )}
         <p className="text-xs">{t("footer.operated" as any)}</p>
       </div>
 

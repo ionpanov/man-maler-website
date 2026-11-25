@@ -375,6 +375,9 @@ export default function MalerHerlevEn() {
               <Link to={L("/ydelser")} className="inline-block py-1 text-primary font-medium hover:underline">
                 See all our painting services →
               </Link>
+              <Link to={L("/priser")} className="inline-block py-1 text-primary font-medium hover:underline">
+                See our prices →
+              </Link>
               <Link to={L("/ydelser/indendoers-maling")} className="inline-block py-1 text-primary font-medium hover:underline">
                 Interior painting in Herlev →
               </Link>

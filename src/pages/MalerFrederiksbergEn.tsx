@@ -153,7 +153,7 @@ export default function MalerFrederiksbergEn() {
         <div className="absolute inset-0 gradient-warm" />
         <div className="relative max-w-4xl mx-auto">
           <Breadcrumbs
-            items={[{ name: "Home", to: "/" }, { name: "Areas", to: "/omraader" }, { name: "Painter in Frederiksberg" }]}
+            items={[{ name: "Home", to: "/" }, { name: "Areas", to: langPath("/omraader", "en") }, { name: "Painter in Frederiksberg" }]}
             ariaLabel="Breadcrumb"
           />
           <AnimatedSection>

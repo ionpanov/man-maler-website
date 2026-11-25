@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { langPath } from "@/lib/enRoutes";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ServicePageTemplate, { ServicePageData, ServicePageLabels } from "@/components/ServicePageTemplate";
 import { useI18n } from "@/lib/i18n";
@@ -381,22 +382,22 @@ const enData: ServicePageData = {
     paragraphs: [
       <>
         We have written about how we handle commercial jobs locally: offices and brand colours in{" "}
-        <Link to="/maler-ballerup" className={link}>Ballerup</Link>, shops and chains in{" "}
-        <Link to="/maler-herlev" className={link}>Herlev</Link>, institutions and industry in{" "}
-        <Link to="/maler-naestved" className={link}>Næstved</Link>, the healthcare sector in{" "}
-        <Link to="/maler-glostrup" className={link}>Glostrup</Link> and business near DTU in{" "}
-        <Link to="/maler-lyngby" className={link}>Lyngby</Link>. These pages are in Danish.
+        <Link to={langPath("/maler-ballerup", "en")} className={link}>Ballerup</Link>, shops and chains in{" "}
+        <Link to={langPath("/maler-herlev", "en")} className={link}>Herlev</Link>, institutions and industry in{" "}
+        <Link to={langPath("/maler-naestved", "en")} className={link}>Næstved</Link>, the healthcare sector in{" "}
+        <Link to={langPath("/maler-glostrup", "en")} className={link}>Glostrup</Link> and business near DTU in{" "}
+        <Link to={langPath("/maler-lyngby", "en")} className={link}>Lyngby</Link>.
       </>,
       <>
         For larger properties and associations, read about the process in{" "}
-        <Link to="/maler-brondby" className={link}>Brøndby</Link>, and about the business areas in{" "}
-        <Link to="/maler-taastrup" className={link}>Taastrup</Link> and{" "}
-        <Link to="/maler-albertslund" className={link}>Albertslund</Link>.
+        <Link to={langPath("/maler-brondby", "en")} className={link}>Brøndby</Link>, and about the business areas in{" "}
+        <Link to={langPath("/maler-taastrup", "en")} className={link}>Taastrup</Link> and{" "}
+        <Link to={langPath("/maler-albertslund", "en")} className={link}>Albertslund</Link>.
       </>,
       <>
-        Besides painting inside the premises we also do <Link to="/ydelser/facademaling" className={link}>facade painting</Link>,{" "}
-        <Link to="/ydelser/indendoers-maling" className={link}>interior painting</Link> and{" "}
-        <Link to="/ydelser/renovering" className={link}>renovation</Link>, so you can keep everything with one painter.
+        Besides painting inside the premises we also do <Link to={langPath("/ydelser/facademaling", "en")} className={link}>facade painting</Link>,{" "}
+        <Link to={langPath("/ydelser/indendoers-maling", "en")} className={link}>interior painting</Link> and{" "}
+        <Link to={langPath("/ydelser/renovering", "en")} className={link}>renovation</Link>, so you can keep everything with one painter.
       </>,
     ],
   },

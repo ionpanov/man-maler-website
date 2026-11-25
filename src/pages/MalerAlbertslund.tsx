@@ -406,6 +406,9 @@ export default function MalerAlbertslund() {
               <Link to="/ydelser" className="inline-block py-1 text-primary font-medium hover:underline">
                 Se alle vores malerydelser →
               </Link>
+              <Link to="/priser" className="inline-block py-1 text-primary font-medium hover:underline">
+                Se priser på malerarbejde →
+              </Link>
               <Link to="/ydelser/indendoers-maling" className="inline-block py-1 text-primary font-medium hover:underline">
                 Indvendig maling i Albertslund →
               </Link>
